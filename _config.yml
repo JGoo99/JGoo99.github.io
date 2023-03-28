@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: JGoo99
 description: study with github
-#baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jgoo99.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #repository: just-the-docs/just-the-docs # for github-metadata
 
