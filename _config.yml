@@ -8,15 +8,15 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
+# Site settinigs
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: JGoo99
-description: study with github
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://jgoo99.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+title: JGoo99 #사이트 제목
+description: study with github #사이트 설명
+baseurl: "" # the subpath of your site, e.g. /blog #메인접속경로
+url: "https://jgoo99.github.io" # the base hostname & protocol for your site, e.g. http://example.com #본인 깃허브 주소
 #repository: just-the-docs/just-the-docs # for github-metadata
 
 #Theme
@@ -53,7 +53,7 @@ exclude:
    - fixtures/
 
 # Set a path/url to a logo that will be displayed instead of the title
-#logo: "/assets/images/just-the-docs.png"
+#logo: "/assets/images/gitlogo.jpg"
 
 # Enable or disable the site search
 # Supports true (default) or false
@@ -101,7 +101,7 @@ mermaid:
 heading_anchors: true
 
 # Aux links for the upper right navigation
-aux_links:
+aux_links: #본인 깃허브 url
   "Just the Docs on GitHub":
     - "//github.com/just-the-docs/just-the-docs"
 
@@ -135,13 +135,13 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/just-the-docs/just-the-docs" # the github URL for your repo
+gh_edit_repository:"https://github.com/JGoo99/JGoo99.github.io.git" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
-color_scheme: nil
+color_scheme: dark
 
 callouts_level: quiet # or loud
 callouts:
