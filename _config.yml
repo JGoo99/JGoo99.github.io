@@ -53,7 +53,7 @@ exclude:
    - fixtures/
 
 # Set a path/url to a logo that will be displayed instead of the title
-#logo: "/assets/images/gitlogo.jpg"
+logo: "/assets/images/gitlogo.jpg"
 
 # Enable or disable the site search
 # Supports true (default) or false
@@ -100,10 +100,6 @@ mermaid:
 # Enable or disable heading anchors
 heading_anchors: true
 
-# Aux links for the upper right navigation
-aux_links: #본인 깃허브 url
-  "Just the Docs on GitHub":
-    - "//github.com/just-the-docs/just-the-docs"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -154,7 +150,7 @@ callouts:
     color: green
   new:
     title: New
-    color: blue
+    color: pink
   note:
     title: Note
     color: purple
