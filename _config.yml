@@ -108,9 +108,9 @@ aux_links_new_tab: false
 nav_sort: case_sensitive # Capital letters sorted before lowercase
 
 # External navigation links
-nav_external_links:
-  - title: JGoo99
-    url: https://jgoo99.github.io
+# nav_external_links:
+#  - title: JGoo99
+#    url: https://jgoo99.github.io
 
 # Footer content
 # appears at the bottom of every page's main content
