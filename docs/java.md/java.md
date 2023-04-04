@@ -1,9 +1,8 @@
 ---
 layout: default
-title: java
-nav_order: 11
+title: Java
+nav_order: 12
 has_children: true
-permalink: /docs/java
 ---
 
 # UI Components

@@ -1,8 +1,8 @@
 ---
 layout: default
-title: first-project
-parent: java
-nav_order: 1
+title: First Project
+parent: Java
+nav_order: 2
 ---
 
 #child
