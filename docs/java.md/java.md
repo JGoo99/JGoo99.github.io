@@ -6,8 +6,7 @@ has_children: true
 permalink: /docs/java
 ---
 
-#java
-{: .no_toc }
+# UI Components
 
-java test
 {: .fs-6 .fw-300 }
+
