@@ -53,7 +53,7 @@ exclude:
   - fixtures/
 
 # Set a path/url to a logo that will be displayed instead of the title
-logo: "/assets/images/gitlogo.jpg" + "JGoo99"
+#logo: "/assets/images/gitlogo.jpg" + JGoo99
 
 # Enable or disable the site search
 # Supports true (default) or false
