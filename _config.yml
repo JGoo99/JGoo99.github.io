@@ -17,7 +17,7 @@ title: JGoo99 #사이트 제목
 description: study with github #사이트 설명
 baseurl: "" # the subpath of your site, e.g. /blog #메인접속경로
 url: "https://jgoo99.github.io" # the base hostname & protocol for your site, e.g. http://example.com #본인 깃허브 주소
-#repository: just-the-docs/just-the-docs # for github-metadata
+repository: JGoo99/jgoo99.github.io # for github-metadata
 
 #Theme
 remote_theme : mmistakes/minimal-mistakes
