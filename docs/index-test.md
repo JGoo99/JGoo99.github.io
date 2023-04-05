@@ -180,6 +180,9 @@ public class DynamicBeat  extends JFrame {
 
 	public DynamicBeat() {
 		setTitle("Dynamic Beat");
+    newLine();
+  }
+}
 ```
 
 ---

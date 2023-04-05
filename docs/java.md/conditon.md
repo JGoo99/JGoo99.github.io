@@ -19,8 +19,8 @@ if (id.equals("Goo")) {
 ```
 _문자열 비교 연산자로 아이디 입력값이 맞는지 출력하는 조건문_
 
-{: .worning-title }
-> Error
+{: .warning-title }
+>Error
 >
 > args[0]에 입력 받은 값이 없기 때문에 아래와 같은 에러 발생
 
