@@ -1,8 +1,12 @@
 ---
 layout: default
-title: Markdown kitchen sink
+title: Memo
 nav_order: 99
 ---
+
+### 버튼만들기
+
+#### 다크모드 버튼
 
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
@@ -20,60 +24,204 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
+#### 기본 버튼
+
+<div class="code-example" markdown="1">
+[Link button](http://example.com/){: .btn }
+
+[Link button](http://example.com/){: .btn .btn-purple }
+[Link button](http://example.com/){: .btn .btn-blue }
+[Link button](http://example.com/){: .btn .btn-green }
+
+[Link button](http://example.com/){: .btn .btn-outline }
+</div>
+
+#### Button element
+
+GitHub Flavored Markdown does not support the `button` element, so you'll have to use inline HTML for this:
+
+<div class="code-example">
+<button type="button" name="button" class="btn">Button element</button>
+</div>
+```html
+<button type="button" name="button" class="btn">Button element</button>
+```
+
+#### 버튼 크기
+
+Wrap the button in a container that uses the [font-size utility classes]({% link docs/utilities/typography.md %}) to scale buttons:
+
+<div class="code-example" markdown="1">
+<span class="fs-6">
+[Big ass button](http://example.com/){: .btn }
+</span>
+
+<span class="fs-3">
+[Tiny ass button](http://example.com/){: .btn }
+</span>
+</div>
+
+#### 버튼 사이 공간 만들기
+
+<div class="code-example" markdown="1">
+[Button with space](http://example.com/){: .btn .btn-purple .mr-2 }
+[Button](http://example.com/){: .btn .btn-blue }
+
+[Button with more space](http://example.com/){: .btn .btn-green .mr-4 }
+[Button](http://example.com/){: .btn .btn-blue }
+</div>
+
+---
+
+### 굵은 글씨, 기울임, 글씨 가운데 줄긋기
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
+### 박스 만들기
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+{: .fs-5 .ls-10 .text-mono .code-example }
+
+### 긴 글 넣고 싶을 때
+
+<div class="code-example" markdown="1">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+```markdown
+박스 붙여서 짧은 글을 쓸 수 있음
+```
+
+### 글씨 크기
+
+<div class="code-example" markdown="1">
+Font size 1
+{: .fs-1 }
+Font size 2
+{: .fs-2 }
+Font size 3
+{: .fs-3 }
+Font size 4
+{: .fs-4 }
+Font size 5
+{: .fs-5 }
+Font size 6
+{: .fs-6 }
+Font size 7
+{: .fs-7 }
+Font size 8
+{: .fs-8 }
+Font size 9
+{: .fs-9 }
+Font size 10
+{: .fs-10 }
+</div>
+
+### 글씨 굵기
+<div class="code-example" markdown="1">
+Font weight 300
+{: .fw-300 }
+Font weight 400
+{: .fw-400 }
+Font weight 500
+{: .fw-500 }
+Font weight 700
+{: .fw-700 }
+</div>
+
+---
+
+### 링크걸기
+
 [Link to another page](another-page).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# [](#header-1)Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## [](#header-2)Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### [](#header-3)Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### [](#header-4)Header 4 `with code not transformed`
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### [](#header-5)Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### [](#header-6)Header 6
 
 [This is a very long link which wraps and therefore doesn't overflow
 even when it comes at the beginning](.) of the line.
 
 - [This is a very long link which wraps and therefore doesn't overflow the line
   when used first in an item ](.) in a list.
+
+---
+
+### 단락 제목
+
+# [](#header-1)Header 1
+
+## [](#header-2)Header 2
+
+### [](#header-3)Header 3
+
+#### [](#header-4)Header 4 `with code not transformed`
+
+##### [](#header-5)Header 5
+
+###### [](#header-6)Header 6
+
+---
+
+### 들여쓰기
+
+> This is a blockquote following a header.
+> 안녕하세요.
+
+---
+
+### 코드 작성
+
+```java
+package dynamic_beat_1;
+
+import javax.swing.JFrame;
+
+public class DynamicBeat  extends JFrame {
+
+	public DynamicBeat() {
+		setTitle("Dynamic Beat");
+```
+
+---
+
+### 줄 나누기
+
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
+
+### 하위목록 만들기
+
+- level 1 item
+  1. level 2 item
+  2. level 2 item
+    - level 3 item
+    - level 3 item
+- level 1 item
+  1. level 2 item
+  2. level 2 item
+  3. level 2 item
+    - level 3 item
+
+### 번호 나누기
+
+1.  This is an ordered list following a header.
+2.  This is an ordered list following a header.
+3.  This is an ordered list following a header.
+
+_번호 안 끊기게 할 수 있음_
+
+{:style="counter-reset:none"}
+4.  Item three
+5.  Item four 
+
+_원하는 숫자부터 시작할 수 있음_
+
+{:style="counter-reset:step-counter 41"}
+1.  Item 42
+1.  Item 43
+1.  Item 44
+
+---
+
+### 표 만들기
 
 | head1        | head two          | three |
 |:-------------|:------------------|:------|
@@ -82,120 +230,33 @@ even when it comes at the beginning](.) of the line.
 | ok           | good `oreos`      | hmm   |
 | ok           | good `zoute` drop | yumm  |
 
-### There's a horizontal rule below this.
+---
 
-* * *
+### 체크리스트 만들기
 
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And an ordered list, continued:
-
-1.  Item one
-1.  Item two
-
-Some text
-
-{:style="counter-reset:none"}
-1.  Item three
-1.  Item four
-
-### And an ordered list starting from 42:
-
-{:style="counter-reset:step-counter 41"}
-1.  Item 42
-1.  Item 43
-1.  Item 44
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Nesting an ol in ul in an ol
-
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-  1. level 4 item (ol)
-  1. level 4 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-
-### And a task list
-
-- [ ] Hello, this is a TODO item
-- [ ] Hello, this is another TODO item
-- [x] Goodbye, this item is done
-
-### Nesting task lists
-
-- [ ] level 1 item (task)
+- level 1 item (task)
    - [ ] level 2 item (task)
-   - [ ] level 2 item (task)
-- [ ] level 1 item (task)
-- [ ] level 1 item (task)
+   - [x] level 2 item (task)
+- level 1 item (task)
+- [x] level 1 item (task)
 
-### Nesting a ul in a task list
+---
 
-- [ ] level 1 item (task)
-   - level 2 item (ul)
-   - level 2 item (ul)
-- [ ] level 1 item (task)
-- [ ] level 1 item (task)
+### 이미지 삽입
 
-### Nesting a task list in a ul
-
-- level 1 item (ul)
-   - [ ] level 2 item (task)
-   - [ ] level 2 item (task)
-- level 1 item (ul)
-- level 1 item (ul)
-
-### Small image
+작은 이미지
 
 ![](../../assets/images/small-image.jpg)
 
-### Large image
+큰 이미지
 
 ![](../../assets/images/large-image.jpg)
 
 "[Wroclaw University Library digitizing rare archival texts](https://www.flickr.com/photos/97810305@N08/9401451269)" by [j_cadmus](https://www.flickr.com/photos/97810305@N08) is marked with [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=openverse).
 
-### Labels
+---
 
-I'm a label
-{: .label }
+### 라벨 넣기
 
 blue
 {: .label .label-blue }
@@ -208,99 +269,11 @@ yellow
 red
 {: .label .label-red }
 
-**bold**
-{: .label }
-*italic*
-{: .label }
-***bold + italic***
-{: .label }
+---
 
-### Definition lists can be used with HTML syntax.
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
 
-#### Multiple description terms and values
-
-Term
-: Brief description of Term
-
-Longer Term
-: Longer description of Term,
-  possibly more than one line
-
-Term
-: First description of Term,
-  possibly more than one line
-
-: Second description of Term,
-  possibly more than one line
-
-Term1
-Term2
-: Single description of Term1 and Term2,
-  possibly more than one line
-
-Term1
-Term2
-: First description of Term1 and Term2,
-  possibly more than one line
-
-: Second description of Term1 and Term2,
-  possibly more than one line
-
-### More code
-
-```python{% raw %}
-def dump_args(func):
-    "This decorator dumps out the arguments passed to a function before calling it"
-    argnames = func.func_code.co_varnames[:func.func_code.co_argcount]
-    fname = func.func_name
-    def echo_func(*args,**kwargs):
-        print fname, ":", ', '.join(
-            '%s=%r' % entry
-            for entry in zip(argnames,args) + kwargs.items())
-        return func(*args, **kwargs)
-    return echo_func
-
-@dump_args
-def f1(a,b,c):
-    print a + b + c
-
-f1(1, 2, 3)
-
-def precondition(precondition, use_conditions=DEFAULT_ON):
-    return conditions(precondition, None, use_conditions)
-
-def postcondition(postcondition, use_conditions=DEFAULT_ON):
-    return conditions(None, postcondition, use_conditions)
-
-class conditions(object):
-    __slots__ = ('__precondition', '__postcondition')
-
-    def __init__(self, pre, post, use_conditions=DEFAULT_ON):
-        if not use_conditions:
-            pre, post = None, None
-
-        self.__precondition  = pre
-        self.__postcondition = post
-{% endraw %}```
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-### Mermaid Diagrams
-
-The following code is displayed as a diagram only when a `mermaid` key supplied in `_config.yml`.
+### 다이어그램 넣기
 
 ```mermaid
 graph TD;
@@ -310,7 +283,3 @@ graph TD;
     C-->D;
 ```
 
-
-```
-The final element.
-```

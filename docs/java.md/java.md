@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Java
-nav_order: 12
+nav_order: 2
 has_children: true
+has_toc: false
 ---
 
-# UI Components
-
-{: .fs-6 .fw-300 }
+hi
+안녕하세요
 
