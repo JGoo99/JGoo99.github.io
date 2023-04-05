@@ -25,11 +25,6 @@ has_toc: false
     - &&
     - "||"
     - !
-- 조건문
-  1. if
-  2. else
-  3. else if
-  4. switch
 - 반복문
   1. while
   2. for

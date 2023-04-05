@@ -34,6 +34,7 @@ double a = 1.1;
 
 float b = 2.2F; //임의적으로 float형 데이터롤 바꿈
 ```
+
 ---
 
 ## 2. 문자와 문자열
@@ -64,5 +65,7 @@ System.out.prinln("Jin said \n\ hi");
 ```java
 String a = "coding";
 ```
+
+---
 
 [Link button](https://opentutorials.org/course/1223/5261){: .btn .btn-outline }
