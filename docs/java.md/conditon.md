@@ -5,74 +5,55 @@ parent: Java
 nav_order: 5
 ---
 
-# IV. 연산자 
+# IV. 조건문
 
-## 1. 산술 연산자
-
-| 연산자   | 의미    |
-|:-------|:-------|
-| +      | 더하기   |
-| -      | 빼기    |
-| *      | 곱하기   |
-| /      | 나누기   |
-| -      | 나머지   |
-
-_연산자 중에 +는 문자열에도 사용 가능하다_
-```java
-String a = "안녕";
-String b = "하세요";
-System.out.println(a + b);
-```
-```
-안녕하세요
-```
-
-## 1. 단항 연산자
-_하나의 항을 대상을 이루어지는 연산자_
-
-| 연산자   | 의미       |
-|:-------|:----------|
-| +      | 양수(사용x) |
-| -      | 음수       |
-| ++     | 1씩 증가   |
-| --     | 1씩 감소   |
+## 1. if
 
 ```java
-int i = 3;
-i++			// i=i+1
-System.out.println(i);    // 4
-++i;
-System.out.println(i);    // 5
-System.out.println(++i);  // 6
-System.out.println(i++);  // 6 i++는 print가 끝나고 더해지는 특징이 있음
-System.out.println(i);    // 7
+String id = args[0];
+if (id.equals("Goo")) {
+	System.out.println("로그인 완료");
+} else {
+	System.out.println("잘못된 ID");
+}
 ```
+_문자열 비교 연산자로 아이디 입력값이 맞는지 출력하는 조건문_
 
-## 1. 비교 연산자
+{: .worning-title }
+> Error
+>
+> args[0]에 입력 받은 값이 없기 때문에 아래와 같은 에러 발생
 
-| 연산자    | 의미       |
-|:--------|:----------|
-| ==      | 같다       |
-| !=      | 같지 않다   |
-| >       | 크다       |
-| >=      | 크거나 같다  |
-| .equals | 같다(문자열) |
+<div class="code-example" markdown="1">
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException:
+Index 0 out of bounds for length 0 at DynamicBeat dynamic_beat_1.hi.main(hi.java:6)
+</div>
 
-_문자열 비교 예시_
+### **해결방법**
+> Run - run configurations - arguments - variables - string_prompt
+
+{: .new }
+> 만약 비밀번호까지 입력받는 로직을 만들고 싶다면?
+>
+> **조건문의 중첩**
+
 ```java
- String a = "Hello world";
-    String b = new String("Hello world");
-	System.out.println(a == b);
-	System.out.println(a.equals(b));
+String id = args[0];
+String password = args[1];
+if (id.equals("Goo")) {
+	if (password.equals("1111")) {
+		System.out.println("로그인 완료");
+	} else {
+		System.out.println("비밀번호 오류");
+	}
+} else {
+	system.out.println("로그인 완료");
+}
 ```
-```java
-false
-true
-```
 
-## 1. 논리 연산자
-
-
+## 2. else
+## 3. else if
+## 4. switch
 
 
 [Link button](https://opentutorials.org/course/1223/5335){: .btn .btn-outline }

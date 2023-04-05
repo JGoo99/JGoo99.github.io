@@ -274,8 +274,6 @@ red
 
 ---
 
-
-
 ## 다이어그램 넣기
 
 ```mermaid
@@ -285,4 +283,37 @@ graph TD;
     B-->D;
     C-->D;
 ```
+## 메모 박스 넣기
 
+{: .highlight }
+강조용 노랑 박스
+
+{: .note }
+메모용 보라색 박스
+
+{: .note-title}
+> 노트 제목
+>
+> 노트 내용 작성
+
+{: .important-title}
+> 노트 제목
+>
+> 중요한 내용 핑크 박스
+
+{: .new }
+> 노트 제목
+>
+> 새로운 내용 초록 박스
+
+{: .warning-title }
+> ERROR
+>
+> 에러용 빨간 박스
+
+{: .highlight }
+> {: .opaque }
+> 중첩할 수 있음
+> <div markdown="block">
+> {: .warning }
+> 에러용 빨간 박스

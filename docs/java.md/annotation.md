@@ -39,3 +39,5 @@ public void println(int x) {
 ```java
 int a = 100; double b = 10.1; //한 줄에 두 문장 가능
 ```
+
+[Link button](https://opentutorials.org/course/1223/6714){: .btn .btn-outline }

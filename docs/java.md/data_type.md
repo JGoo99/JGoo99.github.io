@@ -16,8 +16,10 @@ _숫자는 따옴표 없이 입력_
 ```java
 System.out.println(1+2);
 ```
-###  **변수 설정 방법**
+### **변수 설정 방법**
+
 - 정수
+
 ```java
 int a = 1;
 
@@ -62,3 +64,5 @@ System.out.prinln("Jin said \n\ hi");
 ```java
 String a = "coding";
 ```
+
+[Link button](https://opentutorials.org/course/1223/5261){: .btn .btn-outline }
