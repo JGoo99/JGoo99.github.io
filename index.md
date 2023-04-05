@@ -4,6 +4,5 @@ title: Home
 nav_order: 1
 ---
 
-# UI Components
-
-{: .fs-6 .fw-300 }
+# Study with **github blog**
+_2023.04.05_
