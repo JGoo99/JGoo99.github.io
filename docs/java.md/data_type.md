@@ -16,26 +16,35 @@ _숫자는 따옴표 없이 입력_
 ```java
 System.out.println(1+2);
 ```
-### 변수 설정 방법
+###  **변수 설정 방법**
+- 정수
+```java
+int a = 1;
 
+byte b = 2; //int형 숫자 사용 가능
+short c = 3; //int형 숫자 사용 가능
+long d = 4L; //int형 숫자에 L 붙여야 함
+```
+
+- 실수
+```java
+double a = 1.1;
+
+float b = 2.2F; //임의적으로 float형 데이터롤 바꿈
+```
 ---
 
 ## 2. 문자와 문자열
 
 ### 문자 : 한 글자
 ```java
-System.out.prinln('깃');
+System.out.prinln('깃'); //작은 따옴표
 ```
-```markdown
-작은 따옴표(') 사용
-```
+
 ### 문자열 : 두 글자 이상
 
 ```java
-System.out.prinln("깃허브");
-```
-```markdown
-작은 따옴표(') 사용
+System.out.prinln("깃허브"); //큰 따옴표
 ```
 
 _문자열 안에 문자열을 사용하고 싶은 경우_
@@ -46,41 +55,10 @@ System.out.prinln("Jin said \"hi\"");
 
 _문자열 안에 줄바꿈을 사용하고 싶은 경우_
 ```java
-System.out.prinln("Jin said \n\\"hi\"");
+System.out.prinln("Jin said \n\ hi");
 ```
----
+###  **변수 설정 방법**
 
-- 데이터 타입
-  1. 숫자
-    - 정수
-    - 실수
-  2. 문자
-  
-- 주석과 세미콜론
-- 형 변환
-  1. 암시적 형 변환
-  2. 명시적 형 변환
-- 연산자
-  1. 산술 연산자
-  2. 단항 연산자
-  3. 비교 연산자
-  4. 논리 연산자
-    - &&
-    - ||
-    - !
-- 조건문
-  1. if
-  2. else
-  3. else if
-  4. switch
-- 반복문
-  1. while
-  2. for
-  3. break
-  4. continue
-- 배열
-- 매소드
-  1. 재활용성
-  2. 입력과 출력
-  3. 복수의 인자
-  4. 어플리케이션 응용
+```java
+String a = "coding";
+```
