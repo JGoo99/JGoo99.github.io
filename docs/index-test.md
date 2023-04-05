@@ -4,9 +4,9 @@ title: Memo
 nav_order: 99
 ---
 
-### 버튼만들기
+## 버튼만들기
 
-#### 다크모드 버튼
+### 다크모드 버튼
 
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
@@ -24,7 +24,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
-#### 기본 버튼
+### 기본 버튼
 
 <div class="code-example" markdown="1">
 [Link button](http://example.com/){: .btn }
@@ -36,9 +36,9 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 [Link button](http://example.com/){: .btn .btn-outline }
 </div>
 
-#### Button element
+### 버튼 요소
 
-GitHub Flavored Markdown does not support the `button` element, so you'll have to use inline HTML for this:
+// GitHub Flavored Markdown does not support the `button` element, so you'll have to use inline HTML for this:
 
 <div class="code-example">
 <button type="button" name="button" class="btn">Button element</button>
@@ -47,7 +47,7 @@ GitHub Flavored Markdown does not support the `button` element, so you'll have t
 <button type="button" name="button" class="btn">Button element</button>
 ```
 
-#### 버튼 크기
+### 버튼 크기
 
 
 <div class="code-example" markdown="1">
@@ -60,7 +60,7 @@ GitHub Flavored Markdown does not support the `button` element, so you'll have t
 </span>
 </div>
 
-#### 버튼 사이 공간 만들기
+### 버튼 사이 공간 만들기
 
 <div class="code-example" markdown="1">
 [Button with space](http://example.com/){: .btn .btn-purple .mr-2 }
@@ -71,18 +71,19 @@ GitHub Flavored Markdown does not support the `button` element, so you'll have t
 </div>
 
 ---
+---
 
-### 굵은 글씨, 기울임, 글씨 가운데 줄긋기
+## 굵은 글씨, 기울임, 글씨 가운데 줄긋기
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-### 박스 만들기
+## 박스 만들기
 
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 abcdefghijklmnopqrstuvwxyz
 {: .fs-5 .ls-10 .text-mono .code-example }
 
-### 긴 글 넣고 싶을 때
+## 긴 글 넣고 싶을 때
 
 <div class="code-example" markdown="1">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -91,7 +92,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 박스 붙여서 짧은 글을 쓸 수 있음
 ```
 
-### 글씨 크기
+## 글씨 크기
 
 <div class="code-example" markdown="1">
 Font size 1
@@ -116,7 +117,7 @@ Font size 10
 {: .fs-10 }
 </div>
 
-### 글씨 굵기
+## 글씨 굵기
 <div class="code-example" markdown="1">
 Font weight 300
 {: .fw-300 }
@@ -142,7 +143,9 @@ even when it comes at the beginning](.) of the line.
 
 ---
 
-### 단락 제목
+## 단락 제목
+
+<div class="code-example" markdown="1">
 
 # [](#header-1)Header 1
 
@@ -150,17 +153,18 @@ even when it comes at the beginning](.) of the line.
 
 ### [](#header-3)Header 3
 
-#### [](#header-4)Header 4 `with code not transformed`
+#### [](#header-4)Header 4 
 
 ##### [](#header-5)Header 5
 
 ###### [](#header-6)Header 6
-
+</div>
 ---
 
-### 들여쓰기
+## 들여쓰기
 
 > This is a blockquote following a header.
+>
 > 안녕하세요.
 
 ---
@@ -180,13 +184,13 @@ public class DynamicBeat  extends JFrame {
 
 ---
 
-### 줄 나누기
+## 줄 나누기
 
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
 
-### 하위목록 만들기
+## 하위목록 만들기
 
 - level 1 item
   1. level 2 item
@@ -199,7 +203,7 @@ public class DynamicBeat  extends JFrame {
   3. level 2 item
     - level 3 item
 
-### 번호 나누기
+## 번호 나누기
 
 1.  This is an ordered list following a header.
 2.  This is an ordered list following a header.
@@ -220,7 +224,7 @@ _원하는 숫자부터 시작할 수 있음_
 
 ---
 
-### 표 만들기
+## 표 만들기
 
 | head1        | head two          | three |
 |:-------------|:------------------|:------|
@@ -231,7 +235,7 @@ _원하는 숫자부터 시작할 수 있음_
 
 ---
 
-### 체크리스트 만들기
+## 체크리스트 만들기
 
 - level 1 item (task)
    - [ ] level 2 item (task)
@@ -241,7 +245,7 @@ _원하는 숫자부터 시작할 수 있음_
 
 ---
 
-### 이미지 삽입
+## 이미지 삽입
 
 작은 이미지
 
@@ -255,7 +259,7 @@ _원하는 숫자부터 시작할 수 있음_
 
 ---
 
-### 라벨 넣기
+## 라벨 넣기
 
 blue
 {: .label .label-blue }
@@ -272,7 +276,7 @@ red
 
 
 
-### 다이어그램 넣기
+## 다이어그램 넣기
 
 ```mermaid
 graph TD;
