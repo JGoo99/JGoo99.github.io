@@ -29,7 +29,7 @@ Index 0 out of bounds for length 0 at DynamicBeat dynamic_beat_1.hi.main(hi.java
 {: .warning-title }
 > Error
 > 
-> args[0]에 입력 받은 값이 없기 때문에 아래와 같은 에러 발생
+> args[0]에 입력 받은 값이 없기 때문에 위와 같은 에러 발생
 
 > 해결방법
 >

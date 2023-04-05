@@ -35,12 +35,14 @@ _한 문장을 나타낼 때 사용_
 public void println(int x) {
 	synchronized (this) {
     	print(x);
-      newLine();
+      	newLine();
  	}
 }
 ```
 ```java
 int a = 100; double b = 10.1; //한 줄에 두 문장 가능
 ```
+
+---
 
 [Link button](https://opentutorials.org/course/1223/6714){: .btn .btn-outline }
