@@ -112,8 +112,14 @@ String[] korean = {"ga", "na", "da"};
 System.out.println(korean[3]);
 ```
 
-```java
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3 at DynamicBeat/dynamic_beat_1.hi.main(hi.java:8)
+{: .warning-title }
+>Error
+>
+>Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException:
+>
+>Index 3 out of bounds for length 3
+>
+>at DynamicBeat/dynamic_beat_1.hi.main(hi.java:8)
 ```
 
 > 아래의 경우도 같은 오류를 발생시킨다
