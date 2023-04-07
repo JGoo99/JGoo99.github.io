@@ -86,7 +86,51 @@ true
 | ||      | or        |
 | !       | not       |
 
-### i. && 
+### i. && (and)
+
+> ID와 PASSWORD가 모두 맞아야 하는 로그인 로직을 만들어보자
+
+```java
+String id = args[0];
+String password = args[1];
+		
+if (id.equals("Goo") && password.equals("111")) {
+	System.out.println("login");
+} else {
+	System.out.println("worng");
+}
+```
+
+### i. || (or)
+
+> ID가 둘 중 하나라도 맞으면 되는 로그인 로직을 만들어보자
+
+```java
+String id = args[0];
+		
+if (id.equals("Goo") || id.equals("goo")) {
+	System.out.println("login");
+} else {
+	System.out.println("worng");
+}
+```
+
+### i. ! (not)
+
+```java
+if (!true) {
+	System.out.println(1);
+}
+if (!false) {
+	System.out.println(2);
+}
+```
+
+```java
+2
+```
+
+
 ---
 
 
