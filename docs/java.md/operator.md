@@ -83,7 +83,7 @@ true
 | 연산자    | 의미       |
 |:--------|:----------|
 | &&      | and       |
-| ||      | or        |
+| 아래 참고 | or        |
 | !       | not       |
 
 ### i. && (and)
@@ -101,7 +101,7 @@ if (id.equals("Goo") && password.equals("111")) {
 }
 ```
 
-### i. || (or)
+### ii. || (or)
 
 > ID가 둘 중 하나라도 맞으면 되는 로그인 로직을 만들어보자
 
@@ -115,7 +115,7 @@ if (id.equals("Goo") || id.equals("goo")) {
 }
 ```
 
-### i. ! (not)
+### iii. ! (not)
 
 ```java
 if (!true) {

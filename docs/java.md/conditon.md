@@ -5,19 +5,18 @@ parent: Java
 nav_order: 5
 ---
 
-# IV. 조건문
+# V. 조건문
 
 ## 1. if
+
+> 문자열 비교 로직을 활용하여 로그인 로직을 만들어보자
 
 ```java
 String id = args[0];
 if (id.equals("Goo")) {
 	System.out.println("로그인 완료");
-} else {
-	System.out.println("잘못된 ID");
-}
+} 
 ```
-_문자열 비교 연산자로 아이디 입력값이 맞는지 출력하는 조건문_
 
 ### 결과
 
@@ -38,7 +37,8 @@ Index 0 out of bounds for length 0 at DynamicBeat dynamic_beat_1.hi.main(hi.java
 ---
 
 ## 2. else
-_else를 이용해서 비밀번호도 받아보자_
+
+> else를 이용해서 아이디가 맞았는지 틀렸는지 나타내는 로직을 만들어보자
 
 ```java
 String id = args[0];
