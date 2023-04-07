@@ -11,7 +11,7 @@ _입력 : 키보드, 마우스, 터치 등의 자극_
 _출력 : 그에 대한 반응_
 
 ---
- ## +. String[] args
+**String[] args**
 
 ```java
 public class hi {
@@ -83,11 +83,12 @@ public class inputDemo1 {
     System.out.println(i*1000);
     sc.close();
   }
-
 }
 ```
 
 {: .note-title }
+> ❔❔
+>
 > import java.util.Scanner;
 >
 > 의미 : java util 안에 있는 Scanner Library를 사용하겠다
@@ -117,9 +118,9 @@ sc.close();
 
 ---
 
-> Scanner를 통해 file 데이터를 입력해보자
+> 이번에는 Scanner를 통해 file 데이터를 입력해보자
 
-### **iterm으로 txt 만들기**
+### **먼저 iterm으로 txt 만들기**
 
 ```
 cat > memo.txt
