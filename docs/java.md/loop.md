@@ -73,8 +73,8 @@ _반복문의 중단_
 ```java
 for (int i = 0; i < 6; i++) {  //6은 3보다 큰 숫자로 임의 지정
   if (i == 3) {
-	  System.out.println("만원되었습니다.");
-	  break;
+    System.out.println("만원되었습니다.");
+    break;
   }
   System.out.println("현재 수용 인원: " + (3-i));
 }
@@ -95,12 +95,12 @@ _직후 문장의 명령을 수행하지 않음. (반복문 자체의 중단이 
 ```java
 for (int i = 0; i < 5; i++) {
   if (i == 3) {
-	  System.out.println("만원되었습니다.");
-	  continue;
+    System.out.println("만원되었습니다.");
+    continue;
   }
   if (i > 3) {
-	  System.out.println("고장.");
-	  continue;
+    System.out.println("고장.");
+    continue;
   }
   System.out.println("현재 수용 인원: " + (3-i));
 }
@@ -115,7 +115,7 @@ for (int i = 0; i < 5; i++) {
 ```java
 for (int i = 0; i < 10; i++) {
   for (int j = 0; j < 10; j++) {
-	  System.out.println(i + "" + j);
+    System.out.println(i + "" + j);
   }
 }
 ```
@@ -130,13 +130,13 @@ for (int i = 0; i < 10; i++) {
 ```java
 for (int i = 0; i < 10; i++) {
   for (int j = 0; j < 10; j++) {
-	  if (i == 0) {
-	    if (j == 0)
-		    continue;
-	    System.out.println(" " + j);
-	    continue;
-	  }
-	  System.out.println(i + "" + j);
+    if (i == 0) {
+      if (j == 0)
+        continue;
+      System.out.println(" " + j);
+      continue;
+    }
+    System.out.println(i + "" + j);
   }
 }
 ```

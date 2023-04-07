@@ -36,7 +36,7 @@ _연관된 정보를 그룹핑하는 역할_
 
 ---
 
-## 1. 배열의 사용
+## 2. 배열의 사용
 
 ### i. 한번에 정의하는 방법
 
@@ -72,7 +72,7 @@ ra
 
 ---
 
-## 1. 배열과 반복문
+## 3. 배열과 반복문
 
 > 배열을 활용하여 동물의 건강검진 확인 문구를 출력해보자
 >
@@ -82,7 +82,7 @@ ra
 String[] animals = {"dog", "cat", "rat"};
 
 for (int i = 0; i < animals.length; i++) {
-	String animal = animals[i];
+  String animal = animals[i];
   System.out.println(animal + " 검사완료.");
 }
 ```

@@ -67,9 +67,9 @@ String password = args[1];
 
 if (id.equals("Goo")) {
   if (password.equals("1111")) {
-	  System.out.println("로그인 완료");
+    System.out.println("로그인 완료");
   } else {
-	    System.out.println("비밀번호 오류");
+      System.out.println("비밀번호 오류");
   }
 } else {
     system.out.println("로그인 완료");
@@ -89,18 +89,18 @@ public class hi {
   public static void main(String[] args) {
     int age;
 
-	  Scanner sc = new Scanner(System.in);
-	  System.out.println("나이?")
-	  age = sc.nextInt(); 
-	  //위의 내용은 직접 입력값을 받기 위한 로직
+    Scanner sc = new Scanner(System.in);
+    System.out.println("나이?")
+    age = sc.nextInt(); 
+    //위의 내용은 직접 입력값을 받기 위한 로직
 
-	  if (age > 10) {
-		  System.out.println("입장가능"); //10살 초과
-	  } else if (age == 10) {			  //10살 이하
-		    System.out.println("이벤트당첨");//딱 10살
-	  } else {
-		    System.out.println("입장불가");  //10살 미만
-	  }
+    if (age > 10) {
+      System.out.println("입장가능"); //10살 초과
+    } else if (age == 10) {			  //10살 이하
+        System.out.println("이벤트당첨");//딱 10살
+    } else {
+        System.out.println("입장불가");  //10살 미만
+    } 
   }
 }
 ```
