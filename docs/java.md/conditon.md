@@ -14,7 +14,7 @@ nav_order: 5
 ```java
 String id = args[0];
 if (id.equals("Goo")) {
-	System.out.println("로그인 완료");
+  System.out.println("로그인 완료");
 } 
 ```
 
@@ -43,9 +43,9 @@ Index 0 out of bounds for length 0 at DynamicBeat dynamic_beat_1.hi.main(hi.java
 ```java
 String id = args[0];
 if (id.equals("Goo")) {
-	System.out.println("로그인 완료");
+  System.out.println("로그인 완료");
 } else {
-	System.out.println("잘못된 ID");
+  System.out.println("잘못된 ID");
 }
 ```
 ---
@@ -63,13 +63,13 @@ if (id.equals("Goo")) {
 String id = args[0];
 String password = args[1];
 if (id.equals("Goo")) {
-	if (password.equals("1111")) {
-		System.out.println("로그인 완료");
-	} else {
-		System.out.println("비밀번호 오류");
-	}
+  if (password.equals("1111")) {
+	  System.out.println("로그인 완료");
+  } else {
+	  System.out.println("비밀번호 오류");
+  }
 } else {
-	system.out.println("로그인 완료");
+    system.out.println("로그인 완료");
 }
 ```
 
@@ -83,21 +83,21 @@ import java.util.Scanner;
 
 public class hi {
 
-	public static void main(String[] args) {
-		int age;
+  public static void main(String[] args) {
+    int age;
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("나이?")
-		age = sc.nextInt(); 
-		//위의 내용은 직접 입력값을 받기 위한 로직
+	Scanner sc = new Scanner(System.in);
+	System.out.println("나이?")
+	age = sc.nextInt(); 
+	//위의 내용은 직접 입력값을 받기 위한 로직
 
-		if (age > 10) {
-			System.out.println("입장가능"); //10살 초과
-		} else if (age == 10) {			  //10살 이하
-			System.out.println("이벤트당첨");//딱 10살
-		} else {
-			System.out.println("입장불가");  //10살 미만
-		}
+	if (age > 10) {
+		System.out.println("입장가능"); //10살 초과
+	} else if (age == 10) {			  //10살 이하
+		System.out.println("이벤트당첨");//딱 10살
+	} else {
+		System.out.println("입장불가");  //10살 미만
+	}
 
 }
 ```
@@ -112,31 +112,30 @@ _또한 조건에 들어갈 수 있는 데이터 타입이 한정적임_
 ```java
 switch(1) {
 case 1 :
-	System.out.println("one");
-    break;
+  System.out.println("one");
+  break;
 case 2 : 
-	System.out.println("twe");
-    break;
+  System.out.println("twe");
+  break;
 case 3 : 
-	System.out.println("three");
-    break;
+  System.out.println("three");
+  break;
 default:
-	System.out.println("default");
+  System.out.println("default");
 }
 ```
 ### if문으로 대체 가능함
 
 ```java
 int val = 1;
-	if (val == 1) {
-    	System.out.println("one");
-    } else if (val == 2) {
-    	System.out.println("twe");
-    } else if (val == 3) {
-    	System.out.println("three");
-    } else {
-    	System.out.println("default");
-    }
+if (val == 1) {
+  System.out.println("one");
+} else if (val == 2) {
+	System.out.println("twe");
+} else if (val == 3) {
+ 	System.out.println("three");
+} else {
+    System.out.println("default");
 }
 ```
 

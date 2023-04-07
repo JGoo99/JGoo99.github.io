@@ -66,11 +66,13 @@ System.out.println(i);    // 7
 
 _문자열 비교 예시_
 ```java
- String a = "Hello world";
-    String b = new String("Hello world");
-	System.out.println(a == b);
-	System.out.println(a.equals(b));
+String a = "Hello world";
+String b = new String("Hello world");
+
+System.out.println(a == b);
+System.out.println(a.equals(b));
 ```
+
 ```java
 false
 true
@@ -95,9 +97,9 @@ String id = args[0];
 String password = args[1];
 		
 if (id.equals("Goo") && password.equals("111")) {
-	System.out.println("login");
+  System.out.println("login");
 } else {
-	System.out.println("worng");
+  System.out.println("worng");
 }
 ```
 
@@ -109,9 +111,9 @@ if (id.equals("Goo") && password.equals("111")) {
 String id = args[0];
 		
 if (id.equals("Goo") || id.equals("goo")) {
-	System.out.println("login");
+  System.out.println("login");
 } else {
-	System.out.println("worng");
+  System.out.println("worng");
 }
 ```
 
@@ -119,10 +121,10 @@ if (id.equals("Goo") || id.equals("goo")) {
 
 ```java
 if (!true) {
-	System.out.println(1);
+  System.out.println(1);
 }
 if (!false) {
-	System.out.println(2);
+  System.out.println(2);
 }
 ```
 

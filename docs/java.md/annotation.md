@@ -33,10 +33,10 @@ String b = "coding";
 _한 문장을 나타낼 때 사용_
 ```java
 public void println(int x) {
-	synchronized (this) {
-    	print(x);
-      	newLine();
- 	}
+  synchronized (this) {
+	print(x);
+	newLine();
+  }
 }
 ```
 ```java
