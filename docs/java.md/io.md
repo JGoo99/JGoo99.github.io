@@ -37,15 +37,14 @@ for (int j = 0; j < 5; j++) {
 
 ```java
 public static void numbering() {  //정의
-  for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < 5; i++)
   System.out.println(i);
-  }
 }
 
 public static void main(String[] args) {
   for (int j = 0; j < 5; j++) {
-    numbering();  //호출
-    System.out.println(" " + (j+1) );
+  numbering();  //호출
+  System.out.println(" " + (j+1) );
   }
 }
 ```
@@ -65,14 +64,14 @@ public static void main(String[] args) {
 
 ```java
 public static void numbering(int init, int limit) { //복수의 인자
-  for (int i = init; i < limit; i++)
-    System.out.println(i);
+	for (int i = init; i < limit; i++)
+		System.out.println(i);
 }
 
-public static void main(String[] args) {  
+public static void main(String[] args) {
   for (int j = 0; j < 5; j++) {
-    numbering(1,5);  //numbering(init, limit)
-    System.out.println("  " + (j+1));
+  	numbering(1,5);  //numbering(init, limit)
+  	System.out.println("  " + (j+1));
   }
 }
 ```
@@ -94,29 +93,27 @@ _활용도가 더 높은 출력방법_
 
 ```java
 public static String numbering(int init, int limit) { 
-  String output = ""; //빈 문자열 (문자열로 저장하여 리턴하기 위함)
+	String output = ""; //빈 문자열 (문자열로 저장하여 리턴하기 위함)
 	
   for (int i = init; i < limit; i++)
-    output += i;
+  	output += i;
   return output;  //프린트하지 않고 output에 값을 저장
 }
 
 public static void main(String[] args) {
   for (int j = 0; j < 5; j++) {
-    String result = numbering(1, 5); //데이터 타입을 지정해줘야함!!
-    System.out.println(result);      //output에 저장된 값을 출력함
+		String result = numbering(1, 5); //데이터 타입을 지정해줘야함!!
+		System.out.println(result);      //output에 저장된 값을 출력함
   }
 }
 ```
 
 {: .important-title }
-> Return을 사용할 때
+> Return의 사용
 >
-> 1. 정의 매소드에서 데이터 타입 바꾸기 
+> **String** 으로 바꿔주어야 하며,
 >
-> 2. main 매소드에서 호출 시에 데이터 타입 지정하기
->
-> (**return 받는 데이터** 기준) _아래 예시 참고_
+> 리턴을 통해 반환할 값의 **데이터형식**을 매소드 옆에 지정해주어야 한다!
 
 ---
 
@@ -137,15 +134,15 @@ import java.util.Arrays;
 
 public class hi {
 
-	public static String[] getKorean() { //1. 정의 매소드에서 배열 타입으로 지정
-    String[] korean = {"ga", "na", "da"};
-    return korean;
-  }
-  
-  public static void main(String[] args) {
-    String[] korean = getKorean(); //2. 매인 매소드에서 배열 타입 지정
-    System.out.println(Arrays.toString(korean)); //배열값을 한번에 출력
-  }
+	public static String[] getKorean() { //배열 매소드를 사용해야함
+		String[] korean = {"ga", "na", "da"};
+		return korean;
+	}
+
+	public static void main(String[] args) {
+	  String[] korean = getKorean(); //반환받는 값의 데이터형식을 지정
+	  System.out.println(Arrays.toString(korean)); //배열값을 한번에 출력
+	}
 }
 ```
 
