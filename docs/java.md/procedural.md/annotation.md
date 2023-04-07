@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 주석과 새미콜론
-parent: Java
+parent: 절차지향프로그래밍
+grand_parent: Java
 nav_order: 2
 ---
 

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 입력과 출력
-parent: Java
+parent: 절차지향프로그래밍
+grand_parent: Java
 nav_order: 9
 ---
 

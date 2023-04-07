@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 데이터 타입
-parent: Java
+parent: 절차지향프로그래밍
+grand_parent: Java
 nav_order: 1
 ---
 
