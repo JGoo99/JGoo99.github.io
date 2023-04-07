@@ -7,27 +7,148 @@ nav_order: 8
 
 # VIII. 매소드
 
+```java
+public static void main(String[] args) {
+  return
+}
+```
+
+_지금까지 사용해온 위의 **void main** 이 곧 매소드이다_
+
 ---
 
 ## 1. 재활용성
 
+_매소드는 반복적인 코드의 활용성을 높일 수 있다_
 
+> 0부터 4까지 출력하는 for 문을 5번 출력해보자
+
+```java
+for (int j = 0; j < 5; j++) {
+  for (int i = 0; i < 5; i++) {
+	  System.out.println(i);
+  }
+  System.out.println(" " + (j+1) ); //몇번 반복했는지 확인용
+}
+```
+
+{: .note }
+> 아래처럼 매소드를 활용하면 간단해진다....~~뭐가 간단해진거지?ㅋㅋ~~
+
+```java
+public static void numbering() {  //정의
+  for (int i = 0; i < 5; i++)
+  System.out.println(i);
+}
+
+public static void main(String[] args) {
+  for (int j = 0; j < 5; j++) {
+  numbering();  //호출
+  System.out.println(" " + (j+1) );
+  }
+}
+```
+
+{: .new-title }
+> 🧐
+>
+> 만약 i를 다른 수로 초기화하고 싶다면? (ex. 1부터 시작)
+>
+> numbering(**변수**) 활용하기!
 
 ---
 
 ## 1. 입력과 출력
 
+> 위의 함수를 numbering(**변수**)를 활용하여 표현하자
+
+```java
+public static void numbering(int init, int limit) { //복수의 인자
+	for (int i = init; i < limit; i++)
+		System.out.println(i);
+}
+
+public static void main(String[] args) {
+  for (int j = 0; j < 5; j++) {
+  	numbering(1,5);  //numbering(init, limit)
+  	System.out.println("  " + (j+1));
+  }
+}
+```
 
 
 ---
 
-## 1. 복수의 인자
+## 2. Return
+_활용도가 더 높은 출력방법_
 
+{: .note-title }
+> Return의 기능
+>
+> 1. 매소드의 결과를 매인으로 반환
+>
+> 2. 매소드의 실행을 완전히 종료
 
+>
+
+```java
+public static String numbering(int init, int limit) { 
+	String output = ""; //빈 문자열 (문자열로 저장하여 리턴하기 위함)
+	
+  for (int i = init; i < limit; i++)
+  	output += i;
+  return output;  //프린트하지 않고 output에 값을 저장
+}
+
+public static void main(String[] args) {
+  for (int j = 0; j < 5; j++) {
+		String result = numbering(1, 5); //데이터 타입을 지정해줘야함!!
+		System.out.println(result);      //output에 저장된 값을 출력함
+  }
+}
+```
+
+{: .important-title }
+> Return의 사용
+>
+> **String** 으로 바꿔주어야 하며,
+>
+> 리턴을 통해 반환할 값의 **데이터형식**을 매소드 옆에 지정해주어야 한다!
 
 ---
 
-## 1. 어플리케이션 응용
+{: .new-title }
+> 🤔
+>
+> 위에서 return은 매소드를 종료시킨다고 했다
+>
+> 그렇다면 하나의 매소드에서 여러개의 리턴값을 받을 방법이 없을까?
+>
+> **배열** 사용하기!
+
+
+> 배열을 샤용하여 여러개의 리턴값을 받아보자
+
+```java
+import java.util.Arrays;
+
+public class hi {
+
+	public static String[] getKorean() { //배열 매소드를 사용해야함
+		String[] korean = {"ga", "na", "da"};
+		return korean;
+	}
+
+	public static void main(String[] args) {
+	  String[] korean = getKorean(); //반환받는 값의 데이터형식을 지정
+	  System.out.println(Arrays.toString(korean)); //배열값을 한번에 출력
+	}
+}
+```
+
+```java
+[ga, na, da]
+```
 
 
 
