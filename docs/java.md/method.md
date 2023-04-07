@@ -130,20 +130,22 @@ public static void main(String[] args) {
 > **배열** 사용하기!
 
 
-> 배열을 샤용하여 여러개의 리턴값을 받아보자
+> 배열을 사용하여 여러개의 리턴값을 받아보자
 
 ```java
 import java.util.Arrays;
 
 public class hi {
 
-	public static String[] getKorean() { //1. 정의 매소드에서 배열 타입으로 지정
+  public static String[] getKorean() { 
+  //1. 정의 매소드에서 배열 타입으로 지정
     String[] korean = {"ga", "na", "da"};
     return korean;
   }
   
   public static void main(String[] args) {
-    String[] korean = getKorean(); //2. 매인 매소드에서 배열 타입 지정
+    String[] korean = getKorean(); 
+    //2. 매인 매소드에서 배열 타입 지정
     System.out.println(Arrays.toString(korean)); //배열값을 한번에 출력
   }
 }

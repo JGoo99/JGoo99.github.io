@@ -40,6 +40,9 @@ has_toc: false
   2. 입력과 출력
   3. 복수의 인자
 - 입력과 출력(별도)
+  1. run configuration
+  2. scanner
+  3. gui
 - 객체 지향 프로그래밍
   1. 정의
   2. 클래스와 인스턴스
