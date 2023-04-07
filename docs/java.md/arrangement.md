@@ -42,6 +42,7 @@ _연관된 정보를 그룹핑하는 역할_
 
 ```java
 String[] korean = {"ga", "na", "da", "ra"};
+
 System.out.println(korean[0]);
 System.out.println(korean[3]);
 ```
@@ -59,6 +60,7 @@ korean[0] = "ga";
 korean[1] = "na";
 korean[2] = "da";
 korean[3] = "ra";
+
 System.out.println(korean.length);
 System.out.println(korean[3]);
 ```
@@ -78,10 +80,10 @@ ra
 
 ```java
 String[] animals = {"dog", "cat", "rat"};
-  for (int i = 0; i < animals.length; i++) {
-			
-    String animal = animals[i];
-    System.out.println(animal + " 검사완료.");
+
+for (int i = 0; i < animals.length; i++) {
+	String animal = animals[i];
+  System.out.println(animal + " 검사완료.");
 }
 ```
 
@@ -106,8 +108,10 @@ _배열의 크기보다 큰 index를 호출했을 때_
 
 ```java
 String[] korean = {"ga", "na", "da"};
+
 System.out.println(korean[3]);
 ```
+
 ```java
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3 at DynamicBeat/dynamic_beat_1.hi.main(hi.java:8)
 ```

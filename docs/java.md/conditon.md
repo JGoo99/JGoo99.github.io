@@ -13,6 +13,7 @@ nav_order: 5
 
 ```java
 String id = args[0];
+
 if (id.equals("Goo")) {
   System.out.println("로그인 완료");
 } 
@@ -42,10 +43,11 @@ Index 0 out of bounds for length 0 at DynamicBeat dynamic_beat_1.hi.main(hi.java
 
 ```java
 String id = args[0];
+
 if (id.equals("Goo")) {
   System.out.println("로그인 완료");
 } else {
-  System.out.println("잘못된 ID");
+    System.out.println("잘못된 ID");
 }
 ```
 ---
@@ -133,9 +135,9 @@ int val = 1;
 if (val == 1) {
   System.out.println("one");
 } else if (val == 2) {
-	  System.out.println("twe");
+    System.out.println("twe");
 } else if (val == 3) {
- 	  System.out.println("three");
+    System.out.println("three");
 } else {
     System.out.println("default");
 }

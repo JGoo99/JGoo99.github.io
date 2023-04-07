@@ -23,9 +23,11 @@ _연산자 중에 +는 문자열에도 사용 가능하다_
 ```java
 String a = "안녕";
 String b = "하세요";
+
 System.out.println(a + b);
 ```
-```markdown
+
+```
 안녕하세요
 ```
 
@@ -113,7 +115,7 @@ String id = args[0];
 if (id.equals("Goo") || id.equals("goo")) {
   System.out.println("login");
 } else {
-  System.out.println("worng");
+    System.out.println("worng");
 }
 ```
 

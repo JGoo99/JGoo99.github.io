@@ -21,6 +21,7 @@ while (i < 5) {
   i++;
 }
 ```
+
 ```java
 D + 1
 D + 2
@@ -55,6 +56,7 @@ for (int i = 1; i < 5; i++) {
   System.out.println( "D + " + i );
 }
 ```
+
 ```
 결과는 동일하며 코드가 더욱 간단해짐을 알 수 있음
 ```
@@ -133,8 +135,8 @@ for (int i = 0; i < 10; i++) {
 		    continue;
 	    System.out.println(" " + j);
 	    continue;
-	}
-	System.out.println(i + "" + j);
+	  }
+	  System.out.println(i + "" + j);
   }
 }
 ```
