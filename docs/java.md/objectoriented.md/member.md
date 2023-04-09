@@ -239,14 +239,12 @@ c.static_instance();
 > 클래스(static)매소드에서 인스턴스(non-static) 변수에 접근이 안 된다는 에러
 
 **왜 안 될까?**
+[Link button](https://wisdom-and-record.tistory.com/35){: .btn .btn-outline }
 1. 클래스와 인스턴스는 만들어지는 시기와 장소가 다르다
 2. 클래스가 먼저 생성된 후 인스턴스가 생성된다
 3. 즉, 인스턴스의 존재는 클래스 멤버 존재를 보장한다
 4. 하지만 클래스의 존재는 인스턴스의 생성을 보장할 수 없다
 5. 따라서 클래스 매소드에서 존재가 확실하지 않은 인스턴스 멤버를 호출할 수 없다
-
-'클래스 멤버는 왜 인스턴스 멤버를 참조할 수 없을까?'
-[Link button](https://wisdom-and-record.tistory.com/35){: .btn .btn-outline }
 
 ```java
 c.instance_static();
