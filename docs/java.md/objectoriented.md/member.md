@@ -12,18 +12,19 @@ _구성원, 즉 변수와 매소드이다_
 
 ---
 
-## 1. 인스턴스의 맴버
+## 1. 인스턴스의 멤버
 
 > 클래스 아래 n개의 인스턴스를 만들 수 있고
 >
-> 인스턴스c1과 인스턴스 c2에는 각각의 맴버가 있다
-
+> 인스턴스c1과 인스턴스c2에는 각각의 멤버가 있다
 
 ---
 
-## 2. 클래스의 맴버
+## 2. 클래스의 멤버
 
-> 언제 클래스 맴버를 선언하는 것이 좋을까?
+### i. 클래스의 변수
+
+> 언제 클래스 변수를 선언하는 것이 좋을까?
 >
 > 1. 해당 클래스 하의 모든 인스턴스가 공유하는 고정 변수 (ex.π)
 >
@@ -31,52 +32,46 @@ _구성원, 즉 변수와 매소드이다_
 >
 > _아래 예시를 통해 확인해보자_
 
-### i. 클래스의 변수
-
-> 1. 해당 클래스 하의 모든 인스턴스가 공유하는 고정 변수 (ex.π)
+### **고정 변수**
 
 ```java
 class Calculator {
-	static double PI = 3.14;
+  static double PI = 3.14;
+  //클래스 고정 변수
   //사실 final을 이용하여 상수로 선언하는 것이 바람직 (아직 안 배움)
-	int left, right;
-	
-	public void setOprands(int left, int right) {
-		this.left = left;
-		this.right = right;
-	}
+  int left, right;
+  //인스턴스 변수
 
-//sum과 avg 생략	
-	
+  public void setOprands(int left, int right) {
+    this.left = left;
+    this.right = right;
+  }
 }
 
 public class test {
 	
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 		
-		Calculator c1 = new Calculator();
-		c1.setOprands(10, 20);
+    Calculator c1 = new Calculator();
+    c1.setOprands(10, 20);
 		
-		Calculator c2 = new Calculator();
-		c2.setOprands(20, 40);
+    Calculator c2 = new Calculator();
+    c2.setOprands(20, 40);
 
-		System.out.println(c1.PI);
-		System.out.println(c2.PI);
-		System.out.println(Calculator.PI); 
+    System.out.println(c1.PI);
+    System.out.println(c2.PI);
+    System.out.println(Calculator.PI); 
     //세개 모두 같은 값이 출력됨
-		
 	}
 }
 ```
 
-{: .highlight-title }
-> class 맴버 접근방법
->
-> 객체(c1, c2)를 거쳐서 접근 가능 **c1.PI**
->
-> 클래스를 통해 다이랙트로 접근 가능 **Calculator.PI**
+{: .highlight }
+> 어떤 인스턴스로 접근해도 같은 PI값이 출력된다
 
 ---
+
+**변수 변경**
 
 > 2. 클래스 변수의 변경사항을 모든 인스턴스에 공유해야 할 경우
 >
@@ -84,38 +79,40 @@ public class test {
 
 ```java
 class Calculator {
-	static double PI = 3.14;
-	int left, right;
-	static int base = 0;
+  int left, right;
+  //인스턴스 변수
+  static int base = 0;
+	//클래스 변수
+
+  public void setOprands(int left, int right) {
+    this.left = left;
+    this.right = right;
+  }
 	
-	public void setOprands(int left, int right) {
-		this.left = left;
-		this.right = right;
-	}
-	
-	public void sum() {
-		System.out.println( this.left + this.right + base );
-	}
+  public void sum() {
+    System.out.println( this.left + this.right + base );
+    //인스턴스 변수 + 클래스 변수
+  }
 }
 
 public class test {
-	
-	public static void main(String[] args) {
+	  
+  public static void main(String[] args) {
 		
-		Calculator c1 = new Calculator();
-		c1.setOprands(10, 20);
-		c1.sum(); // 10 + 20 + 0
+    Calculator c1 = new Calculator();
+    c1.setOprands(10, 20);
+    c1.sum(); // 10 + 20 + 0
 		
-		Calculator c2 = new Calculator();
-		c2.setOprands(20, 40);
-		c2.sum(); // 20 + 40 + 0
+    Calculator c2 = new Calculator();
+    c2.setOprands(20, 40);
+    c2.sum(); // 20 + 40 + 0
 		
-		Calculator.base = 10;
+    Calculator.base = 10;
     //클래스 하의 변수를 변경함
 		
-		c1.sum(); // 10 + 20 + 10
-		c2.sum(); // 20 + 40 + 10
-	}
+    c1.sum(); // 10 + 20 + 10
+    c2.sum(); // 20 + 40 + 10
+  }
 }
 ```
 
@@ -126,30 +123,31 @@ public class test {
 70
 ```
 
+{: .highlight }
+> 클래스 변수 base의 변경이 모든 인스턴스에 적용되고 있다
+
 ---
 
-### iii. 클래스의 맴버_매소드
+### ii. 클래스의 매소드
 
-> 인스턴스 변수를 사용하지 않고 바로 클래스를 통해 접근하기
-
-
+> 인스턴스를 사용하지 않고 바로 클래스를 통해 매소드 접근하기
 
 ```java
 class Calculator {
 	
-	public static void sum(int left, int right) {
-		System.out.println( left + right );
-	}
+  public static void sum(int left, int right) {
+    System.out.println( left + right );
+  }
   //'static'으로 변경해주어야 함
 }
 
 public class test {
 	
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 		
-		Calculator.sum(10, 20);
-		Calculator.sum(20, 40);
-	}
+    Calculator.sum(10, 20);
+    Calculator.sum(20, 40);
+  }
 }
 ```
 
@@ -164,6 +162,154 @@ _sum 매소드에서 static void 로 지정해주어야 에러를 해결할 수 
 
 ---
 
+## 3. 멤버 접근 : 타입별 비교
+
+> 클래스와 인스턴스 멤버에 접근하는 방법을 알아보자
+
+{: .note-title }
+> 클래스-인스턴스 접근 원칙
+>
+> 1. 인스턴스 매소드는 클래스 맴버에 접근 O
+>
+> 2. 클래스 매소드는 인스턴스 맴버에 접근 X
+
+```java
+class C1 {
+
+  static int static_variable = 1;
+  //클래스 변수
+  int instance_variable = 2;
+  //인스턴스 변수
+	
+  static void static_static() {
+    System.out.println(static_variable); 
+  //클래스 매소드에서 클래스 변수 접근
+  }
+	
+  static void static_instance() {
+    System.out.println(instance_variable); //컴파일 오류
+  //클래스 매소드에서 인스턴스 변수 접근
+  }
+	
+  void instance_static() {
+    System.out.println(static_variable);
+  //인스턴스 매소드에서 클래스 변수 접근
+  }
+	
+  void instance_instance() {
+    System.out.println(instance_variable);
+  //인스턴스 매소드에서 인스턴스 변수 접근
+  }
+}
+```
+
+```java
+public class test {
+	
+  public static void main(String[] args) {
+		
+    C1 c = new C1();
+  }
+}
+```
+
+### i. 인스턴스에서 매소드 접근
+
+```java
+c.static_static();
+```
+
+> 인스턴스를 이용해서 클래스 매소드에 접근 O
+>
+> 클래스 매소드에서 클래스 변수에 접근 O
+
+```java
+c.static_instance();
+```
+
+> 인스턴스를 이용하여 클래스 매소드에 접근 O
+>
+> 클래스 매소드에서 인스턴스 변수에 접근 X
+
+{: .warning-title }
+> Error
+>
+> Cannot make a **static reference** to the **non-static field** 
+>
+> 클래스(static)매소드에서 인스턴스(non-static) 변수에 접근이 안 된다는 에러
+
+**왜 안 될까?**
+1. 클래스와 인스턴스는 만들어지는 시기와 장소가 다르다
+2. 클래스가 먼저 생성된 후 인스턴스가 생성된다
+3. 즉, 인스턴스의 존재는 클래스 멤버 존재를 보장한다
+4. 하지만 클래스의 존재는 인스턴스의 생성을 보장할 수 없다
+5. 따라서 클래스 매소드에서 존재가 확실하지 않은 인스턴스 멤버를 호출할 수 없다
+
+'클래스 멤버는 왜 인스턴스 멤버를 참조할 수 없을까?'
+[Link button](https://wisdom-and-record.tistory.com/35){: .btn .btn-outline }
+
+```java
+c.instance_static();
+```
+
+> 인스턴스를 이용해서 인스턴스 매소드에 접근 O
+>
+> 인스턴스 매소드에서 클래스 변수에 접근 O
+
+```java
+c.instance_instance();
+```
+
+> 인스턴스를 이용해서 인스턴스 매소드에 접근 O
+>
+> 인스턴스 매소드에서 인스턴스 변수에 접근 O
+
+### ii. 클래스에서 매소드 접근
+
+```java
+C1.static_static();
+```
+
+> 클래스를 이용해서 클래스 매소드에 접근 O
+>
+> 클래스 매소드에서 클래스 변수에 접근 O
+
+```java
+C1.static_instance();
+```
+
+> 클래스를 이용해서 클래스 매소드에 접근 O
+>
+> 클래스 매소드에서 인스턴스 변수에 접근 X
+
+{: .warning-title }
+> Error
+>
+> Cannot make a **static reference** to the **non-static field** instance_variable
+
+```java
+C1.instance_static();
+```
+
+> 클래스를 이용해서 인스턴스 매소드에 접근 X
+
+{: .warning-title }
+> Error
+>
+> Cannot make a **static reference** to the **non-static method** 
+
+```java
+C1.instance_instance();
+```
+
+> 클래스를 이용해서 인스턴스 매소드에 접근 X
+
+{: .warning-title }
+> Error
+>
+> Cannot make a **static reference** to the **non-static method**
+
+---
 
 [Link button](https://opentutorials.org/course/1223/5440){: .btn .btn-outline }
 

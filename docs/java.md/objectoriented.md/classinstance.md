@@ -18,7 +18,7 @@ nav_order: 2
 
 > 일종의 설계도라고 할 수 있다
 >
-> 즉, 매소드를 정의하는 것이고
+> 즉, 매소드를 정의하는 것이며
 >
 > 사용자 정의 데이터 타입을 만드는 것이다
 >
@@ -28,8 +28,9 @@ nav_order: 2
 
 > 클래스가 설계도라면 인스턴스는 제품이다
 >
-> 하나의 구체적인 객체이며, 정의된 클래스를 호출하는 것이다
-
+> 하나의 구체적인 객체이며
+> 
+> 정의된 클래스를 호출하는 것이다
 
 ---
 
@@ -45,7 +46,7 @@ _기존 코드의 문제를 개선하고 더욱 효율적이게 만드는 과정
 ```java
 public static void main(String[] args) {
   System.out.println(10 + 20);
-  System.out.println(20 + 26);
+  System.out.println(20 + 60);
 }
 ```
 
@@ -63,7 +64,9 @@ public static void main(String[] args) {
 }
 ```
 
-{: .highlight }
+{: .highlight-title }
+> Refactoring의 장점
+>
 > 객체의 로직을 알기때문에 sum(a,b)의 해석이 쉽다 (가독성)
 >
 > sum 객체는 다른 코드에도 활용이 가능하다 (재활용성)
@@ -95,12 +98,13 @@ sum(left, right);
 
 > 클래스와 인스턴스를 활용하여 객체화 해보자
 >
-> 계산(덧셈, 평균) 로직의 클래스를 만들고, 메인에서 인스턴스하기
+> 계산(덧셈, 평균) 로직의 클래스를 만들고, 메인에서 인스턴스로 호출하기
 
 ```java
 class Calculator {
 	
   int left, right;
+  //인스턴스 변수
 	
   public void setOprands(int left, int right) {
     this.left = left;
@@ -108,7 +112,7 @@ class Calculator {
   }
 	
   public void sum() {
-	  System.out.println(this.left + this.right);
+    System.out.println(this.left + this.right);
   }
 	
   public void avg() {
@@ -130,7 +134,7 @@ public class calculatorDemo1 {
     c2.setOprands(30, 60);
     c2.sum();
     c2.avg();
-	}
+  }
 }
 ```
 
