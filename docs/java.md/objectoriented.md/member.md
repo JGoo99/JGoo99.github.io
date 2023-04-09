@@ -26,13 +26,15 @@ _구성원, 즉 변수와 매소드이다_
 
 > 언제 클래스 변수를 선언하는 것이 좋을까?
 >
-> 1. 해당 클래스 하의 모든 인스턴스가 공유하는 고정 변수 (ex.π)
+> 1. 인스턴스에 따라서 변하지 않는 값이 필요한 경우 (ex.π)
 >
-> 2. 클래스 변수의 변경사항을 모든 인스턴스에 공유해야 할 경우
+> 2. 값의 변경 사항을 모든 인스턴스가 공유해야 하는 경우
+>
+> 3. 인스턴스를 생성할 필요가 없는 값을 클래스에 저장하고 싶은 경우
 >
 > _아래 예시를 통해 확인해보자_
 
-### **고정 변수**
+#### i-1) 인스턴스에 따라서 변하지 않는 값이 필요한 경우 (ex.π)
 
 ```java
 class Calculator {
@@ -60,9 +62,8 @@ public class test {
 
     System.out.println(c1.PI);
     System.out.println(c2.PI);
-    System.out.println(Calculator.PI); 
-    //세개 모두 같은 값이 출력됨
-	}
+    //모두 같은 값이 출력됨
+  }
 }
 ```
 
@@ -71,10 +72,8 @@ public class test {
 
 ---
 
-**변수 변경**
+#### i-2) 값의 변경 사항을 모든 인스턴스가 공유해야 하는 경우
 
-> 2. 클래스 변수의 변경사항을 모든 인스턴스에 공유해야 할 경우
->
 > ex. calculator 결과에 공통적으로 10만큼 더 더하고 싶다면?
 
 ```java
@@ -128,6 +127,21 @@ public class test {
 
 ---
 
+#### i-3) 인스턴스를 생성할 필요가 없는 값을 클래스에 저장하고 싶은 경우
+
+_i-1) 예제 참고_
+
+```java
+System.out.println(Calculator.PI); 
+```
+
+{: .highlight }
+> 클래스를 이용해서 클래스 변수에 접근하기 때문에 인스턴스 생성이 필요없다
+>
+> 클래스 매소드 또한 인스턴스 없이 접근 가능하다 _아래 예시 참고_
+
+---
+
 ### ii. 클래스의 매소드
 
 > 인스턴스를 사용하지 않고 바로 클래스를 통해 매소드 접근하기
@@ -159,6 +173,9 @@ public class test {
 > from the type Calculator
 
 _sum 매소드에서 static void 로 지정해주어야 에러를 해결할 수 있다_
+
+{: .highlight }
+> 클래스를 통해 클래스 매소드로 접근이 가능하다
 
 ---
 
@@ -283,7 +300,7 @@ C1.static_instance();
 {: .warning-title }
 > Error
 >
-> Cannot make a **static reference** to the **non-static field** instance_variable
+> Cannot make a **static reference** to the **non-static field**
 
 ```java
 C1.instance_static();
