@@ -34,7 +34,7 @@ _구성원, 즉 변수와 매소드이다_
 >
 > _아래 예시를 통해 확인해보자_
 
-#### i-1) 인스턴스에 따라서 변하지 않는 값이 필요한 경우 (ex.π)
+### **i-1) 인스턴스에 따라서 변하지 않는 값이 필요한 경우 (ex.π)**
 
 ```java
 class Calculator {
@@ -72,7 +72,7 @@ public class test {
 
 ---
 
-#### i-2) 값의 변경 사항을 모든 인스턴스가 공유해야 하는 경우
+### **i-2) 값의 변경 사항을 모든 인스턴스가 공유해야 하는 경우**
 
 > ex. calculator 결과에 공통적으로 10만큼 더 더하고 싶다면?
 
@@ -127,7 +127,7 @@ public class test {
 
 ---
 
-#### i-3) 인스턴스를 생성할 필요가 없는 값을 클래스에 저장하고 싶은 경우
+### **i-3) 인스턴스를 생성할 필요가 없는 값을 클래스에 저장하고 싶은 경우**
 
 _i-1) 예제 참고_
 
@@ -136,7 +136,7 @@ System.out.println(Calculator.PI);
 ```
 
 {: .highlight }
-> 클래스를 이용해서 클래스 변수에 접근하기 때문에 인스턴스 생성이 필요없다
+> 클래스를 이용해서 클래스 변수에 접근할 수 있기 때문에 인스턴스 생성이 필요없다
 >
 > 클래스 매소드 또한 인스턴스 없이 접근 가능하다 _아래 예시 참고_
 
@@ -168,9 +168,7 @@ public class test {
 {: .warning-title }
 > Error
 >
-> Cannot make a static reference to the non-static method sum(int, int)
->
-> from the type Calculator
+> Cannot make a **static reference** to the **non-static method** 
 
 _sum 매소드에서 static void 로 지정해주어야 에러를 해결할 수 있다_
 
