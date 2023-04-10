@@ -185,7 +185,7 @@ public class test {
 
 ---
 
-- 메인에서 지역변수로 선언하기
+1. 메인에서 지역변수로 선언하기
 
 ```java
 public static void main(String[] args) {
@@ -202,7 +202,7 @@ public static void main(String[] args) {
 
 ---
 
-- 클래스 매소드의 변수를 지역변수로 바꾸기
+2. 클래스 매소드의 변수를 지역변수로 바꾸기
 
 ```java
 public void a() {
@@ -260,7 +260,9 @@ public class test {
 
 ### **바람직한 유효범위에 대하여**
 
-{: .warning }
+{: .warning-title }
+> 🐷
+>
 > 사실 인스턴스 매소드에서 전역 인스턴스 변수를 사용하는 것은 비추
 >
 > 해당 매소드에 영향을 미치는 변수임을 알기 어렵기 때문
