@@ -10,6 +10,15 @@ nav_order: 3
 
 _구성원, 즉 변수와 매소드이다_
 
+### *용어 정리**
+
+| Member       | Terms              | 
+|:-------------|:-------------------|
+| 클래스 매소드   | static method      |
+| 클래스 변수     | static field       |
+| 인스턴스 매소드  | non-static method  |
+| 인스턴스 변수   | non-static field    |
+
 ---
 
 ## 1. 인스턴스의 멤버
@@ -254,7 +263,12 @@ c.static_instance();
 > 클래스(static)매소드에서 인스턴스(non-static) 변수에 접근이 안 된다는 에러
 
 **왜 안 될까?**
-[Link button](https://wisdom-and-record.tistory.com/35){: .btn .btn-outline }
+
+<span class="fs-3">
+[Link Button](https://wisdom-and-record.tistory.com/35){: .btn }
+</span>
+</div>
+
 1. 클래스와 인스턴스는 만들어지는 시기와 장소가 다르다
 2. 클래스가 먼저 생성된 후 인스턴스가 생성된다
 3. 즉, 인스턴스의 존재는 클래스 멤버 존재를 보장한다
