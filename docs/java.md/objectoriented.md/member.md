@@ -10,7 +10,7 @@ nav_order: 3
 
 _구성원, 즉 변수와 매소드이다_
 
-### *용어 정리**
+### **용어 정리**
 
 | Member       | Terms              | 
 |:-------------|:-------------------|
@@ -263,11 +263,9 @@ c.static_instance();
 > 클래스(static)매소드에서 인스턴스(non-static) 변수에 접근이 안 된다는 에러
 
 **왜 안 될까?**
-
 <span class="fs-3">
 [Link Button](https://wisdom-and-record.tistory.com/35){: .btn }
 </span>
-</div>
 
 1. 클래스와 인스턴스는 만들어지는 시기와 장소가 다르다
 2. 클래스가 먼저 생성된 후 인스턴스가 생성된다
