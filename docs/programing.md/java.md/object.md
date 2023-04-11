@@ -1,9 +1,9 @@
 ---
 layout: default
 title: 객체
-parent: 객체지향프로그래밍
-grand_parent: Java
-nav_order: 1
+parent: Java
+grand_parent: Programing
+nav_order: 10
 ---
 
 # I. 객체지향 프로그래밍이란?

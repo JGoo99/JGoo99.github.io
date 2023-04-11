@@ -1,9 +1,9 @@
 ---
 layout: default
 title: 초기화와 생성자
-parent: 객체지향프로그래밍
-grand_parent: Java
-nav_order: 5
+parent: Java
+grand_parent: Programing
+nav_order: 14
 ---
 
 # V. 초기화와 생성자

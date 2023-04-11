@@ -1,9 +1,9 @@
 ---
 layout: default
 title: 유효범위
-parent: 객체지향프로그래밍
-grand_parent: Java
-nav_order: 4
+parent: Java
+grand_parent: Programing
+nav_order: 13
 ---
 
 # IV. 유효범위

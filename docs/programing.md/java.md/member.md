@@ -1,9 +1,9 @@
 ---
 layout: default
 title: 멤버
-parent: 객체지향프로그래밍
-grand_parent: Java
-nav_order: 3
+parent: Java
+grand_parent: Programing
+nav_order: 12
 ---
 
 # III. 멤버

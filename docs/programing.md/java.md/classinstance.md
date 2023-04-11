@@ -1,9 +1,9 @@
 ---
 layout: default
 title: 클래스와 인스턴스
-parent: 객체지향프로그래밍
-grand_parent: Java
-nav_order: 2
+parent: Java
+grand_parent: Programing
+nav_order: 11
 ---
 
 # II. 클래스와 인스턴스

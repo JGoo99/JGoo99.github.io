@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 연산자
-parent: 절차지향프로그래밍
-grand_parent: Java
+parent: Java
+grand_parent: Programing
 nav_order: 4
 ---
 
