@@ -6,7 +6,7 @@ grand_parent: Programing
 nav_order: 15
 ---
 
-# V. 초기화와 생성자
+# XIV. 초기화와 생성자
 
 ---
 

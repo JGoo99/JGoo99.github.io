@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Git
+title: 사용법
+parent: Git
 nav_order: 2
-has_children: true
 ---

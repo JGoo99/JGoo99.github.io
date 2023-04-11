@@ -6,7 +6,7 @@ grand_parent: Programing
 nav_order: 12
 ---
 
-# II. 클래스와 인스턴스
+# XI. 클래스와 인스턴스
 
 > 클래스와 인스턴스의 관계를 이해하는 것이 중요하다
 

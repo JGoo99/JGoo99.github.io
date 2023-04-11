@@ -6,7 +6,7 @@ grand_parent: Programing
 nav_order: 13
 ---
 
-# III. 멤버
+# XII. 멤버
 
 _구성원, 즉 변수와 매소드이다_
 

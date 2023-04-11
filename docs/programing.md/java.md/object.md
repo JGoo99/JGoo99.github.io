@@ -6,7 +6,7 @@ grand_parent: Programing
 nav_order: 11
 ---
 
-# I. 객체지향 프로그래밍이란?
+# X. 객체지향 프로그래밍이란?
 
 _객체지향프로그래밍 (OOP: Object Oriented Programing)_
 

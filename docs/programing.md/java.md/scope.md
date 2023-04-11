@@ -6,7 +6,7 @@ grand_parent: Programing
 nav_order: 14
 ---
 
-# IV. 유효범위
+# XIII. 유효범위
 
 ---
 
