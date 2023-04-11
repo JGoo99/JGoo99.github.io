@@ -3,7 +3,7 @@ layout: default
 title: 매소드
 parent: Java
 grand_parent: Programing
-nav_order: 8
+nav_order: 9
 ---
 
 # VIII. 매소드
@@ -34,7 +34,7 @@ for (int j = 0; j < 5; j++) {
 ```
 
 {: .note }
-> 아래처럼 매소드를 활용하면 간단해진다....~~뭐가 간단해진거지?ㅋㅋ~~
+> 아래처럼 매소드를 활용하면 매인 매소드 코드가 간단해진다
 
 ```java
 public static void numbering() {  //정의
@@ -156,7 +156,17 @@ public class hi {
 [ga, na, da]
 ```
 
+---
 
+# **이 개념을 왜 배울까?(my opinion)**
+
+- 좋은 코드는 유지보수가 필요하다
+
+> 개발자는 개발과정이 힘들더라도 항상 좋은 유지보수를 갖기 위해 노력해야한다
+>
+> 매소드를 활용하면 변경사항을 적용하거나, 다른 코드에 재활용하기 용이하다
+>
+> 즉, 유지보수를 높일 수 있는 매소드는 좋은 코드의 키가 될 수 있다 !
 
 ---
 

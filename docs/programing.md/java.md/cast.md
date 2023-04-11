@@ -3,7 +3,7 @@ layout: default
 title: 형 변환
 parent: Java
 grand_parent: Programing
-nav_order: 3
+nav_order: 4
 ---
 
 # III. 형 변환
@@ -42,6 +42,18 @@ float b = 3.0F;
 
 System.out.println(a/b);
 ```
+---
+
+# **이 개념을 왜 배울까?(my opinion)**
+
+- 형변환
+
+> java는 변수의 데이터 타입을 엄격하게 통제한다
+>
+> 또한 어떤 결과 값을 가져오고 보내는 형변환 과정이 종종 발생하기 때문에
+>
+> 객체지향 수업 전에 형변환에 대한 기본 개념을 탄탄히 해야한다
+
 ---
 
 [Link button](https://opentutorials.org/course/1223/5330){: .btn .btn-outline }

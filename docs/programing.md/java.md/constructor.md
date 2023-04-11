@@ -3,7 +3,7 @@ layout: default
 title: 초기화와 생성자
 parent: Java
 grand_parent: Programing
-nav_order: 14
+nav_order: 15
 ---
 
 # V. 초기화와 생성자

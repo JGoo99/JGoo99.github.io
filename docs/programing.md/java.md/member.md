@@ -3,7 +3,7 @@ layout: default
 title: 멤버
 parent: Java
 grand_parent: Programing
-nav_order: 12
+nav_order: 13
 ---
 
 # III. 멤버
@@ -333,6 +333,18 @@ C1.instance_instance();
 > Error
 >
 > Cannot make a **static reference** to the **non-static method**
+
+---
+
+# **이 개념을 왜 배울까?(my opinion)**
+
+- 객체지향에 점점 가까워지고 있다!
+
+> 이전 시간까지 클래스와 인스턴스가 무엇인지 배웠다면
+>
+> 이번엔 그것들이 어떤 것들로 이루어져있고, 어떻게 만들어지는지 배운다
+>
+> 다음엔 각 멤버의 소속을 배우고, 접근 범위를 배운다
 
 ---
 

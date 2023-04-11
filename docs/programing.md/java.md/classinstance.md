@@ -3,7 +3,7 @@ layout: default
 title: 클래스와 인스턴스
 parent: Java
 grand_parent: Programing
-nav_order: 11
+nav_order: 12
 ---
 
 # II. 클래스와 인스턴스
@@ -137,6 +137,16 @@ public class calculatorDemo1 {
   }
 }
 ```
+
+---
+
+# **이 개념을 왜 배울까?(my opinion)**
+
+- 객체화의 재료이다
+
+> 클래스를 만들고 인스턴스를 만드는 과정이 객체화이다
+>
+> 클래스/인스턴스가 무엇인지, 어떻게 생성하고 호출하는지 알아야 객체지향이 가능하다
 
 ---
 

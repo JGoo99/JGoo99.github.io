@@ -3,7 +3,7 @@ layout: default
 title: 연산자
 parent: Java
 grand_parent: Programing
-nav_order: 4
+nav_order: 5
 ---
 
 # IV. 연산자 
@@ -135,9 +135,20 @@ if (!false) {
 2
 ```
 
-
 ---
 
+# **이 개념을 왜 배울까?(my opinion)**
 
+- 연산자는 조건문의 기본이다
+
+> 조건문에서의 연산자 작성 실수는 완전히 틀린 답을 도출할 수 있다
+>
+> 그 오답이 프로젝트 내에서 치명적인 오류로 이어질 수 있다
+>
+> 만약, 오류 원인을 밤새 찾았는데 그 원인이 연산자 실수라고 생각해보자
+>
+> 기본 중의 기본인 연산자는 정확히 알아두는 것이 필요하다
+
+---
 
 [Link button](https://opentutorials.org/course/1223/5331){: .btn .btn-outline }

@@ -3,7 +3,7 @@ layout: default
 title: 조건문
 parent: Java
 grand_parent: Programing
-nav_order: 5
+nav_order: 6
 ---
 
 # V. 조건문
@@ -143,6 +143,18 @@ if (val == 1) {
     System.out.println("default");
 }
 ```
+
+---
+
+# **이 개념을 왜 배울까?(my opinion)**
+
+- 조건문은 프로그래밍의 꽃이다
+
+> 정말 간단한 프로그래밍도 조건문 없이 만들기 힘들다
+>
+> 지금까지 배운 연산자, 앞으로 배울 반복문과 함꼐 조건문을 활용한다면
+>
+> 무궁무진한 코딩이 가능하다 !
 
 ---
 

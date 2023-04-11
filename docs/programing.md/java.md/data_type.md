@@ -1,9 +1,9 @@
 ---
 layout: default
 title: 데이터 타입
-parent: 절차지향프로그래밍
-grand_parent: Java
-nav_order: 1
+parent: Java
+grand_parent: Programing
+nav_order: 2
 ---
 
 
@@ -68,6 +68,20 @@ System.out.prinln("Jin said \n\ hi");
 ```java
 String a = "coding";
 ```
+
+---
+
+# **이 개념을 왜 배울까?(my opinion)**
+
+- 메모리와 처리속도의 최적화
+
+> 데이터 타입에 따라 사용하는 메모리와 처리속도가 다르다
+>
+> 변수의 데이터 타입을 정확히 알고 선언하는 것은
+>
+> 코딩 작성의 속도를 줄여줄 뿐만 아니라
+>
+> 컴퓨터 메모리와 CPU 처리속도의 최적화를 뜻하는 것이다
 
 ---
 

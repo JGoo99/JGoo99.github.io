@@ -3,7 +3,7 @@ layout: default
 title: 배열
 parent: Java
 grand_parent: Programing
-nav_order: 7
+nav_order: 8
 ---
 
 # VII. 배열
@@ -23,6 +23,8 @@ _연관된 정보를 그룹핑하는 역할_
 ---
 
 ## 1. 변수와 상수
+
+> 예시를 통해 이해해보자
 
 <div class="code-example" markdown="1">
 예를 들어
@@ -143,6 +145,18 @@ _그 크기를 미리 예측하고 변수를 집어넣기는 어렵다._
 
 ---
 
+# **이 개념을 왜 배울까?(my opinion)**
 
+- 배열이 왜 필요할까?
+
+> 처리해야할 데이터의 양이 많아질수록 카테고리가 필요하다
+>
+> 공통적인 특성의 데이터들을 한 바구니 안에 넣어 정리한다면
+>
+> 특정 데이터를 찾을 때도, 추가할 때도 편리할 것이다
+>
+> 배열은 그러한 바구니의 역할을 하는 것이 아닐까?
+
+---
 
 [Link button](https://opentutorials.org/course/1223/5373){: .btn .btn-outline }
