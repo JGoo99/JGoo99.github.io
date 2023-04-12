@@ -49,9 +49,9 @@ c1.setOprands(10, 20);
 
 > 이 단계가 없이 sum과 avg 매소드를 사용하게 되면 오류가 발생한다
 >
-> 위와 같이 반드시 초기화 단계가 필요한 경우,
+> 위와 같이 반드시 초기화 단계가 필요한 경우
 >
-> 객체지향에서 제공하는 **생산자** 기능이 있다
+> 객체지향에서 제공하는 **생성자** 기능이 있다
 
 ---
 
@@ -61,12 +61,12 @@ c1.setOprands(10, 20);
 
 ```java
 class Calculator {
-	int left, right;
+  int left, right;
 	
-	public Calculator (int left, int right) {
-		this.left = left;
-		this.right = right;
-	}
+  public Calculator (int left, int right) {
+    this.left = left;
+    this.right = right;
+  }
 // 아래 생략
 ```
 
@@ -76,21 +76,19 @@ class Calculator {
 Calculator c1 = new Calculator(10,20);
 ```
 
-> 객체 생성 시에 최기화 작업을 강제할 수 있다
+> 객체 생성 시에 초기화 작업을 강제할 수 있다 (오류 가능성x)
 
 ---
 
 ## +. 나의 궁금증
 
-### 1. 멤버 생성 방법
+### 1. "변수를 어떤 소속으로 생성해야 하지??"
 
-> left와 right를 클래스에서 선언할 때
->
-> static / non-static 결정이 헷갈렸다
+> left와 right를 클래스에서 선언할 때 static / non-static 결정이 헷갈렸다
 >
 > 멤버 수업에서 들은 내용을 떠올려보자 
 
-{: .important }
+{: .important-title }
 > 언제 클래스 변수를 선언하는 것이 좋을까?
 >
 > ~~1. 인스턴스에 따라서 변하지 않는 값이 필요한 경우 (ex.π)~~
@@ -101,17 +99,39 @@ Calculator c1 = new Calculator(10,20);
 
 _이번 클래스의 경우 인스턴스를 생성하며 계속해서 값이 초기화되기 때문에 굳이 전역변수로 선언할 필요가 없다_
 
-
-#### ii. 지역변수로 설정
-
-{: .highlight-title }
+{: .warning-title }
 > non-static 변수로 선언
 >
-> 일단 두 변수 모두 class 내에서 전역으로 사용하기 때문에 전역 선언 가능
+> 매소드 밖과 안의 변수명 중복 오류 발생
+
+- 해결방법
+
+> 변수를 구분만 해주면 된다
+> 
+> 1. **this.변수** 활용하기
 >
-> 단 매소드 내 변수명과 같기 때문에 초기화할 때 오류 발생
+> 2. 매소드내 변수명을 **_left, _right**로 변경하기 
+
+---
+
+### 1. "그럼 클래스 변수로 선언하면 어떻게 될까??"
+
+> 일단 클래스 변수에 this(인스턴스)로 접근할 필요가 없다
 >
-> 따라서 매소드 매개변수 명을 변경하면 된다 _(아래 참고)_
+> 따라서 결과는 정상출력되지만, 아래와 같은 메시지가 뜬다
+
+{: .highlight-title }
+> ❗️
+>
+> the static field should be accessed in a static way
+
+- 해결방법
+
+> 접근 방법을 static 방법으로 바꿔준다
+>
+> 1. **Calculator.left** 사용하기
+>
+> 2. this를 지우고 매소드 변수명 변경하기 (this를 지워도 전역변수에 접근O)
 
 ---
 
