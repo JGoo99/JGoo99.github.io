@@ -12,7 +12,8 @@ _입력 : 키보드, 마우스, 터치 등의 자극_
 _출력 : 그에 대한 반응_
 
 ---
-**String[] args**
+## 0. **String[] args**
+_입출력을 알아보기 전, 자주 보았던 이 문구가 무엇인지 알아보자_
 
 ```java
 public class hi {
@@ -65,7 +66,7 @@ two
 
 ## 2. Scanner 활용
 
-> scanner를 활용하여 콘솔창에서 입력을 받아보자
+### i. 콘솔창에서 입력
 
 ```java
 import java.util.Scanner;
@@ -88,9 +89,9 @@ public class inputDemo1 {
 ```
 
 {: .note-title }
-> ❔❔
+> 정의
 >
-> import java.util.Scanner;
+> **import java.util.Scanner;**
 >
 > 의미 : java util 안에 있는 Scanner Library를 사용하겠다
 >
@@ -119,9 +120,9 @@ sc.close();
 
 ---
 
-> 이번에는 Scanner를 통해 file 데이터를 입력해보자
+### ii. file 데이터 입력
 
-### **먼저 iterm으로 txt 만들기**
+#### **먼저 iterm으로 txt 만들기**
 
 ```
 cat > memo.txt
@@ -166,13 +167,6 @@ _Graphic User Interface_
 
 ---
 
-{: .highlight }
-> 지금까지 **절차지향** 프로그래밍이었음
-> 
-> 앞으로 **객체지향** 에 대한 긴 학습시간이 필요함!!
-
----
-
 ## **이 개념을 왜 배울까?**
 
 {: .highlight }
@@ -183,6 +177,12 @@ _Graphic User Interface_
 > 눈에 보이는 변화만이 출력의 전부가 아니다
 >
 > 파일을 읽어오고, 안 보이는 곳에 데이터들을 저장하는 것들도 모두 입출력이 될 수 있다
+
+---
+
+지금까지 **절차지향** 프로그래밍이었음
+
+앞으로 **객체지향** 에 대한 긴 학습시간이 필요함!!
 
 ---
 

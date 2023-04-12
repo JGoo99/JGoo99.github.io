@@ -237,6 +237,8 @@ public class test {
 }
 ```
 
+---
+
 ### i. 인스턴스에서 매소드 접근
 
 ```java
@@ -262,7 +264,8 @@ c.static_instance();
 >
 > 클래스(static)매소드에서 인스턴스(non-static) 변수에 접근이 안 된다는 에러
 
-**왜 안 될까?**
+
+- **왜 안 될까?**
 <span class="fs-3">
 [Link Button](https://wisdom-and-record.tistory.com/35){: .btn }
 </span>
@@ -288,6 +291,8 @@ c.instance_instance();
 > 인스턴스를 이용해서 인스턴스 매소드에 접근 O
 >
 > 인스턴스 매소드에서 인스턴스 변수에 접근 O
+
+---
 
 ### ii. 클래스에서 매소드 접근
 

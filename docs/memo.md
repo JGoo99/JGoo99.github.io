@@ -71,7 +71,6 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 </div>
 
 ---
----
 
 ## 굵은 글씨, 기울임, 글씨 가운데 줄긋기
 
