@@ -16,10 +16,10 @@ nav_order: 17
 
 ```java
 public class test {
-	
+
   public static void main(String[] args) {
     test c1 = new test();
-	}
+  }
 }
 ```
 
@@ -45,7 +45,7 @@ public class test {
 >
 > the constructor test() is undefined
 
-> 매개변수가 있는 생성자가 있을 때는 기본생성자를 자동으로 만들어주지 않는다
+> **매개변수가 있는 생성자가 있을 때는 기본생성자를 자동으로 만들어주지 않는다**
 >
 > 따라서 주석처리 되어있는 기본생성자를 추가해주어야 한다
 
@@ -110,8 +110,8 @@ class Cal {
 class diviCal extends Cal {
 	
   public diviCal(int left, int right) { //생성자 추가
-		this.left = left;
-		this.right = right;
+    this.left = left;
+    this.right = right;
 	}
 
   public void division() {
@@ -136,7 +136,7 @@ public class test {
 >
 > Implicit super constructor Cal() is undefined for default constructor. Must define an explicit constructor
 >
-> 매개변수가 있는 클래스가 있기 때문에 기본생성자가 자동 생성되지 않았고,
+> 매개변수가 있는 클래스가 있기 때문에 **기본생성자가 자동 생성되지 않았고**,
 >
 > 매인에서 하위 클래스를 호출하면 자동으로 상위 클래스의 기본생성자를 호출한다
 >
@@ -159,7 +159,7 @@ public Cal() {}
 >
 > 하지만 생성자 **코드의 중복**이 발생한다
 >
-> 오류를 제거하면섣 코드의 중복을 막을 수 있는 방법이 **super()** 이다
+> 오류를 제거하면서 코드의 중복도 막을 수 있는 방법이 **super()** 이다
 
 ```java
 class Cal {
@@ -197,12 +197,23 @@ public class test {
 }
 ```
 
-_생성자 코드가 1000줄 이상이었다면 분명히 효율적인 방법이다_
-
 {: .important-title }
 > ❗️
 >
 > 단, super()를 가장 먼저 사용해야한다
+
+---
+
+## **이 개념을 왜 배울까?**
+
+{: .highlight }
+> 코드 중복의 제거
+
+> 협업에 있어서 중요한 것은 코드의 가독성이다
+>
+> 쓸데없이 중복되는 코드는 협업자 입장에서 답답할 수 있다
+>
+> 만약 상위 클래스 생성자 코드가 1000줄 이상이라면 이 과정이 필수적일 것이다 
 
 ---
 
