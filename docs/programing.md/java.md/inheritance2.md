@@ -112,7 +112,7 @@ class diviCal extends Cal {
   public diviCal(int left, int right) { //생성자 추가
     this.left = left;
     this.right = right;
-	}
+  }
 
   public void division() {
     System.out.println( this.left / this.right );
@@ -209,7 +209,7 @@ public class test {
 {: .highlight }
 > 코드 중복의 제거
 
-> 협업에 있어서 중요한 것은 코드의 가독성이다
+> 협업에 있어서 중요한 것 중 하나는 코드의 가독성이다
 >
 > 쓸데없이 중복되는 코드는 협업자 입장에서 답답할 수 있다
 >

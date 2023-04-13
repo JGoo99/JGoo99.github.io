@@ -20,15 +20,10 @@ if (id.equals("Goo")) {
 } 
 ```
 
-### 결과
-
-<div class="code-example" markdown="1">
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException:
-Index 0 out of bounds for length 0 at DynamicBeat dynamic_beat_1.hi.main(hi.java:6)
-</div>
-
 {: .warning-title }
 > Error
+> 
+> Index 0 out of bounds for length 0
 > 
 > args[0]에 입력 받은 값이 없기 때문에 위와 같은 에러 발생
 
@@ -111,6 +106,7 @@ public class hi {
 ## 4. switch
 
 _사용빈도는 적으나 조건 구문이 많다면 더 명료하게 표현 가능_
+
 _또한 조건에 들어갈 수 있는 데이터 타입이 한정적임_
 
 ```java
