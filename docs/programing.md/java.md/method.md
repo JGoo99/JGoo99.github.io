@@ -60,7 +60,7 @@ public static void main(String[] args) {
 
 ---
 
-## 1. 입력과 출력
+## 2. 입력과 출력
 
 > 위의 함수를 numbering(**변수**)를 활용하여 표현하자
 
@@ -81,7 +81,7 @@ public static void main(String[] args) {
 
 ---
 
-## 2. Return
+## 3. Return
 _활용도가 더 높은 출력방법_
 
 {: .note-title }

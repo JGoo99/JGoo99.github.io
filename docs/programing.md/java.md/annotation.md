@@ -13,13 +13,15 @@ nav_order: 3
 
 ## 1. 주석
 
-한 줄 주석
+- 한 줄 주석
+
 ```java
 String a = "coding";
 // 한 줄 주석 달기
 ```
 
-여러줄 주석
+- 여러줄 주석
+
 ```java
 String b = "coding";
 /*
