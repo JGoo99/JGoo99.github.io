@@ -80,7 +80,7 @@ public void setOprands(int left, int right, int third) {
 >
 > 2. 달라야 하는 것: 매개변수 형식
 >
-> +. 매개변수의 이름을 통해 매소드를 구분할 수 없음
+> +) 매개변수의 이름을 통해 매소드를 구분할 수 없음
 
 {: .note-title }
 > 🧐
@@ -134,7 +134,7 @@ void A(int param1) {System.out.println( "void A(int " + param1 + ")" );}
 
 ---
 
-## 3. 오버라이딩과의 차이점
+## 4. 오버라이딩과의 차이점
 
 > 하위클래스를 만들어 오버라이딩과의 차이점을 알아보자
 
@@ -178,6 +178,7 @@ void A() {System.out.println("sub: void A()");}
 
 > 매소드의 시그니처가 동일하면서, 하위클래스에 재정의된 경우이다
 
+{:style="counter-reset:none"}
 2. 오버로딩이 된 매소드
 
 ```java
@@ -191,11 +192,13 @@ void A(String args1, String args2) {System.out.println( "void A(String " + args1
 ## **이 개념을 왜 배울까?**
 
 {: .highlight }
-> 
+> 같은 기능의 메소드를 같은 이름으로 정의할 수 있다
 
+> 사용자 입장에서 더 쉬운 설명서를 받는 것과 같다
 > 
-> 
+> 같은 기능임에도 매개변수의 개수에 따라 다른 이름의 매소드를 사용한다면
 >
+> 사용자 입장에서도 번거로울 것이다
 
 ---
 
