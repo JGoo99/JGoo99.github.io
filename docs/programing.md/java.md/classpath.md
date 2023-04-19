@@ -24,7 +24,8 @@ nav_order: 20
 
 1. 새로운 파일을 생성한다 (파일명: srcbin)
 
-![](../../assets/images/classpath1.jpg)
+![](/Users/goojin/git_blog/JGoo99.github.io/assets/images/classpath1.jpg)
+
 
 {:style="counter-reset:none"}
 2. 텍스트 편집기를 이용하여 소스코드를 생성한다
@@ -42,7 +43,7 @@ public class classpthDemo1 {}
 {:style="counter-reset:none"}
 3. iterm2: srcbin 디렉토리 리스트를 확인한다
 
-![](../../assets/images/classpath2.jpg)
+![](./assets/images/classpath2.jpg)
 
 {:style="counter-reset:none"}
 4. iterm2: classpathDemo1 자바 소스코드를 컴파일한다
@@ -52,12 +53,13 @@ javac classpathDemo1.java
 ```
 
 {:style="counter-reset:none"}
-5. iterm2: **ls -al** 로 디렉토리 리스트를 확인한다
+5. iterm2: 다시 srcbin 디렉토리 리스트를 확인한다
 
 ![](../../assets/images/classpath3.jpg)
 
-> 새로 생성된 파일
->
+
+- 새로 생성된 파일
+
 > **classpthDemo1.class ,  item.class**
 >
 > 여러개의 클래스가 하나의 소스코드 내에 있더라도 각각 컴파일된다
@@ -68,9 +70,7 @@ javac classpathDemo1.java
 
 ## 2-1. classpath를 사용하지 않는 경우
 
-> classpath 명령어의 필요성을 알기 위해
->
-> classpath가 필요없는 경우를 알아보자
+> classpath 명령어의 필요성을 알기 위해 classpath가 필요없는 경우를 먼저 알아보자
 
 ### i. 자바 소스 생성 및 컴파일
 
@@ -139,7 +139,7 @@ public class classpthDemo2 {
 >
 > 현재 srcbin 디렉토리에서 item클래스를 찾을 수 없어서 생기는 에러
 
-### 이때 사용하는 것이 **classapth** 명령어이다
+### 이제 **classapth** 명령어를 사용해보자 !
 
 ```
 java -classpath ".:lib" classpathDemo
@@ -147,19 +147,20 @@ java -classpath ".:lib" classpathDemo
 
 ![](../../assets/images/classpath8.jpg)
 
-{: .highlight-title }
-> ".:lib" 해석
->
+---
+- ".:lib" 해석
+
+{: .note-title }
 > **.**
 >
 > 현재 디렉토리
 
-{: .highlight }
+{: .note-title }
 > **;**
 >
 > 경로와 경로를 구분하는 구분자
 
-{: .highlight }
+{: .note-title }
 > **lib**
 >
 > 현재 디렉토리(.)에 없다면 lib 디렉토리에서 찾는다
