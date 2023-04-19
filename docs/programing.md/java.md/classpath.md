@@ -16,12 +16,14 @@ nav_order: 20
 
 > iterm에서 실행할 때 클래스가 위치하는 경로를 지정하는 것  
 
+#
+
 ### ii. 컴파일
 
 > java로 작성한 코드를 컴퓨터가 이해할 수 있는 이진법 언어로 변환하는 것
 >
 > 두개의 클래스를 가진 소스코드를 컴파일해보자  
-
+#
 **1. 새로운 파일을 생성한다 (파일명: srcbin)**
 
 ![classpath1](https://user-images.githubusercontent.com/126454114/233028825-ada6f620-05d8-4a9f-999f-09107c6f5d23.jpg)  
