@@ -22,13 +22,15 @@ nav_order: 20
 >
 > 두개의 클래스를 가진 소스코드를 컴파일해보자
 
-1. 새로운 파일을 생성한다 (파일명: srcbin)
+
+**1. 새로운 파일을 생성한다 (파일명: srcbin)**
 
 ![classpath1](https://user-images.githubusercontent.com/126454114/233028825-ada6f620-05d8-4a9f-999f-09107c6f5d23.jpg)
 
 
+
 {:style="counter-reset:none"}
-2. 텍스트 편집기를 이용하여 소스코드를 생성한다
+**2. 텍스트 편집기를 이용하여 소스코드를 생성한다**
 
 _소스 코드_
 
@@ -40,20 +42,21 @@ public class classpthDemo1 {}
 
 > 하나의 소스에 두개의 클래스가 존재하는 모습
 
+
 {:style="counter-reset:none"}
-3. iterm2: srcbin 디렉토리 리스트를 확인한다
+**3. iterm2: srcbin 디렉토리 리스트를 확인한다**
 
 ![classpath2](https://user-images.githubusercontent.com/126454114/233028935-847daf79-d5eb-4601-814b-e50870ac40c9.jpg)
 
 {:style="counter-reset:none"}
-4. iterm2: classpathDemo1 자바 소스코드를 컴파일한다
+**4. iterm2: classpathDemo1 자바 소스코드를 컴파일한다**
 
 ```
 javac classpathDemo1.java
 ```
 
 {:style="counter-reset:none"}
-5. iterm2: 다시 srcbin 디렉토리 리스트를 확인한다
+**5. iterm2: 다시 srcbin 디렉토리 리스트를 확인한다**
 
 ![classpath3](https://user-images.githubusercontent.com/126454114/233029025-6b38b68e-070c-4471-883c-a37b4ffba2b7.jpg)
 
@@ -74,7 +77,7 @@ javac classpathDemo1.java
 
 ### i. 자바 소스 생성 및 컴파일
 
-1. 두 개의 클래스를 가진 소스코드 생성
+**1. 두 개의 클래스를 가진 소스코드 생성**
 
 _소스코드_
 
@@ -94,15 +97,15 @@ public class classpthDemo2 {
 ```
 
 {:style="counter-reset:step-counter 1"}
-2. iterm에서 컴파일하여 각각의 클래스 파일 생성
+**2. iterm에서 컴파일하여 각각의 클래스 파일 생성**
 
-![](../../assets/images/classpath4.jpg)
+![classpath4](https://user-images.githubusercontent.com/126454114/233030513-cd2f359f-d5e1-4e43-a5ab-f277ae7e1d98.jpg)
 
 ### ii. iterm 에서 실행
 
-* srcbin 폴더로 이동하여 실행
+- **srcbin 폴더로 이동하여 실행**
 
-![](../../assets/images/classpath5.jpg)
+![classpath5](https://user-images.githubusercontent.com/126454114/233030609-45f73fea-7380-4e21-b709-50464bc97059.jpg)
 
 {: .important-title }
 > 실행 시 주의할 점
@@ -122,13 +125,15 @@ public class classpthDemo2 {
 
 ### i. 하위파일을 만들어 item.class를 이동
 
-![](../../assets/images/classpath6.jpg)
+![classpath6](https://user-images.githubusercontent.com/126454114/233030681-5c5f3511-81a8-4e0f-ae15-ff0d6a9c875b.jpg)
+
 
 > 두 클래스가 다른 디렉토리에 존재하는 모습
 
 ### ii. iterm 에서 실행
 
-![](../../assets/images/classpath7.jpg)
+![classpath7](https://user-images.githubusercontent.com/126454114/233030732-1d536021-f9d9-45b2-9928-4af32080c964.jpg)
+
 
 {: .warning-title }
 > Error
@@ -145,7 +150,8 @@ public class classpthDemo2 {
 java -classpath ".:lib" classpathDemo
 ```
 
-![](../../assets/images/classpath8.jpg)
+![classpath8](https://user-images.githubusercontent.com/126454114/233030799-bd023adc-065b-4592-bc02-7d9350e0951d.jpg)
+
 
 ---
 - ".:lib" 해석
