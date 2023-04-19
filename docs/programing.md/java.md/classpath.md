@@ -24,7 +24,7 @@ nav_order: 20
 
 1. 새로운 파일을 생성한다 (파일명: srcbin)
 
-![](/Users/goojin/git_blog/JGoo99.github.io/assets/images/classpath1.jpg)
+![classpath1](https://user-images.githubusercontent.com/126454114/233028825-ada6f620-05d8-4a9f-999f-09107c6f5d23.jpg)
 
 
 {:style="counter-reset:none"}
@@ -43,7 +43,7 @@ public class classpthDemo1 {}
 {:style="counter-reset:none"}
 3. iterm2: srcbin 디렉토리 리스트를 확인한다
 
-![](./assets/images/classpath2.jpg)
+![classpath2](https://user-images.githubusercontent.com/126454114/233028935-847daf79-d5eb-4601-814b-e50870ac40c9.jpg)
 
 {:style="counter-reset:none"}
 4. iterm2: classpathDemo1 자바 소스코드를 컴파일한다
@@ -55,7 +55,7 @@ javac classpathDemo1.java
 {:style="counter-reset:none"}
 5. iterm2: 다시 srcbin 디렉토리 리스트를 확인한다
 
-![](../../assets/images/classpath3.jpg)
+![classpath3](https://user-images.githubusercontent.com/126454114/233029025-6b38b68e-070c-4471-883c-a37b4ffba2b7.jpg)
 
 
 - 새로 생성된 파일
