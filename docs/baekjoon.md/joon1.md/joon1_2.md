@@ -18,7 +18,7 @@ nav_order: 3
 
 ### #입력
 
-> 1 2
+> 1, 2
 
 ### #출력
 
@@ -51,6 +51,8 @@ public class Main {
 ---
 
 ### #유의할 점
+
+<br/>
 
 {: .highlight }
 > Scanner 사용법을 외워보자

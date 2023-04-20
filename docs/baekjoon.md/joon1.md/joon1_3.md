@@ -18,7 +18,7 @@ nav_order: 4
 
 ### #입력
 
-> 3 2
+> 3, 2
 
 ### #출력
 
@@ -52,13 +52,15 @@ public class Main {
 
 ### #유의할 점
 
+<br/>
+
 {: .highlight }
 > Scanner 입력의 데이터 타입을 확실히하자
 
-> 정수를 받을 경우
+> **정수를 받을 경우**
 >
 > int A = i.nextInt();
 
-> 문자열을 받을 경우
+> **문자열을 받을 경우**
 >
 > String A = i.next();

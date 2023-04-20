@@ -18,7 +18,7 @@ nav_order: 7
 
 ### #입력
 
-> 7 3
+> 7, 3
 
 ### #출력
 
@@ -64,13 +64,15 @@ public class Main {
 
 ### #유의할 점
 
+<br/>
+
 {: .highlight }
 > print() 와 println()의 차이
 
-> print()
+> **print()**
 >
 > 줄바꿈을 하지 않는 순수 프린트 명령어
 
-> println()
+> **println()**
 >
 > print + line 으로 자동 줄바꿈을 해주는 명령어
