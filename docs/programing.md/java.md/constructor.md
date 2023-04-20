@@ -84,7 +84,7 @@ Calculator c1 = new Calculator(10,20);
 
 ## +. 나의 궁금증
 
-### 궁금증1. "변수를 어떤 소속으로 생성해야 하지??"
+### 궁금증1) "변수를 어떤 소속으로 생성해야 하지??"
 
 > left와 right를 클래스에서 선언할 때 static / non-static 결정이 헷갈렸다
 >
@@ -147,6 +147,7 @@ class Calculator {
 
 <br/>
 
+{:style="counter-reset:none"}
 2. 매소드내 변수명을 **_left, _right**로 변경하기 
 
 ```java
@@ -161,7 +162,7 @@ class Calculator {
 
 <br/>
 
-### 궁금증2. "그럼 클래스 변수로 선언하면 어떻게 될까??"
+### 궁금증2) "그럼 클래스 변수로 선언하면 어떻게 될까??"
 
 > left, right를 클래스 변수로 선언해보자
 
@@ -210,6 +211,7 @@ class Calculator {
 
 <br/>
 
+{:style="counter-reset:none"}
 2. this를 지우고 매소드 변수명 변경하기
 
 ```java

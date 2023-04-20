@@ -62,15 +62,14 @@ System.out.prinln('깃'); //작은 따옴표
 System.out.prinln("깃허브"); //큰 따옴표
 ```
 
-<br/>
-
 - 문자열 안에 문자열을 사용하고 싶은 경우_
 
 ```java
 System.out.prinln("Jin said \"hi\"");
 ```
 
-_문자열 안에 줄바꿈을 사용하고 싶은 경우_
+- 문자열 안에 줄바꿈을 사용하고 싶은 경우
+
 ```java
 System.out.prinln("Jin said \n\ hi");
 ```

@@ -182,6 +182,8 @@ public class test {
 >
 > Cannot make a **static reference** to the **non-static method** 
 
+<br/>
+
 - 해결방법
 
 > sum 매소드는 static void 로 지정해주어야 한다
