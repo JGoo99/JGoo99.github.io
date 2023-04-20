@@ -15,11 +15,23 @@ _연관된 정보를 그룹핑하는 역할_
 |:-----|:-----|:-----|:-----|
 | 0    | 1    | 2    | 3    |
 
-- length = 배열이 담을 수 있는 크기 _4_
+- **length** 
 
-- element = 원소 _ga,na,da,ra_
+> 4
+>
+> 배열이 담을 수 있는 크기 
 
-- index = 식별자 _1,2,3,4_
+- element
+
+> ga, na, da, ra
+>
+> 원소
+
+- index
+
+> 1, 2, 3, 4
+>
+> 식별자
 
 
 ---
@@ -56,6 +68,8 @@ ga
 ra
 ```
 
+<br/>
+
 ### ii. 하나씩 정의하는 방법
 
 ```java
@@ -91,6 +105,8 @@ for (int i = 0; i < animals.length; i++) {
 }
 ```
 
+<br/>
+
 {: .note-title }
 > for each
 >
@@ -124,7 +140,8 @@ System.out.println(korean[3]);
 >Index 3 out of bounds for length 3
 >
 >at DynamicBeat/dynamic_beat_1.hi.main(hi.java:8)
-```
+
+<br/>
 
 > 아래의 경우도 같은 오류를 발생시킨다
 

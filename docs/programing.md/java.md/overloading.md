@@ -57,6 +57,8 @@ public class test {
 
 > 같은 이름이지만 매개변수의 형식이 다른 매소드를 만들 수 있는 것은 오버로딩 덕분이다
 
+<br/>
+
 {: .important-title }
 > 🤔
 >
@@ -82,12 +84,14 @@ public void setOprands(int left, int right, int third) {
 >
 > +) 매개변수의 이름을 통해 매소드를 구분할 수 없음
 
+<br/>
+
 {: .note-title }
 > 🧐
 >
 > 규칙을 어겼을 경우를 알아보자
 
----
+<br/>
 
 ### i. 매개변수 동일, 리턴타입 상이
 
@@ -119,7 +123,7 @@ public class test {
 >
 > a1.A()이 호출되었을 때, **void A()** 와 **int A()** 중 어느 것을 호출할 지 고를 수 없음
 
----
+<br/>
 
 ### ii. 리턴타입 동일, 매개변수 이름 상이
 
@@ -170,6 +174,8 @@ public class test_sub {
 }
 ```
 
+<br/>
+
 1. 오버라이딩이 된 매소드
 
 ```java
@@ -177,6 +183,8 @@ void A() {System.out.println("sub: void A()");}
 ```
 
 > 매소드의 시그니처가 동일하면서, 하위클래스에 재정의된 경우이다
+
+<br/>
 
 {:style="counter-reset:none"}
 2. 오버로딩이 된 매소드

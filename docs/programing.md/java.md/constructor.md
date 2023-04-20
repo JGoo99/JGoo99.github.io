@@ -12,6 +12,8 @@ nav_order: 15
 
 ## 1. 초기화
 
+> 초기화가 무엇인지 아래 코드를 통해 알아보자
+
 ```java
 class Calculator {
   int left, right;
@@ -34,14 +36,14 @@ public class test {
 	
   public static void main(String[] args) {
     Calculator c1 = new Calculator();
-    c1.setOprands(10, 20);
+    c1.setOprands(10, 20); //초기화
     c1.sum();
     c1.avg();
   }
 }
 ```
 
-> c1 객체를 사용하기 위해서는 아래의 초기화 단계가 필요하다
+> 위처럼 c1 객체를 사용하기 위해서는 아래의 초기화 단계가 필요하다
 
 ```java
 c1.setOprands(10, 20);
@@ -82,7 +84,7 @@ Calculator c1 = new Calculator(10,20);
 
 ## +. 나의 궁금증
 
-### 1. "변수를 어떤 소속으로 생성해야 하지??"
+### 궁금증1. "변수를 어떤 소속으로 생성해야 하지??"
 
 > left와 right를 클래스에서 선언할 때 static / non-static 결정이 헷갈렸다
 >
@@ -97,14 +99,31 @@ Calculator c1 = new Calculator(10,20);
 >
 > ~~3. 인스턴스를 생성할 필요가 없는 값을 클래스에 저장하고 싶은 경우~~
 
-_이번 클래스의 경우 인스턴스를 생성하며 계속해서 값이 초기화되기 때문에 굳이 전역변수로 선언할 필요가 없다_
+_이번 클래스의 경우 인스턴스를 생성하며 계속해서 값이 초기화되기 때문에 **굳이 전역변수로 선언할 필요가 없다**_
+
+
+<br/>
+
+> 그렇다면 non-static 변수로 선언해보자
+
+```java
+class Calculator {
+  int left, right;
+	
+  public Calculator (int left, int right) {
+    left = left; //중복 오류
+    right = right; //중복 오류
+  }
+```
 
 {: .warning-title }
-> non-static 변수로 선언
+> Error
 >
 > 매소드 밖과 안의 변수명 중복 오류 발생
 
-- **해결방법**
+<br/>
+
+- 해결방법
 
 > 변수를 구분만 해주면 된다
 > 
@@ -112,9 +131,49 @@ _이번 클래스의 경우 인스턴스를 생성하며 계속해서 값이 초
 >
 > 2. 매소드내 변수명을 **_left, _right**로 변경하기 
 
----
+<br/>
 
-### 2. "그럼 클래스 변수로 선언하면 어떻게 될까??"
+1. **this.변수** 활용하기
+
+```java
+class Calculator {
+  int left, right;
+	
+  public Calculator (int left, int right) {
+    this.left = left;
+    this.right = right;
+  }
+```
+
+<br/>
+
+2. 매소드내 변수명을 **_left, _right**로 변경하기 
+
+```java
+class Calculator {
+  int left, right;
+	
+  public Calculator (int _left, int _right) {
+    left = _left; 
+    right = _right; 
+  }
+```
+
+<br/>
+
+### 궁금증2. "그럼 클래스 변수로 선언하면 어떻게 될까??"
+
+> left, right를 클래스 변수로 선언해보자
+
+```java
+class Calculator {
+  static int left, right;
+	
+  public Calculator (int left, int right) {
+    this.left = left; 
+    this.right = right; 
+  }
+```
 
 > 일단 클래스 변수에 this(인스턴스)로 접근할 필요가 없다
 >
@@ -125,13 +184,43 @@ _이번 클래스의 경우 인스턴스를 생성하며 계속해서 값이 초
 >
 > the static field should be accessed in a static way
 
-- **해결방법**
+<br/>
+
+- 해결방법
 
 > 접근 방법을 static 방법으로 바꿔준다
 >
 > 1. **Calculator.left** 사용하기
 >
 > 2. this를 지우고 매소드 변수명 변경하기 (this를 지워도 전역변수에 접근O)
+
+<br/>
+
+1. **Calculator.left** 사용하기
+
+```java
+class Calculator {
+  static int left, right;
+	
+  public Calculator (int left, int right) {
+    Calculator.left = left; 
+    Calculator.right = right; 
+  }
+```
+
+<br/>
+
+2. this를 지우고 매소드 변수명 변경하기
+
+```java
+class Calculator {
+  static int left, right;
+	
+  public Calculator (int _left, int _right) {
+    left = _left; 
+    right = _right; 
+  }
+```
 
 ---
 

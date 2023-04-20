@@ -6,21 +6,22 @@ grand_parent: Programing
 nav_order: 3
 ---
 
-
 # II. 주석과 새미콜론
 
 ---
 
 ## 1. 주석
 
-- 한 줄 주석
+### i. 한 줄 주석
 
 ```java
 String a = "coding";
 // 한 줄 주석 달기
 ```
 
-- 여러줄 주석
+<br/>
+
+### ii. 여러줄 주석
 
 ```java
 String b = "coding";
@@ -33,7 +34,9 @@ String b = "coding";
 ---
 
 ## 2. 세미콜론
+
 _한 문장을 나타낼 때 사용_
+
 ```java
 public void println(int x) {
   synchronized (this) {
@@ -42,6 +45,7 @@ public void println(int x) {
   }
 }
 ```
+
 ```java
 int a = 100; double b = 10.1; //한 줄에 두 문장 가능
 ```
@@ -55,7 +59,7 @@ int a = 100; double b = 10.1; //한 줄에 두 문장 가능
 
 > 좋은 코드는 코드를 읽는 것 자체로 이해가 잘 되어야 한다
 >
-> 이해가 잘 되기 위해선 변수, 매소드, 함수 등의 이름을 잘 지어야 하며,
+> 이해가 잘 되기 위해선 변수, 매소드, 함수 등의 이름을 잘 지어야 하며
 >
 > enter, space bar를 적재적소에 사용하여 가독성을 높여야 한다
 >

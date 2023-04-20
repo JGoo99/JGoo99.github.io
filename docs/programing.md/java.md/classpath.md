@@ -24,10 +24,13 @@ nav_order: 20
 >
 > 두개의 클래스를 가진 소스코드를 컴파일해보자  
 
+<br/>
 
 **1. 새로운 파일을 생성한다 (파일명: srcbin)**
 
 ![classpath1](https://user-images.githubusercontent.com/126454114/233028825-ada6f620-05d8-4a9f-999f-09107c6f5d23.jpg)  
+
+<br/>
 
 {:style="counter-reset:none"}
 **2. 텍스트 편집기를 이용하여 소스코드를 생성한다**
@@ -42,11 +45,14 @@ public class classpthDemo1 {}
 
 > 하나의 소스에 두개의 클래스가 존재하는 모습  
 
+<br/>
 
 {:style="counter-reset:none"}
 **3. iterm2: srcbin 디렉토리 리스트를 확인한다**
 
 ![classpath2](https://user-images.githubusercontent.com/126454114/233028935-847daf79-d5eb-4601-814b-e50870ac40c9.jpg)
+
+<br/>
 
 {:style="counter-reset:none"}
 **4. iterm2: classpathDemo1 자바 소스코드를 컴파일한다**
@@ -54,6 +60,8 @@ public class classpthDemo1 {}
 ```
 javac classpathDemo1.java
 ```
+
+<br/>
 
 {:style="counter-reset:none"}
 **5. iterm2: 다시 srcbin 디렉토리 리스트를 확인한다**
@@ -71,11 +79,11 @@ javac classpathDemo1.java
 
 ## 2. 사용법
 
-## 2-1. classpath를 사용하지 않는 경우
+### i. classpath를 사용하지 않는 경우
 
 > classpath 명령어의 필요성을 알기 위해 classpath가 필요없는 경우를 먼저 알아보자
 
-### i. 자바 소스 생성 및 컴파일
+<br/>
 
 **1. 두 개의 클래스를 가진 소스코드 생성**
 
@@ -96,16 +104,20 @@ public class classpthDemo2 {
 }
 ```
 
+<br/>
+
 {:style="counter-reset:step-counter 1"}
 **2. iterm에서 컴파일하여 각각의 클래스 파일 생성**
 
 ![classpath4](https://user-images.githubusercontent.com/126454114/233030513-cd2f359f-d5e1-4e43-a5ab-f277ae7e1d98.jpg)
 
-### ii. iterm 에서 실행
+<br/>
 
-- **srcbin 폴더로 이동하여 실행**
+**3. srcbin 폴더로 이동하여 실행**
 
 ![classpath5](https://user-images.githubusercontent.com/126454114/233030609-45f73fea-7380-4e21-b709-50464bc97059.jpg)
+
+<br/>
 
 {: .important-title }
 > 실행 시 주의할 점
@@ -116,21 +128,26 @@ public class classpthDemo2 {
 >
 > _(패키지가 있으면 **패키지명.클래스명**으로 입력)_ 
 
+---
 
-## 2-2. classpath를 사용해야하는 경우
+### ii. classpath를 사용해야하는 경우
 
 > 만약 item클래스가 다른 디렉토리에 있다면?
 >
 > 이때 필요한 것이 **classpath** 이다
 
-### i. 하위파일을 만들어 item.class를 이동
+<br/>
+
+**1. 하위파일을 만들어 item.class를 이동**
 
 ![classpath6](https://user-images.githubusercontent.com/126454114/233030681-5c5f3511-81a8-4e0f-ae15-ff0d6a9c875b.jpg)
 
 
 > 두 클래스가 다른 디렉토리에 존재하는 모습
 
-### ii. iterm 에서 실행
+<br/>
+
+**2. iterm 에서 실행**
 
 ![classpath7](https://user-images.githubusercontent.com/126454114/233030732-1d536021-f9d9-45b2-9928-4af32080c964.jpg)
 
@@ -144,7 +161,7 @@ public class classpthDemo2 {
 >
 > 현재 srcbin 디렉토리에서 item클래스를 찾을 수 없어서 생기는 에러
 
-### 이제 **classapth** 명령어를 사용해보자 !
+**3. classapth 명령어 사용**
 
 ```
 java -classpath ".:lib" classpathDemo
@@ -154,7 +171,8 @@ java -classpath ".:lib" classpathDemo
 
 
 ---
-- ".:lib" 해석
+
+- **".:lib"** 해석
 
 {: .note-title }
 > **.**

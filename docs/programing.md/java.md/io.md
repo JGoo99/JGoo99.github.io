@@ -8,12 +8,34 @@ nav_order: 10
 
 # IX. 입력과 출력
 
-_입력 : 키보드, 마우스, 터치 등의 자극_
-_출력 : 그에 대한 반응_
+## 1. 정의
 
----
-## 0. **String[] args**
-_입출력을 알아보기 전, 자주 보았던 이 문구가 무엇인지 알아보자_
+### i. 입력과 출력
+
+1. 입력 : 키보드, 마우스, 터치 등의 자극_
+
+2. 출력 : 그에 대한 반응_
+
+<br/>
+
+### ii. void main (String[] args)
+
+> 이전까지 자주 보았던 이 문구가 무엇인지 입출력을 통해 알아보자
+
+<br/>
+
+| 단어          | 의미                            |
+|:-------------|:-------------------------------|
+| void         | 매인 매소드의 출력값이 존재하지 않는다  |
+| main         | 매소드 중 하나                    |
+| String[]     | 배열을 담을 수 있는 데이터 타입       |
+| 파라미터       | 매소드 들어오는 입력값               | 
+
+> 즉, 배열 **args**를 파라미터로 입력받는 **main** 매소드
+>
+> 때문에, 아래의 **args.length**는 배열 args의 입력값 크기를 나타내는 것임
+
+<br/>
 
 ```java
 public class hi {
@@ -29,24 +51,13 @@ public class hi {
 0
 ```
 
-**정의**
-
-| 단어          | 의미                            |
-|:-------------|:-------------------------------|
-| String[]     | 배열을 담을 수 있는 데이터 타입       |
-| main         | 매소드 중 하나                    |
-| void         | 매인 매소드의 출력값이 존재하지 않는다  |
-| 파라미터       | 매소드 들어오는 입력값               | 
-
-> 즉, 배열 **args**를 파라미터로 입력받는 **main** 매소드
->
-> 때문에, args.length는 배열 args의 입력값 크기를 나타내는 것임
+_현재 입력한 값이 없기 때문에 0이 출력되는 모습_
 
 ---
 
 ## 1. arguments 설정 활용
 
-> 이클립스에서 args에 입력 후 출력해보자
+> 이클립스에서 args를 입력 후 출력해보자
 
 ```java
 public static void main(String[] args) {
@@ -70,6 +81,7 @@ two
 
 ```java
 import java.util.Scanner;
+//java util 안에 있는 Scanner Library를 사용
 
 public class inputDemo1 {
 
@@ -88,16 +100,7 @@ public class inputDemo1 {
 }
 ```
 
-{: .note-title }
-> 정의
->
-> **import java.util.Scanner;**
->
-> 의미 : java util 안에 있는 Scanner Library를 사용하겠다
->
-> _scanner 또한 객체에 대한 이해가 필요함_
-
----
+<br/>
 
 {: .new-title }
 > 🧐
@@ -118,7 +121,7 @@ while (sc.hasNextInt()) {
 sc.close();
 ```
 
----
+<br/>
 
 ### ii. file 데이터 입력
 
@@ -136,6 +139,10 @@ vi memo.txt //편집
 rm memo.txt //삭제
 ```
 
+<br/>
+
+#### **위의 txt파일을 Scanner로 읽어오기**
+
 ```java
 try {
   File file = new File("memo.txt");
@@ -148,6 +155,8 @@ try {
   e.printStackTrace();
 }
 ```
+
+<br/>
 
 {: .important-title }
 > 🐷

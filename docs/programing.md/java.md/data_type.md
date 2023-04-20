@@ -6,19 +6,23 @@ grand_parent: Programing
 nav_order: 2
 ---
 
-
 # I. 데이터 타입
 
 ---
 
 ## 1. 숫자
-_숫자는 따옴표 없이 입력_
+
+### i. 입력
+
+_따옴표 없이 입력_
 
 ```java
 System.out.println(1+2);
 ```
 
-### **변수 설정 방법**
+<br/>
+
+### ii. 변수 설정 방법
 
 - 정수
 
@@ -42,18 +46,25 @@ float b = 2.2F; //임의적으로 float형 데이터롤 바꿈
 
 ## 2. 문자와 문자열
 
-### 문자 : 한 글자
+### i. 입력
+
+- 문자 : 한 글자
+
 ```java
 System.out.prinln('깃'); //작은 따옴표
 ```
 
-### 문자열 : 두 글자 이상
+<br/>
+
+- 문자열 : 두 글자 이상
 
 ```java
 System.out.prinln("깃허브"); //큰 따옴표
 ```
 
-_문자열 안에 문자열을 사용하고 싶은 경우_
+<br/>
+
+- 문자열 안에 문자열을 사용하고 싶은 경우_
 
 ```java
 System.out.prinln("Jin said \"hi\"");
@@ -63,7 +74,10 @@ _문자열 안에 줄바꿈을 사용하고 싶은 경우_
 ```java
 System.out.prinln("Jin said \n\ hi");
 ```
-###  **변수 설정 방법**
+
+<br/>
+
+### ii. 변수 설정 방법
 
 ```java
 String a = "coding";

@@ -10,7 +10,9 @@ nav_order: 13
 
 _구성원, 즉 변수와 매소드이다_
 
-### **용어 정리**
+---
+
+## 0. 용어 정리
 
 | Member       | Terms              | 
 |:-------------|:-------------------|
@@ -42,6 +44,8 @@ _구성원, 즉 변수와 매소드이다_
 > 3. 인스턴스를 생성할 필요가 없는 값을 클래스에 저장하고 싶은 경우
 >
 > _아래 예시를 통해 확인해보자_
+
+<br/>
 
 ### **i-1) 인스턴스에 따라서 변하지 않는 값이 필요한 경우 (ex.π)**
 
@@ -79,7 +83,7 @@ public class test {
 {: .highlight }
 > 어떤 인스턴스로 접근해도 같은 PI값이 출력된다
 
----
+<br/>
 
 ### **i-2) 값의 변경 사항을 모든 인스턴스가 공유해야 하는 경우**
 
@@ -134,14 +138,13 @@ public class test {
 {: .highlight }
 > 클래스 변수 base의 변경이 모든 인스턴스에 적용되고 있다
 
----
+<br/>
 
 ### **i-3) 인스턴스를 생성할 필요가 없는 값을 클래스에 저장하고 싶은 경우**
 
-_i-1) 예제 참고_
-
 ```java
 System.out.println(Calculator.PI); 
+//i-1) 예제 참고
 ```
 
 {: .highlight }
@@ -149,7 +152,7 @@ System.out.println(Calculator.PI);
 >
 > 클래스 매소드 또한 인스턴스 없이 접근 가능하다 _아래 예시 참고_
 
----
+<br/>
 
 ### ii. 클래스의 매소드
 
@@ -158,7 +161,7 @@ System.out.println(Calculator.PI);
 ```java
 class Calculator {
 	
-  public static void sum(int left, int right) {
+  public void sum(int left, int right) {
     System.out.println( left + right );
   }
   //'static'으로 변경해주어야 함
@@ -179,7 +182,9 @@ public class test {
 >
 > Cannot make a **static reference** to the **non-static method** 
 
-_sum 매소드에서 static void 로 지정해주어야 에러를 해결할 수 있다_
+- 해결방법
+
+> sum 매소드는 static void 로 지정해주어야 한다
 
 {: .highlight }
 > 클래스를 통해 클래스 매소드로 접근이 가능하다
@@ -196,6 +201,10 @@ _sum 매소드에서 static void 로 지정해주어야 에러를 해결할 수 
 > 1. 인스턴스 매소드는 클래스 맴버에 접근 O
 >
 > 2. 클래스 매소드는 인스턴스 맴버에 접근 X
+
+<br/>
+
+_class C1 소스코드_
 
 ```java
 class C1 {
@@ -227,6 +236,10 @@ class C1 {
 }
 ```
 
+<br/>
+
+_main 소스코드_
+
 ```java
 public class test {
 	
@@ -248,6 +261,8 @@ c.static_static();
 > 인스턴스를 이용해서 클래스 매소드에 접근 O
 >
 > 클래스 매소드에서 클래스 변수에 접근 O
+
+<br/>
 
 ```java
 c.static_instance();
@@ -276,6 +291,8 @@ c.static_instance();
 4. 하지만 클래스의 존재는 인스턴스의 생성을 보장할 수 없다
 5. 따라서 클래스 매소드에서 존재가 확실하지 않은 인스턴스 멤버를 호출할 수 없다
 
+<br/>
+
 ```java
 c.instance_static();
 ```
@@ -283,6 +300,8 @@ c.instance_static();
 > 인스턴스를 이용해서 인스턴스 매소드에 접근 O
 >
 > 인스턴스 매소드에서 클래스 변수에 접근 O
+
+<br/>
 
 ```java
 c.instance_instance();
@@ -304,6 +323,8 @@ C1.static_static();
 >
 > 클래스 매소드에서 클래스 변수에 접근 O
 
+<br/>
+
 ```java
 C1.static_instance();
 ```
@@ -317,6 +338,8 @@ C1.static_instance();
 >
 > Cannot make a **static reference** to the **non-static field**
 
+<br/>
+
 ```java
 C1.instance_static();
 ```
@@ -327,6 +350,8 @@ C1.instance_static();
 > Error
 >
 > Cannot make a **static reference** to the **non-static method** 
+
+<br/>
 
 ```java
 C1.instance_instance();

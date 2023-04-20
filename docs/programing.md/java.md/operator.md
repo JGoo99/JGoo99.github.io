@@ -20,6 +20,8 @@ nav_order: 5
 | /      | 나누기   |
 | -      | 나머지   |
 
+<br/>
+
 _연산자 중에 +는 문자열에도 사용 가능하다_
 ```java
 String a = "안녕";
@@ -44,6 +46,8 @@ _하나의 항을 대상을 이루어지는 연산자_
 | ++     | 1씩 증가   |
 | --     | 1씩 감소   |
 
+<br/>
+
 ```java
 int i = 3;
 i++			// i=i+1
@@ -66,6 +70,8 @@ System.out.println(i);    // 7
 | >       | 크다       |
 | >=      | 크거나 같다  |
 | .equals | 같다(문자열) |
+
+<br/>
 
 _문자열 비교 예시_
 ```java
@@ -91,6 +97,8 @@ true
 | 아래 참고 | or        |
 | !       | not       |
 
+<br/>
+
 ### i. && (and)
 
 > ID와 PASSWORD가 모두 맞아야 하는 로그인 로직을 만들어보자
@@ -106,6 +114,8 @@ if (id.equals("Goo") && password.equals("111")) {
 }
 ```
 
+<br/>
+
 ### ii. || (or)
 
 > ID가 둘 중 하나라도 맞으면 되는 로그인 로직을 만들어보자
@@ -119,6 +129,8 @@ if (id.equals("Goo") || id.equals("goo")) {
     System.out.println("worng");
 }
 ```
+
+<br/>
 
 ### iii. ! (not)
 
