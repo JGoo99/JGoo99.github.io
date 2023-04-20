@@ -42,6 +42,10 @@ double a = 1.1;
 float b = 2.2F; //임의적으로 float형 데이터롤 바꿈
 ```
 
+- 숫자 데이터타입의 저장 가능 범위
+
+![datatype](https://user-images.githubusercontent.com/126454114/233296762-4eda24d3-ec41-4b08-b1bb-f33ce926ca03.jpg)
+
 ---
 
 ## 2. 문자와 문자열
