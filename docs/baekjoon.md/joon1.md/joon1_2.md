@@ -52,8 +52,6 @@ public class Main {
 
 ### #유의할 점
 
-<br/>
-
 {: .highlight }
 > Scanner 사용법을 외워보자
 

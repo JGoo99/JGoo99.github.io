@@ -54,8 +54,6 @@ public class Main {
 
 ### #유의할 점
 
-<br/>
-
 {: .highlight }
 > 실수 데이터타입의 선언 float? double?
 

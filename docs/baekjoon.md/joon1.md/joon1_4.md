@@ -52,8 +52,6 @@ public class Main {
 
 ### #유의할 점
 
-<br/>
-
 {: .highlight }
 > 연산자의 개념을 확실히 하자
 

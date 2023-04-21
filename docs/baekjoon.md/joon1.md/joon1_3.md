@@ -52,8 +52,6 @@ public class Main {
 
 ### #유의할 점
 
-<br/>
-
 {: .highlight }
 > Scanner 입력의 데이터 타입을 확실히하자
 

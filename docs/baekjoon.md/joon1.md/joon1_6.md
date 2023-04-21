@@ -64,8 +64,6 @@ public class Main {
 
 ### #유의할 점
 
-<br/>
-
 {: .highlight }
 > print() 와 println()의 차이
 
