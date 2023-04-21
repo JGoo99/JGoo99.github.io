@@ -68,9 +68,9 @@ public class Main {
 ### #유의할 점
 
 {: .highlight }
-> Scanne(System.in) 닫기
+> 스캐너 닫기 scanner.close(); 
 
-> Scanner를 System.in 해주었다면 사용종료 후 꼭 닫아야한다
+> Scanner에 **System.in** 해주었다면 사용종료 후 꼭 닫아야한다
 >
 > 안 닫을 경우 아래와 같은 경고문이 뜬다
 >
