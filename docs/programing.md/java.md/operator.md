@@ -134,6 +134,8 @@ if (id.equals("Goo") || id.equals("goo")) {
 
 ### iii. ! (not)
 
+> not 연산자를 if조건문에 사용해보자
+
 ```java
 if (!true) {
   System.out.println(1);
@@ -151,7 +153,7 @@ if (!false) {
 
 ## 5. 기본연산자의 우선순위
 
-![operator](https://user-images.githubusercontent.com/126454114/233687519-0365af5a-7291-422e-9592-d303b07043a4.jpg)
+![operator](https://user-images.githubusercontent.com/126454114/233689592-014c1e43-0931-413a-bcff-d2a677e07c7e.jpg)
 
 ---
 
