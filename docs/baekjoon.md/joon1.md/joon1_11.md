@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 꼬마 정민
+title: A+B+C
 parent: 입출력과 사칙연산
 grand_parent: 백준 문제풀이
 nav_order: 12
@@ -14,7 +14,7 @@ nav_order: 12
 
 > 꼬마 정민이는 이제 A + B 정도는 쉽게 계산할 수 있다. 이제 A + B + C를 계산할 차례이다!
 >
-> A, B, C (1 ≤ A, B, C ≤ 10^12)
+> A, B, C ( 1 ≤ A, B, C ≤ 10^12 )
 
 ---
 
@@ -66,18 +66,18 @@ class Main {
 import java.util.Scanner;
 
 class Main {
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 	  
-		Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 		
-		int A = sc.nextInt();
+    int A = sc.nextInt();
     int B = sc.nextInt();
     int C = sc.nextInt();
 		
-		System.out.println( A+B+C );
+    System.out.println( A+B+C );
 		
-		sc.close();
-	}
+    sc.close();
+  }
 }
 ```
 
@@ -117,7 +117,7 @@ long A = sc.nextLong(); //에러 해결
 >
 > 위에서 10^12까지의 범위가 수용가능해야 하므로 int형이 아닌 long타입을 사용해야한다
 >
-> _아래 이전 수업에서 배웠던 데이터타입 링크를 첨부한다_
+> _이전 수업에서 배웠던 데이터타입 링크를 아래에 첨부한다_
 
 
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/data_type/){: .btn .btn-green }
