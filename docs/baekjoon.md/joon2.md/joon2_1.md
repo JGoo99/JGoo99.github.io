@@ -68,10 +68,14 @@ class Main {
 {: .highlight }
 > 제한된 데이터 범위
 
-> 제시된 데이터의 조건 : **정수**, **-10,000 ≤ A, B ≤ 10,000**
+> 제시된 데이터의 조건은 아래와 같다
 >
-> 따라서 해당 범위에 들면서 메모리를 가장 적게 사용하는 short형을 사용한다
+> 1. 정수
+>
+> 2. -10,000 ≤ A, B ≤ 10,000
+>
+> 따라서 해당 범위에 들면서 메모리를 가장 적게 사용하는 **short형**을 사용한다
 >
 > _데이터 타입의 저장 범위를 정리해둔 링크를 아래에 첨부한다_
 
-[Link button](https://jgoo99.github.io/docs/programing.md/java.md/data_type/#ii-%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95){: .btn .btn-purple }
+[Link button](https://jgoo99.github.io/docs/programing.md/java.md/data_type/#ii-%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95){: .btn .btn-outline }
