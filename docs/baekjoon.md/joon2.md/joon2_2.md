@@ -54,14 +54,14 @@ class Main {
 		
     if (score >= 90) 
       System.out.println("A");
-	   else if(score >= 80)
-       System.out.println("B");
-     else if (score >= 70)
-       System.out.println("C");
-     else if (score >= 60)
-       System.out.println("D");
-     else
-       System.out.println("F");
+      else if (score >= 80)
+        System.out.println("B");
+      else if (score >= 70)
+        System.out.println("C");
+      else if (score >= 60)
+        System.out.println("D");
+      else
+        System.out.println("F");
 		
     sc.close();
   }
@@ -73,7 +73,7 @@ class Main {
 ### #유의할 점
 
 {: .highlight }
-> 논리연산자 vs else if
+> **논리연산자** vs **else if**
 
 > 이 문제를 보았을 때 아래의 두 가지 풀이가 생각났다
 
@@ -83,17 +83,20 @@ class Main {
 
 ```java
 if (score >= 90) 
-	System.out.println("A");
+  System.out.println("A");
 if (score >= 80 && score <= 89)
-	System.out.println("B");
+  System.out.println("B");
 if (score >= 70 && score <= 79)
-	System.out.println("C");
+  System.out.println("C");
 if (score >= 60 && score <= 69)
-	System.out.println("D");
+  System.out.println("D");
 if (score <= 59)
-	System.out.println("F");
+  System.out.println("F");
 ```
 
+<br/>
+
+{:style="counter-reset:none"}
 2. else if문을 활용하기
 
 ```java
