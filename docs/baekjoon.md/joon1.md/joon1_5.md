@@ -57,10 +57,10 @@ public class Main {
 {: .highlight }
 > 실수 데이터타입의 선언 float? double?
 
-> **정수는 int형이 기준, 실수는 double이 기준이 된다**
+> **실수는 double타입이 기준이 된다** (정수는 int형이 기준)
 >
-> _+)두 타입 모두 정밀도에서 근본적인 문제가 존재한다_
+> 그 외에는 입출력하는 데이터의 저장가능 범위를 숙지하고 그에 맞는 데이터타입을 사용한다
 >
-> 이전 수업에서 연산자 개념을 정리한 링크 버튼을 첨부한다
+> 이전 수업에서 데이터타입 개념을 정리한 링크 버튼을 첨부한다
 
-[Link button](https://jgoo99.github.io/docs/programing.md/java.md/data_type/){: .btn .btn-purple }
+[Link button](https://jgoo99.github.io/docs/programing.md/java.md/data_type/#ii-%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95){: .btn .btn-purple }

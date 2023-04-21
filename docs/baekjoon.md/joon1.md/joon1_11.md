@@ -111,13 +111,13 @@ long A = sc.nextLong(); //에러 해결
 {: .highlight }
 > 정수형 데이터타입의 구분
 
-> 정수의 데이터 타입에는 byte, short, int, long이 있다
+> 정수 데이터 타입 : byte, short, int, long
 >
-> 네가지 타입의 차이점은 저장 가능 범위와 메모리의 크기차이다
->
+> 차이점 : 저장 가능 범위, 메모리 크기
+
 > 위에서 10^12까지의 범위가 수용가능해야 하므로 int형이 아닌 long타입을 사용해야한다
 >
 > _이전 수업에서 배웠던 데이터타입 링크를 아래에 첨부한다_
 
 
-[Link button](https://jgoo99.github.io/docs/programing.md/java.md/data_type/){: .btn .btn-green }
+[Link button](https://jgoo99.github.io/docs/programing.md/java.md/data_type/#ii-%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95){: .btn .btn-green }
