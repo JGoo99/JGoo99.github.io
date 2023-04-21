@@ -22,13 +22,7 @@ nav_order: 13
 
 ### #출력
 
-> \    /\
->
-> )  ( ')
->
-> (  /  )
->
->  \(__)|
+![joon1_12](https://user-images.githubusercontent.com/126454114/233665812-b46d9ed6-d454-4330-b3fe-4fc7582d2e3a.jpg)
 
 ### #알고리즘 분류
 
@@ -59,10 +53,8 @@ class Main {
 
 > 그 자체만으로는 출력이 되지 않는 특수문자에는 역슬래시를 붙여야 한다
 >
-> **\   '   "**
+> 역슬래시(\), 따옴표(',")
 >
 > _이를 **이스케이프 시퀀스**라 하며 이에 관하여 정리한 링크를 아래에 첨부한다_
 
-<div class="code-example" markdown="1">
-[Link button](https://jgoo99.github.io/docs/programing.md/java.md/escape/){: .btn }
-
+[Link button](https://jgoo99.github.io/docs/programing.md/java.md/escape/){: .btn .btn-outline }
