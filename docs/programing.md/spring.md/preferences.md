@@ -12,21 +12,24 @@ nav_order: 2
 
 ## 1. 프로젝트 생성
 
-0. H2 데이터베이스 다운로드
+1. H2 데이터베이스 다운로드
 
-> 아래 사이트에 자세하게 설명되어 있다
+> 링크 사이트에 자세하게 설명되어 있다
+[Link button](https://so-easy-coding.tistory.com/5){: .btn .btn-outline }
 
-https://so-easy-coding.tistory.com/5
+<br/>
 
 {:style="counter-reset:none"}
-1. 스프링 부트 사이트 이동
+2. 스프링 부트 사이트 이동
 
 https://start.spring.io/ 
 
 [Link button](https://opentutorials.org/course/1223/5261){: .btn .btn-outline }
 
+<br/>
+
 {:style="counter-reset:none"}
-2. 프로젝트 선택
+3. 프로젝트 선택
 
 ![preference1](https://user-images.githubusercontent.com/126454114/233755520-ad4cdb4a-ea76-4aed-a435-27bf77d47154.jpg)
 
@@ -35,9 +38,9 @@ https://start.spring.io/
 {: .important-title }
 > 스프링부트 버전
 >
-> 3.0 이상을 선택했기 때문에 자바 17 이상을 사용해야 한다
+> 스프링부트 3.0 이상을 선택했기 때문에 자바 17 이상을 사용해야 한다
 >
-> 현재 자바 11을 사용하고 있기 때문에 바꿔주어야 한다
+> 현재 자바 11을 사용하고 있기 때문에 바꿔주었다
 
 <br/>
 
@@ -49,21 +52,19 @@ https://start.spring.io/
 <br/>
 
 {:style="counter-reset:none"}
-3. 라이브러리 살펴보기
+4. 라이브러리 살펴보기
 
 > 프로젝트 생성 시 라이브러리를 선택할 수 있다
 >
-> 아래는 선택항목이다
+> 아래는 선택된 항목이다
 
 ![preference4](https://user-images.githubusercontent.com/126454114/233756546-1795dc9d-4e5b-417f-81cb-75cb6bca3f7b.jpg)
 
-<br/>
+- **Spring Web**
 
-- Spring Web
+> 웹 프로젝트를 만들 것이기 때문에 가져온다
 
-> 웹 프로젝트를 만들 것이기 때문이다
-
-- Thymeleaf
+- **Thymeleaf**
 
 > html을 만들어주는 템플릿 엔진이 필요하다
 >
@@ -71,8 +72,8 @@ https://start.spring.io/
 
 <br/>
 
-{:style="counter-reset:step-counter 3"}
-4. 스프링 생성
+{:style="counter-reset:none"}
+5. 스프링 생성
 
 > 이후 **generate**를 눌러 프로젝트를 생성한 후
 >
@@ -81,10 +82,10 @@ https://start.spring.io/
 <br/>
 
 {:style="counter-reset:none"}
-5. intellij에서 열기  
+6. intellij에서 열기  
 
 open - (study-hello_spring-build.gradle) - open as project
-{: .fs-5 .ls-10 .text-mono .code-example }
+{: .fs-3 .ls-10 .text-mono .code-example }
 
 {: .new-title }
 > test 코드
@@ -95,18 +96,15 @@ open - (study-hello_spring-build.gradle) - open as project
 
 <br/>
 
-{:style="counter-reset:none"}
-6. build.gradle 살펴보기
+> 프로젝트를 열었으면 **build.gradle**를 살펴보자
+>
+> 해당 그래들은 버전설정 및 라이브러리 가져오는 역할을 한다
 
-### i. build.gradle
-
-> 버전설정 및 라이브러리 가져오는 역할
-
-```java
+```groovy
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.0.6'
-	id 'io.spring.dependency-management' version '1.1.0'
+  id 'java'
+  id 'org.springframework.boot' version '3.0.6'
+  id 'io.spring.dependency-management' version '1.1.0'
 }
 //이 부분은 나중에 공부하는 것이 좋다
 //지금은 버전설정하고 라이브러리를 땡겨오는구나 정도만 파악하기
@@ -116,21 +114,21 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17' //java version: 17
 
 repositories {
-	mavenCentral()
+  mavenCentral()
 }
 //아래의 라이브러리를 mavenCentral에서 다운받도록 설정됨
 //필요 시 특정 사이트 url을 넣을 수 있음
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+  implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+  implementation 'org.springframework.boot:spring-boot-starter-web'
   //라이브러리 선택했던 것 두개 (spring web, thymeleaf)
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
   //요즘은 테스트 라이브러리가 기본적으로 들어감(참고)
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+  useJUnitPlatform()
 }
 ```
 
@@ -180,20 +178,77 @@ _404 에러페이지가 뜬 모습_
 
 ![preference5](https://user-images.githubusercontent.com/126454114/233772770-553a1259-58ac-468a-a9aa-284724e04d5d.jpg)
 
-<br/>
-
 {: .highlight }
 > intellij의 실행을 중단하고 404페이지를 새로고침하면 **사이트에 연결할 수 없음** 메시지가 뜬다
 
 ---
 
-## 2. View 환경설정
+## 2. 라이브러리 살펴보기
 
+1. 다운 받은 라이브러리와 실제 라이브러리 차이
 
+> **External Libraries** : 땡겨온 라이브러리
+>
+> 다운 받은 라이브러리에 비해 실제 라이브러리의 양이 많다
+>
+> 땡긴 적이 없는 수많은 라이브러리들 존재하는 이유는 **의존관계** 때문이다
+>
+> 아래를 보면 라이브러리 간 의존관계의 중첩을 볼 수 있다
+
+_cmd+cmd 후 오른쪽 상단 gradle 클릭_
+
+![preference7](https://user-images.githubusercontent.com/126454114/233788866-5c715679-e6fa-48d0-bc29-f763ccba088c.jpg)
+
+> 확장 화살표가 없고, (*) 표시된 라이브러리는 중복처리된 것이다
+
+<br/>
+
+- intellij 꿀팁
+
+![preference6](https://user-images.githubusercontent.com/126454114/233788374-06ff9dfb-f96b-48f5-8176-c94f26573a6e.jpg)
+
+{: .note-title }
+> 파일 검색 기능
+>
+> 파일을 검색하고싶을 때 파일 하나 선택 후 키보드로 바로 입력하여 검색 가능
+
+<br/>
+
+> 아래 사진을 보면 spring-core가 의존관계이기 때문에 자동으로 땡겨지고있다
+>
+> 이처럼 spring boot와 관련된 라이브러리를 쓰면 spring core까지 다 땡겨서 저절로 세팅된다
+
+![preference8](https://user-images.githubusercontent.com/126454114/233789458-cbeb75c0-27b8-4555-90b1-4ea46b6a2ad2.jpg)
 
 ---
 
-## 3. 빌드하고 실행하기
+## +) 로그와 관련된 간단한 언급
+
+{: .highlight }
+> 현업에선 **System.out.println();** 사용을 안 한다?
+
+> 실무에선 **log**로 받는 경우가 많아서 syso을 거의 사용하지 않는다
+
+<br/>
+
+- 로그에 관련된 라이브러리가 스프링부트와 함께 자동으로 당겨진 모습
+
+![preference9](https://user-images.githubusercontent.com/126454114/233790929-c8528f97-6e91-404d-85bd-dd0f211864fe.jpg)
+
+{: .new-title }
+> **logback** 과 **slf4j**
+>
+> 로그를 어떤 구현체로 출력할 것인가?
+>
+> 요즘 트랜드는 logback이고(성능/속도 측면에서 우세), slf4j는 인터페이스이다
+
+---
+
+## 3. View 환경설정
+
+---
+
+## 4. 빌드하고 실행하기
 
 
 
