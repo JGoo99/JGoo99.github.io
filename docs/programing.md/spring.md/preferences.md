@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 프로젝트 환경설정
-parent: Spring
+parent: Spring 입문
 grand_parent: Programing
 nav_order: 2
 ---
@@ -185,6 +185,8 @@ _404 에러페이지가 뜬 모습_
 
 ## 2. 라이브러리 살펴보기
 
+<br/>
+
 1. 다운 받은 라이브러리와 실제 라이브러리 차이
 
 > **External Libraries** : 땡겨온 라이브러리
@@ -246,6 +248,40 @@ _cmd+cmd 후 오른쪽 상단 gradle 클릭_
 
 ## 3. View 환경설정
 
+> 이전 수업까지는 404 에러 페이지 띄우기까지 했었다
+>
+> 이번 수업에서는 페이지를 제작해서 페이지를 띄워보자
+
+### i. Welcome Page 만들기
+
+> 도매인만 누르고 들어왔을 때 뜨는 첫 화면으로. 가장 간단한 페이지 제작이다
+
+<br/>
+
+1. html 파일 만들기
+
+> 아래 사진의 경로에 html을 만든 뒤 간단한 코드를 작성한다
+
+![preference10](https://user-images.githubusercontent.com/126454114/233822135-fcf97fd2-f832-4ce8-9468-deb27e3efa74.jpg) 
+
+2. 
+
+> 아래 경로로 들어가 'welcome page'를 찾는다
+
+```
+https://docs.spring.io/spring-boot/docs/current/reference/html/web.html#web.servlet.spring-mvc.welcome-page
+```
+
+> 해당 내용은 아래와 같다
+
+<div class="code-example" markdown="1">
+1.1.5. Welcome Page
+Spring Boot supports both static and templated welcome pages. It first looks for an index.html file in the configured static content locations. If one is not found, it then looks for an index template. If either is found, it is automatically used as the welcome page of the application.
+</div>
+```markdown
+index.html 파일을 찾는 순서를 설명한 글이다
+```
+
 ---
 
 ## 4. 빌드하고 실행하기
@@ -260,7 +296,3 @@ _cmd+cmd 후 오른쪽 상단 gradle 클릭_
 > 
 
 > 
-
----
-
-[Link button](https://opentutorials.org/course/1223/5261){: .btn .btn-outline }
