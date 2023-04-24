@@ -61,6 +61,7 @@ _2023.04.21~_
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 import java.util.Scanner;
@@ -137,6 +138,7 @@ class Main {
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 import java.util.Scanner;
@@ -263,6 +265,7 @@ else
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 import java.util.Scanner;

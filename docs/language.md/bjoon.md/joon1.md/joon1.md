@@ -49,6 +49,7 @@ _2023.04.20~2023.04.21_
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 public class Main {
@@ -148,6 +149,7 @@ public class Main {
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 import java.util.Scanner;
@@ -207,6 +209,7 @@ public class Main {
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 import java.util.Scanner;
@@ -264,6 +267,7 @@ public class Main {
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 import java.util.Scanner;
@@ -331,6 +335,7 @@ public class Main {
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 import java.util.Scanner;
@@ -398,6 +403,7 @@ public class Main {
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 import java.util.Scanner;
@@ -460,6 +466,7 @@ public class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > 코드의 최적화
@@ -517,6 +524,7 @@ System.out.println(i.next() + "??!");
 ---
 
 ### #풀이
+{: .no_toc }
 
 - 서기
 
@@ -588,6 +596,7 @@ public class Main {
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 import java.util.Scanner;
@@ -664,6 +673,7 @@ public class Main {
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 import java.util.Scanner;
@@ -733,6 +743,7 @@ public class Main {
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 import java.util.Scanner;
@@ -849,6 +860,7 @@ long A = sc.nextLong(); //에러 해결
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 class Main {
@@ -904,6 +916,7 @@ class Main {
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 class Main {
