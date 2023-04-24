@@ -14,6 +14,8 @@ _2023.04.20~2023.04.21_
     Table of contents
   </summary>
   {: .text-delta }
+1. TOC
+{:toc}
 </details>
 
 ---
@@ -29,14 +31,17 @@ _2023.04.20~2023.04.21_
 ---
 
 ### #입력
+{: .no_toc }
 
 > 없음
 
 ### #출력
+{: .no_toc }
 
 > Hello World!를 출력하시오
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 구현
 
@@ -55,6 +60,7 @@ public class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > 출력해야할 문장을 꼼꼼히 확인하자
