@@ -21,6 +21,7 @@ _2023.04.20~2023.04.21_
 ---
 
 # 입출력과 사칙연산
+{: .no_toc }
 
 ---
 
@@ -67,7 +68,7 @@ public class Main {
 
 > 느낌표 하나, 온점 하나도 정확히 파악하자
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_1000
 
@@ -76,20 +77,24 @@ public class Main {
 ---
 
 ### #입력
+{: .no_toc }
 
 > 1, 2
 
 ### #출력
+{: .no_toc }
 
 > 3
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 수학, 구현, 사칙연산
 
 ---
 
 ### #풀이
+{: .no_toc }
 
 ```java
 import java.util.Scanner;
@@ -110,13 +115,14 @@ public class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > Scanner 사용법을 외워보자
 
 > 이제는 이해를 넘어서서 사용법을 외워보자
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_1001
 
@@ -125,14 +131,17 @@ public class Main {
 ---
 
 ### #입력
+{: .no_toc }
 
 > 3, 2
 
 ### #출력
+{: .no_toc }
 
 > 1
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 수학, 구현, 사칙연산
 
@@ -159,6 +168,7 @@ public class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > Scanner 입력의 데이터 타입을 확실히하자
@@ -171,7 +181,7 @@ public class Main {
 >
 > String A = i.next();
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_10998
 
@@ -180,14 +190,17 @@ public class Main {
 ---
 
 ### #입력
+{: .no_toc }
 
 > 1, 2
 
 ### #출력
+{: .no_toc }
 
 > 2
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 수학, 구현, 사칙연산
 
@@ -214,6 +227,7 @@ public class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > 연산자의 개념을 확실히 하자
@@ -222,7 +236,7 @@ public class Main {
 
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/operator/){: .btn .btn-purple }
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_1008
 
@@ -231,16 +245,19 @@ public class Main {
 ---
 
 ### #입력
+{: .no_toc }
 
 > 1, 3
 
 ### #출력
+{: .no_toc }
 
 > 0.33333333333333333333333333333333
 >
 > _오차 허용_
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 수학, 구현, 사칙연산
 
@@ -267,6 +284,7 @@ public class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > 실수 데이터타입의 선언 float? double?
@@ -279,7 +297,7 @@ public class Main {
 
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/data_type/#ii-%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95){: .btn .btn-purple }
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_10869
 
@@ -288,10 +306,12 @@ public class Main {
 ---
 
 ### #입력
+{: .no_toc }
 
 > 7, 3
 
 ### #출력
+{: .no_toc }
 
 > 10
 >
@@ -304,6 +324,7 @@ public class Main {
 > 1
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 수학, 구현, 사칙연산
 
@@ -334,6 +355,7 @@ public class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > print() 와 println()의 차이
@@ -346,7 +368,7 @@ public class Main {
 >
 > print + line 으로 자동 줄바꿈을 해주는 명령어
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_10926
 
@@ -359,14 +381,17 @@ public class Main {
 ---
 
 ### #입력
+{: .no_toc }
 
 > joonas
 
 ### #출력
+{: .no_toc }
 
 > joonas??!
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 구현
 
@@ -462,7 +487,7 @@ Scanner i = new Scanner(System.in);
 System.out.println(i.next() + "??!");
 ```
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_18108
 
@@ -475,14 +500,17 @@ System.out.println(i.next() + "??!");
 ---
 
 ### #입력
+{: .no_toc }
 
 > 2541
 
 ### #출력
+{: .no_toc }
 
 > 1998
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 수학, 사칙연산
 
@@ -515,6 +543,7 @@ public class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > 입력값의 데이터타입
@@ -523,7 +552,7 @@ public class Main {
 >
 > Scanner에 입력되는 데이터타입에 맞추어 정확히 호출해야한다
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_10430
 
@@ -536,10 +565,12 @@ public class Main {
 ---
 
 ### #입력
+{: .no_toc }
 
 > 5, 8, 4
 
 ### #출력
+{: .no_toc }
 
 > 1
 >
@@ -550,6 +581,7 @@ public class Main {
 > 0
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 수학, 구현, 사칙연산
 
@@ -581,6 +613,7 @@ public class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > 스캐너 닫기 scanner.close(); 
@@ -593,7 +626,7 @@ public class Main {
 > 
 > **닫는 방법 : i.close();** 
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_2588
 
@@ -605,12 +638,14 @@ public class Main {
 ---
 
 ### #입력
+{: .no_toc }
 
 > 472
 >
 > 385
 
 ### #출력
+{: .no_toc }
 
 > 2360
 >
@@ -622,6 +657,7 @@ public class Main {
 
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 수학, 사칙연산
 
@@ -656,6 +692,7 @@ public class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > 유지보수가 좋은 코드에 대한 고민
@@ -668,7 +705,7 @@ public class Main {
 >
 > 따라서 입력값이 바뀌었을 때도 사용할 수 있는 코드에 대해 고민을 했다
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_11382
 
@@ -679,14 +716,17 @@ public class Main {
 ---
 
 ### #입력
+{: .no_toc }
 
 > 77, 77, 7777
 
 ### #출력
+{: .no_toc }
 
 > 7931
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 수학, 구현, 사칙연산
 
@@ -767,6 +807,7 @@ long A = sc.nextLong(); //에러 해결
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > 정수형 데이터타입의 구분
@@ -782,7 +823,7 @@ long A = sc.nextLong(); //에러 해결
 
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/data_type/#ii-%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95){: .btn .btn-green }
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_10171
 
@@ -791,14 +832,17 @@ long A = sc.nextLong(); //에러 해결
 ---
 
 ### #입력
+{: .no_toc }
 
 > 없음
 
 ### #출력
+{: .no_toc }
 
 ![joon1_12](https://user-images.githubusercontent.com/126454114/233665812-b46d9ed6-d454-4330-b3fe-4fc7582d2e3a.jpg)
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 구현
 
@@ -821,6 +865,7 @@ class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > 특수문자의 출력 방법
@@ -833,7 +878,7 @@ class Main {
 
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/escape/){: .btn .btn-outline }
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_10172
 
@@ -842,14 +887,17 @@ class Main {
 ---
 
 ### #입력
+{: .no_toc }
 
 > 없음
 
 ### #출력
+{: .no_toc }
 
 ![joon1_13](https://user-images.githubusercontent.com/126454114/233666156-c3f483de-71e0-4e87-8451-8c809b3d2319.jpg)
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 구현
 
@@ -873,6 +921,7 @@ class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > 비슷한 특수문자의 차이

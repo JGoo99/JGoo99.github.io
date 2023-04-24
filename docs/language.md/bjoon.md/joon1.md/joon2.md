@@ -10,9 +10,19 @@ has_children: true
 
 _2023.04.21~_
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 ---
 
 # 조건문
+{: .no_toc }
 
 ---
 
@@ -25,6 +35,7 @@ _2023.04.21~_
 ---
 
 ### #입력
+{: .no_toc }
 
 > 1, 2
 
@@ -33,6 +44,7 @@ _2023.04.21~_
 > 5, 5
 
 ### #출력
+{: .no_toc }
 
 > <
 
@@ -42,6 +54,7 @@ _2023.04.21~_
 
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 구현
 
@@ -70,6 +83,7 @@ class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > 제한된 데이터 범위
@@ -86,7 +100,7 @@ class Main {
 
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/data_type/#ii-%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95){: .btn .btn-outline }
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_9498
 
@@ -105,15 +119,18 @@ class Main {
 ---
 
 ### #입력
+{: .no_toc }
 
 > 100
 
 ### #출력
+{: .no_toc }
 
 > A
 
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 구현
 
@@ -149,6 +166,7 @@ class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > **논리연산자** vs **else if**
@@ -201,7 +219,7 @@ else
 
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/operator/#4-%EB%85%BC%EB%A6%AC-%EC%97%B0%EC%82%B0%EC%9E%90){: .btn .btn-outline }
 
-<br/><br/>
+<br/><br/><br/>
 
 ## #문제_2753
 
@@ -224,18 +242,21 @@ else
 ---
 
 ### #입력
+{: .no_toc }
 
 > 2000
 
 > 1999
 
 ### #출력
+{: .no_toc }
 
 > 1
 
 > 0
 
 ### #알고리즘 분류
+{: .no_toc }
 
 > 수학, 구현, 사칙연산
 
@@ -265,6 +286,7 @@ class Main {
 ---
 
 ### #유의할 점
+{: .no_toc }
 
 {: .highlight }
 > 논리연산자의 우선순위
@@ -289,4 +311,4 @@ class Main {
 
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/operator/#5-%EA%B8%B0%EB%B3%B8%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84){: .btn .btn-outline }
 
-<br/><br/>
+<br/><br/><br/>
