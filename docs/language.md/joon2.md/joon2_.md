@@ -1,15 +1,3 @@
----
-layout: default
-title: 
-parent: 조건문
-grand_parent: 백준 문제풀이
-nav_order: 
----
-
-# 조건문
-
----
-
 ## #문제_
 
 > 

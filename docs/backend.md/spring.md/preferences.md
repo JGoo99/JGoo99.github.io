@@ -2,7 +2,7 @@
 layout: default
 title: 프로젝트 환경설정
 parent: Spring 입문
-grand_parent: Programing
+grand_parent: Back-end
 nav_order: 2
 ---
 
@@ -258,14 +258,18 @@ _cmd+cmd 후 오른쪽 상단 gradle 클릭_
 
 <br/>
 
-1. html 파일 만들기
+1. Welcome Page 만들기
 
 > 아래 사진의 경로에 html을 만든 뒤 간단한 코드를 작성한다
 
 ![preference10](https://user-images.githubusercontent.com/126454114/233822135-fcf97fd2-f832-4ce8-9468-deb27e3efa74.jpg) 
 
-2. 
+> html 파일은 static 코드를 그냥 넘겨주는 것이다
 
+<br/>
+
+> 또한, spring.io에서는 검색하여 정보를 얻을 수 있다
+>
 > 아래 경로로 들어가 'welcome page'를 찾는다
 
 ```
@@ -281,6 +285,14 @@ Spring Boot supports both static and templated welcome pages. It first looks for
 ```markdown
 index.html 파일을 찾는 순서를 설명한 글이다
 ```
+
+<br/>
+
+3. thymeleaf 탬플릿 엔진 사용해보기
+
+> 템플릿 엔진을 활용하면 위의 html의 파일 코드를 수정하여 원하는대로 모양을 바꿀 수 있다
+
+
 
 ---
 

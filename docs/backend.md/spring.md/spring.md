@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Spring 입문
-parent: Programing
+parent: Back-end
 nav_order: 2
 has_children: true
 ---
