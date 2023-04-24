@@ -14,8 +14,6 @@ _2023.04.20~2023.04.21_
     Table of contents
   </summary>
   {: .text-delta }
-1. TOC
-{:toc}
 </details>
 
 ---
