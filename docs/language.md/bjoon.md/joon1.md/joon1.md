@@ -9,6 +9,15 @@ has_children: true
 
 _2023.04.20~2023.04.21_
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 ---
 
 # 입출력과 사칙연산
