@@ -1,8 +1,10 @@
 ---
 layout: default
 title: 입출력과 사칙연산
-parent: Language
-nav_order: 1
+parent: Algorithm
+grand_parent: Language
+nav_order: 50
+has_children: true
 ---
 
 _2023.04.20~2023.04.21_

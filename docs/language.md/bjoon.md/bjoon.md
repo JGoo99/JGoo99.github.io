@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Java
+title: Algorithm
 parent: Language
-nav_order: 2
+nav_order: 50
 has_children: true
 ---
-
-_2023.04.05~_
