@@ -7,8 +7,6 @@ nav_order: 2
 has_children: true
 ---
 
-_2023.04.20~2023.04.21_
-
 <details open markdown="block">
   <summary>
     Table of contents

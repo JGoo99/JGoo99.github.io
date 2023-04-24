@@ -6,7 +6,19 @@ grand_parent: Back-end
 nav_order: 2
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+---
+
 # I. 프로젝트 환경설정
+{: .no_toc }
 
 ---
 
@@ -225,6 +237,7 @@ _cmd+cmd 후 오른쪽 상단 gradle 클릭_
 ---
 
 ## +) 로그와 관련된 간단한 언급
+{: .no_toc }
 
 {: .highlight }
 > 현업에선 **System.out.println();** 사용을 안 한다?
@@ -253,6 +266,7 @@ _cmd+cmd 후 오른쪽 상단 gradle 클릭_
 > 이번 수업에서는 페이지를 제작해서 페이지를 띄워보자
 
 ### i. Welcome Page 만들기
+{: .no_toc }
 
 > 도매인만 누르고 들어왔을 때 뜨는 첫 화면으로. 가장 간단한 페이지 제작이다
 
@@ -288,23 +302,124 @@ index.html 파일을 찾는 순서를 설명한 글이다
 
 <br/>
 
-3. thymeleaf 탬플릿 엔진 사용해보기
+### ii. 템플릿으로 화면 구성해보기
+{: .no_toc }
 
 > 템플릿 엔진을 활용하면 위의 html의 파일 코드를 수정하여 원하는대로 모양을 바꿀 수 있다
 
+<br/>
 
+1. 컨트롤러 클래스 생성하기
+
+> src/main/java/hello.hellospring에 **controller 패키지 생성** 후 
+>
+> hellocontroller 클래스 생성한다 코드는 아래와 같다
+
+_hellocontroller.class_
+
+```java
+package hello.hellospring.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HelloController {
+
+  @GetMapping("hello") //맵 어플에서
+  public String hello (Model model) {
+		
+    model.addAttribute("data", "hello!!");
+    //(attributeName: "data", attributeValue: "hello!!")
+    return "hello";
+  }
+}
+```
+
+<br/>
+
+2. html 파일 생성하기
+
+> src/main/resources/templates에 hello.html 생성 후 아래와 같이 작성한다
+
+```html
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Hello</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="'안녕하세요. ' + ${data}" >안녕하세요. 손님</p>
+<!--&{data}는 Hellospring클래스의 attributeValue값과 치환된다-->
+</body>
+</html>
+```
+
+{: .highlight}
+> HTML 주석처리
+>
+> <!--내용 작성-->
+
+<br/>
+
+3. 실행해보기
+
+> intellij에서 재실행 후 검색창에 아래 링크를 작성하여 들어가면 아래 화면이 출력된다
+>
+> **_localhost8080/hello_**
+
+![preference11](https://user-images.githubusercontent.com/126454114/233960208-37649383-138d-43ed-ae83-27b2ec01a518.jpg)
+
+<br/>
+
+4. 동작 과정
+
+![preference12](https://user-images.githubusercontent.com/126454114/233962124-75e5e9a8-8c53-4cec-a48c-1380b50cc428.jpg)
+
+- 검색창에 localhost8080/**hello** 입력
+
+> 스프링 부트는 **톰캣**이라는 웹서버를 내장하고 있음
+>
+> 이 웹서버에 위 url이 들어오고 "hello" 값과 매칭값이 있는지 spring에서 찾음
+
+- hello 매소드 실행
+
+```java
+public String hello (Model model) {
+  model.addAttribute("data", "hello!!");
+  return "hello";
+}
+```
+
+> 모델에 키는 data, 값은 hello!!를 대입한 후 hello를 리턴한다
+
+- 템플릿 엔진 처리
+
+> hello를 리턴하면 뷰 리졸버가 resources:templates의 hello.html을 찾아 랜더링한다
+>
+> resources:templates/**hello**.html
 
 ---
 
 ## 4. 빌드하고 실행하기
 
+> 터미널에 들어가서 빌드하고 실행해보자
 
+![preference13](https://user-images.githubusercontent.com/126454114/233966526-953324e9-6f7f-49cf-ab66-a33c11a57521.jpg)
+
+![preference14](https://user-images.githubusercontent.com/126454114/233966958-86052d3d-6907-48d6-99d7-e3e0ef8d72a9.jpg)
+
+> 이후 localhost8080, localhost8080/hello를 확인해보면 똑같이 실행된다
 
 ---
 
-## **이 개념을 왜 배울까?**
+## **이번 수업 정리**
 
 {: .highlight }
-> 
+> 스프링 개념을 이해하기 위한 간단한 실습
 
-> 
+> 프로젝트를 생성해보고 템플릿을 활용하여 실제 화면을 띄워보는 과정을 통해
+>
+> 라이브러리에는 무엇이 있으며 화면을 띄우는 과정에서 어떤 파일들이 필요한 지 알아보았다
