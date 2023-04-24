@@ -2,7 +2,7 @@
 layout: default
 title: 주석과 새미콜론
 parent: Java
-grand_parent: Programing
+grand_parent: Language
 nav_order: 3
 ---
 

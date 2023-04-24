@@ -1,9 +1,12 @@
 ---
 layout: default
 title: 조건문
-parent: Language
-nav_order: 2
+parent: Algorithm
+grand_parent: Language
+nav_order: 3
+has_children: true
 ---
+
 
 _2023.04.21~_
 

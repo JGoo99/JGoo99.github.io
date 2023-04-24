@@ -2,7 +2,7 @@
 layout: default
 title: 오버라이딩
 parent: Java
-grand_parent: Programing
+grand_parent: Language
 nav_order: 18
 ---
 

@@ -2,7 +2,7 @@
 layout: default
 title: 데이터 타입
 parent: Java
-grand_parent: Programing
+grand_parent: Language
 nav_order: 2
 ---
 

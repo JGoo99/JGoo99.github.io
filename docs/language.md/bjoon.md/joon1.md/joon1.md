@@ -3,7 +3,7 @@ layout: default
 title: 입출력과 사칙연산
 parent: Algorithm
 grand_parent: Language
-nav_order: 50
+nav_order: 2
 has_children: true
 ---
 

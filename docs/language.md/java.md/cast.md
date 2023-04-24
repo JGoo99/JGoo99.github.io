@@ -2,7 +2,7 @@
 layout: default
 title: 형 변환
 parent: Java
-grand_parent: Programing
+grand_parent: Language
 nav_order: 4
 ---
 

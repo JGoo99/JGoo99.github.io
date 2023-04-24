@@ -2,7 +2,7 @@
 layout: default
 title: 매소드
 parent: Java
-grand_parent: Programing
+grand_parent: Language
 nav_order: 9
 ---
 
