@@ -22,7 +22,7 @@ nav_order: 2
 
 ---
 
-## 1. 프로젝트 생성
+## #프로젝트 생성
 
 1. H2 데이터베이스 다운로드
 
@@ -37,7 +37,9 @@ nav_order: 2
 
 > 프로젝트를 만들기 위해 스트링부트로 이동한다
 
+```
 https://start.spring.io/ 
+```
 
 [Link button](https://opentutorials.org/course/1223/5261){: .btn .btn-outline }
 
@@ -195,7 +197,7 @@ _404 에러페이지가 뜬 모습_
 
 ---
 
-## 2. 라이브러리 살펴보기
+## #라이브러리 살펴보기
 
 <br/>
 
@@ -259,7 +261,7 @@ _cmd+cmd 후 오른쪽 상단 gradle 클릭_
 
 ---
 
-## 3. View 환경설정
+## #View 환경설정
 
 > 이전 수업까지는 404 에러 페이지 띄우기까지 했었다
 >
@@ -307,7 +309,6 @@ Spring Boot supports both static and templated welcome pages. It first looks for
 
 <br/>
 
-{:style="counter-reset:none"}
 1. 컨트롤러 클래스 생성하기
 
 > src/main/java/hello.hellospring에 **controller 패키지 생성** 후 
@@ -405,7 +406,7 @@ public String hello (Model model) {
 
 ---
 
-## 4. 빌드하고 실행하기
+## #빌드하고 실행하기
 
 > 터미널에 들어가서 빌드하고 실행해보자
 
@@ -418,6 +419,7 @@ public String hello (Model model) {
 ---
 
 ## **이번 수업 정리**
+{: .no_toc }
 
 {: .highlight }
 > 스프링 개념을 이해하기 위한 간단한 실습
