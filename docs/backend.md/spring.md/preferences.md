@@ -27,12 +27,15 @@ nav_order: 2
 1. H2 데이터베이스 다운로드
 
 > 링크 사이트에 자세하게 설명되어 있다
+
 [Link button](https://so-easy-coding.tistory.com/5){: .btn .btn-outline }
 
 <br/>
 
 {:style="counter-reset:none"}
 2. 스프링 부트 사이트 이동
+
+> 프로젝트를 만들기 위해 스트링부트로 이동한다
 
 https://start.spring.io/ 
 
@@ -43,6 +46,12 @@ https://start.spring.io/
 {:style="counter-reset:none"}
 3. 프로젝트 선택
 
+> 기존에 다운받은 스트링부트와 자바 버전에 맞게 선택한다
+>
+> 자바 버전 확인방법 : 최상위 디렉토리에서 **java -version**
+>
+> 스트링부트 버전 확인방법 : ~/study/hello-spring 에서 **./gradlew --version**
+
 ![preference1](https://user-images.githubusercontent.com/126454114/233755520-ad4cdb4a-ea76-4aed-a435-27bf77d47154.jpg)
 
 ![preference2](https://user-images.githubusercontent.com/126454114/233755760-12d8e7b9-a9e3-4ac1-86bf-a2f3894a66ef.jpg)
@@ -51,15 +60,6 @@ https://start.spring.io/
 > 스프링부트 버전
 >
 > 스프링부트 3.0 이상을 선택했기 때문에 자바 17 이상을 사용해야 한다
->
-> 현재 자바 11을 사용하고 있기 때문에 바꿔주었다
-
-<br/>
-
-- 자바 버전을 17로 바꿔준 모습
-
-![preference3](https://user-images.githubusercontent.com/126454114/233755589-7fee3330-61bc-478e-a740-7906feb1eee4.jpg)
-
 
 <br/>
 
@@ -199,7 +199,7 @@ _404 에러페이지가 뜬 모습_
 
 <br/>
 
-1. 다운 받은 라이브러리와 실제 라이브러리 차이
+- 다운 받은 라이브러리와 실제 라이브러리 차이
 
 > **External Libraries** : 땡겨온 라이브러리
 >
@@ -265,15 +265,13 @@ _cmd+cmd 후 오른쪽 상단 gradle 클릭_
 >
 > 이번 수업에서는 페이지를 제작해서 페이지를 띄워보자
 
+<br/>
+
 ### i. Welcome Page 만들기
 {: .no_toc }
 
 > 도매인만 누르고 들어왔을 때 뜨는 첫 화면으로. 가장 간단한 페이지 제작이다
-
-<br/>
-
-1. Welcome Page 만들기
-
+>
 > 아래 사진의 경로에 html을 만든 뒤 간단한 코드를 작성한다
 
 ![preference10](https://user-images.githubusercontent.com/126454114/233822135-fcf97fd2-f832-4ce8-9468-deb27e3efa74.jpg) 
@@ -297,7 +295,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/web.html#web.serv
 Spring Boot supports both static and templated welcome pages. It first looks for an index.html file in the configured static content locations. If one is not found, it then looks for an index template. If either is found, it is automatically used as the welcome page of the application.
 </div>
 ```markdown
-index.html 파일을 찾는 순서를 설명한 글이다
+스프링 부트에서 index.html 파일을 찾는 순서를 설명한 글이다
 ```
 
 <br/>
@@ -309,6 +307,7 @@ index.html 파일을 찾는 순서를 설명한 글이다
 
 <br/>
 
+{:style="counter-reset:none"}
 1. 컨트롤러 클래스 생성하기
 
 > src/main/java/hello.hellospring에 **controller 패키지 생성** 후 
@@ -339,6 +338,7 @@ public class HelloController {
 
 <br/>
 
+{:style="counter-reset:none"}
 2. html 파일 생성하기
 
 > src/main/resources/templates에 hello.html 생성 후 아래와 같이 작성한다
@@ -364,6 +364,7 @@ public class HelloController {
 
 <br/>
 
+{:style="counter-reset:none"}
 3. 실행해보기
 
 > intellij에서 재실행 후 검색창에 아래 링크를 작성하여 들어가면 아래 화면이 출력된다
@@ -374,6 +375,7 @@ public class HelloController {
 
 <br/>
 
+{:style="counter-reset:none"}
 4. 동작 과정
 
 ![preference12](https://user-images.githubusercontent.com/126454114/233962124-75e5e9a8-8c53-4cec-a48c-1380b50cc428.jpg)
