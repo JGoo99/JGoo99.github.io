@@ -35,20 +35,19 @@ nav_order: 3
 
 > 서버에서 조작하지 않고, 파일 그대로 웹브라우저에 내려주는 것이다
 >
-> 이전 수업에서 html파일을 그대로 띄운 것과 같다 _아래에 이전 수업 링크 첨부_
+> 이전 수업에서 html파일을 그대로 띄운 것과 같다 _(아래에 이전 수업 링크 첨부)_
 
 [Link button](https://jgoo99.github.io/docs/backend.md/spring.md/preferences/#i-welcome-page-%EB%A7%8C%EB%93%A4%EA%B8%B0){: .btn .btn-outline }
 
 <br/>
 
-> 정확한 정보를 위해 _spring.io_ 에서 'static Content'를 검색해서 알아보자
+> 정확한 정보를 위해 _spring.io_ 에서 'static Content'를 검색해서 알아보자 _(아래에 링크 첨부)_
 
-https://docs.spring.io/spring-boot/docs/current/reference/html/web.html#web.servlet.spring-mvc.static-content
-[Link button](){: .btn .btn-outline }
+[Link button](https://docs.spring.io/spring-boot/docs/current/reference/html/web.html#web.servlet.spring-mvc.static-content){: .btn .btn-outline }
 
 <br/>
 
-_이 사이트에서 스크랩한 일부 중_
+_위 사이트에서 일부 스크랩_
 
 <div class="code-example" markdown="1">
 By default, Spring Boot serves static content from a directory called /static (or /public or /resources or /META-INF/resources) in the classpath or from the root of the ServletContext. 
@@ -57,7 +56,7 @@ By default, Spring Boot serves static content from a directory called /static (o
 스프링부트가 정적 컨텐츠를 가져오는 경로에 대한 설명이다 (static이나 resources 등에서 정적 콘텐츠를 탐색함)
 ```
 
-<br/>
+---
 
 ### ii. 웹 페이지 만들어보기
 {: .no_toc }
@@ -98,7 +97,7 @@ localhost:8080/hello-static.html
 
 > 출력 결과를 확인해보니 html 파일이 잘 실행되고 있다
 
-<br/>
+---
 
 ### iii. 동작 방식
 {: .no_toc }
@@ -108,19 +107,18 @@ localhost:8080/hello-static.html
 > 컨트롤러에서 먼저 찾아본 후 매칭이 안 되면 내부 resorces에서 매칭한다
 
 ---
+---
 
 ## #MVC와 템플릿 엔진
 
 ### i. MVC와 템플릿 엔진이란?
 {: .no_toc }
 
-1. MVC (Model View Controller)
+1. **MVC (Model View Controller)**
 
 > 컨트롤러, 모델, 템플릿 엔진의 화면을 뜻하며, 템플릿 엔진이 동작하기 위해 필요한 것이다
 >
 > 각각의 역할이 무엇인지 알아보고, 명확히 분업하여 사용해야 한다 
-
-<br/>
 
 - Model
 
@@ -144,11 +142,11 @@ localhost:8080/hello-static.html
 <br/>
 
 {:style="counter-reset:none"}
-2. 템플릿 엔진
+2. **템플릿 엔진**
 
 > 서버의 프로그래밍을 통해 html을 동적으로 바꾸어 전달하는 것
 
-<br/>
+---
 
 ### ii. 웹 페이지 만들어보기
 {: .no_toc }
@@ -209,8 +207,6 @@ _src/main/resources/templates/hello-template.html_
 localhost:8080/hello-mvc
 ```
 
-<br/>
-
 ![web4](https://user-images.githubusercontent.com/126454114/234181125-cb558b8a-459c-41aa-85b5-553533ce54c3.jpg)
 
 ```groovy
@@ -224,6 +220,8 @@ WARN 35856 --- [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Reso
 >
 > name을 받지 않아서 뜨는 오류이다
 
+<br/>
+
 - 해결 방법
 
 > url창에 아래와 같이 입력하여 name값을 넘길 수 있다
@@ -233,8 +231,6 @@ WARN 35856 --- [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Reso
 ```
 localhost:8080/hello-mvc?name=spring!!
 ```
-
-<br/>
 
 ![web5](https://user-images.githubusercontent.com/126454114/234183848-cb110319-ca2d-4bf3-9ec4-4818fec507d3.jpg)
 
@@ -251,26 +247,24 @@ ERROR 36067 --- [nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Ser
 >
 > 템플렛이 없거나 접근불가능하다는 내용의 에러가 떴다
 
+<br/>
+
 - 해결 방법
 
 > 에러의 원인을 찾아본 결과
 >
 > tamplate/hello-tempat.html 파일명에 오타(e가 빠짐)가 발견되어 수정해주었다
 
-<br/>
-
 ![web6](https://user-images.githubusercontent.com/126454114/234185024-f42cd1f4-16e9-4993-8d4b-23a1319fdd4c.jpg)
 
 > 정상적으로 화면이 출력되는 모습
 
-<br/>
+---
 
 ### iii. 동작 방식
 {: .no_toc }
 
 ![web7](https://user-images.githubusercontent.com/126454114/234185350-a12dfb45-23e2-4ff6-9322-95eff833c163.jpg)
-
-<br/>
 
 - Controller
 
@@ -301,6 +295,7 @@ _hello-template.html_
 ```
 
 ---
+---
 
 ## #API
 
@@ -313,7 +308,7 @@ _hello-template.html_
 >
 > 2. 서버끼리 통신할 경우 (html이 필요없기 때문) _controller만 이용_
 
-<br/>
+---
 
 ### ii. 웹 페이지 만들어보기
 {: .no_toc }
@@ -392,14 +387,12 @@ static class Hello {
 >
 > 요즘에 거의 jason 방식을 사용하는 추세이다
 
-<br/>
+---
 
 ### iii. 동작 방식
 {: .no_toc }
 
 ![web9](https://user-images.githubusercontent.com/126454114/234193676-5ab270fb-c970-4240-a58c-9ebbbb140b73.jpg)
-
-<br/>
 
 1. 문자 반환
 
@@ -411,6 +404,7 @@ static class Hello {
 
 <br/>
 
+{:style="counter-reset:none"}
 2. 객체 반환
 
 > @ResponsBody를 통해 바로 벨류값을 전달 받음
@@ -419,6 +413,7 @@ static class Hello {
 >
 > 리턴값이 객체이기 때문에 (**return hello;**) JsonConverter가 동작하여 출력함
 
+---
 ---
 
 ## **이번 수업 정리**
@@ -429,7 +424,7 @@ static class Hello {
 
 <br/>
 
-- 첫째, html만으로 정적 컨텐츠를 만들었다 
+- **첫째, html만으로 정적 컨텐츠를 만들었다**
 
 > html 파일을 만들어서 바로 웹으로 넘기면 된다
 >
@@ -437,7 +432,7 @@ static class Hello {
 
 <br/>
 
-- 둘째, MVC와 템플릿엔진을 사용하여 동적 콘텐츠를 만들었다
+- **둘째, MVC와 템플릿엔진을 사용하여 동적 콘텐츠를 만들었다**
 
 > Controller에서 name키를 갖는 Model을 View에 리턴한 후 웹에서 출력한다
 >
@@ -447,7 +442,7 @@ static class Hello {
 
 <br/>
 
-- 셋째, API 방식으로 동적 콘텐츠를 만들었다 
+- **셋째, API 방식으로 동적 콘텐츠를 만들었다**
 
 > 그 중 API방식은 String 반환과 객체 반환으로 나뉜다
 >
@@ -458,7 +453,7 @@ static class Hello {
 > 컨버터는 문자값을 리턴받았으므로 String 방식으로 바로 출력한다
 >
 > 2. 객체 반환
->
+> 
 > @Responsbody를 사용하여 뷰 리졸버 대신 http메시지컨버터가 동작한다
 >
 > 컨버터는 객체를 리턴받았으므로 객체가 Json 방식으로 변환되어 웹에서 출력된다

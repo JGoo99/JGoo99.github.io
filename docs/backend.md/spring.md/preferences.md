@@ -112,7 +112,9 @@ open - (study-hello_spring-build.gradle) - open as project
 
 > 프로젝트를 열었으면 **build.gradle**를 살펴보자
 >
-> 해당 그래들은 버전설정 및 라이브러리 가져오는 역할을 한다
+> 해당 gradle은 버전설정 및 라이브러리 가져오는 역할을 한다
+
+_hello-spring/build.gradle_
 
 ```groovy
 plugins {
@@ -162,13 +164,15 @@ tasks.named('test') {
 
 > 아직 intellij에 익숙하지 않았던 탓에 gradle의 새로고침 버튼 조차 몰랐다
 >
-> **.gradle 파일로 가서 새로고침**을 해주었더니 다운로드가 시작되었고, 매인매소드도 정상 작동했다
+> **build.gradle 파일로 가서 새로고침**을 해주었더니 다운로드가 시작되었고, 매인매소드도 정상 작동했다
 
 <br/>
 
 > 매인 매소드가 정상 작동되어 콘솔창에 긴 글이 출력되었다
 >
 > 그 중 아래에서 두번째 줄의 내용이다
+>
+> 아래 8080(http)를 사용하여 웹화면을 띄워보자
 
 ```
 main] o.s.b.w.embedded.tomcat.TomcatWebServer  :
@@ -178,28 +182,26 @@ Tomcat started on port(s): 8080 (http) with context path ''
 <br/>
 
 {:style="counter-reset:none"}
-8. 중간 점검
+8. 웹화면 띄워보기
 
 ```
 http:localhost:8080
 ```
 
-> 위 링크를 입력하여 404 페이지가 뜨는지 확인한다
+> 위 링크를 입력하여 웹페이지가 뜨는지 확인한다
 >
-> 아직 아무것도 만든 것이 없기 때문에 404 에러 페이지가 뜬다면 지금까지 잘 온 것이다
+> 아직 아무것도 만든 것이 없기 때문에 404 에러 페이지가 뜨는 것이 정상이다
 
 _404 에러페이지가 뜬 모습_
 
 ![preference5](https://user-images.githubusercontent.com/126454114/233772770-553a1259-58ac-468a-a9aa-284724e04d5d.jpg)
 
 {: .highlight }
-> intellij의 실행을 중단하고 404페이지를 새로고침하면 **사이트에 연결할 수 없음** 메시지가 뜬다
+> 다시 intellij의 실행을 중단하고 404페이지를 새로고침하면 **사이트에 연결할 수 없음** 메시지가 뜬다
 
 ---
 
 ## #라이브러리 살펴보기
-
-<br/>
 
 - 다운 받은 라이브러리와 실제 라이브러리 차이
 
@@ -210,6 +212,8 @@ _404 에러페이지가 뜬 모습_
 > 땡긴 적이 없는 수많은 라이브러리들 존재하는 이유는 **의존관계** 때문이다
 >
 > 아래를 보면 라이브러리 간 의존관계의 중첩을 볼 수 있다
+
+<br/>
 
 _cmd+cmd 후 오른쪽 상단 gradle 클릭_
 
@@ -269,19 +273,11 @@ _cmd+cmd 후 오른쪽 상단 gradle 클릭_
 
 <br/>
 
-### i. Welcome Page 만들기
+### i. Welcome Page란?
 {: .no_toc }
 
 > 도매인만 누르고 들어왔을 때 뜨는 첫 화면으로. 가장 간단한 페이지 제작이다
 >
-> 아래 사진의 경로에 html을 만든 뒤 간단한 코드를 작성한다
-
-![preference10](https://user-images.githubusercontent.com/126454114/233822135-fcf97fd2-f832-4ce8-9468-deb27e3efa74.jpg) 
-
-> html 파일은 static 코드를 그냥 넘겨주는 것이다
-
-<br/>
-
 > 또한, spring.io에서는 검색하여 정보를 얻을 수 있다
 >
 > 아래 경로로 들어가 'welcome page'를 찾는다
@@ -300,12 +296,23 @@ Spring Boot supports both static and templated welcome pages. It first looks for
 스프링 부트에서 index.html 파일을 찾는 순서를 설명한 글이다
 ```
 
-<br/>
+---
 
-### ii. 템플릿으로 화면 구성해보기
+### ii. Welcome Page 만들기
 {: .no_toc }
 
-> 템플릿 엔진을 활용하면 위의 html의 파일 코드를 수정하여 원하는대로 모양을 바꿀 수 있다
+0. 정적 페이지 만들기
+
+> html 파일 하나로만 Welcome Page를 만들어보자 _(static 코드를 그냥 넘겨주는 것이다)_
+>
+> 아래 사진의 경로에 html을 만든 뒤 간단한 코드를 작성한다
+
+![preference10](https://user-images.githubusercontent.com/126454114/233822135-fcf97fd2-f832-4ce8-9468-deb27e3efa74.jpg) 
+
+<br/>
+
+{: .hightlight }
+> 템플릿 엔진을 활용하면 위의 html의 파일 코드를 수정하여 원하는대로 모양을 바꿀 수 있다 _아래에서 더 다뤄보자_
 
 <br/>
 
@@ -361,7 +368,7 @@ public class HelloController {
 {: .highlight}
 > HTML 주석처리
 >
-> <!--내용 작성-->
+> <!- - 내용입력 - ->
 
 <br/>
 
@@ -374,10 +381,10 @@ public class HelloController {
 
 ![preference11](https://user-images.githubusercontent.com/126454114/233960208-37649383-138d-43ed-ae83-27b2ec01a518.jpg)
 
-<br/>
+---
 
-{:style="counter-reset:none"}
-4. 동작 과정
+### iii. 동작 방식
+{: .no_toc }
 
 ![preference12](https://user-images.githubusercontent.com/126454114/233962124-75e5e9a8-8c53-4cec-a48c-1380b50cc428.jpg)
 
@@ -386,6 +393,8 @@ public class HelloController {
 > 스프링 부트는 **톰캣**이라는 웹서버를 내장하고 있음
 >
 > 이 웹서버에 위 url이 들어오고 "hello" 값과 매칭값이 있는지 spring에서 찾음
+
+<br/>
 
 - hello 매소드 실행
 
@@ -398,12 +407,15 @@ public String hello (Model model) {
 
 > 모델에 키는 data, 값은 hello!!를 대입한 후 hello를 리턴한다
 
+<br/>
+
 - 템플릿 엔진 처리
 
 > hello를 리턴하면 뷰 리졸버가 resources:templates의 hello.html을 찾아 랜더링한다
 >
 > resources:templates/**hello**.html
 
+---
 ---
 
 ## #빌드하고 실행하기
