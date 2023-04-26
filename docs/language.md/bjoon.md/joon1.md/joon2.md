@@ -312,3 +312,78 @@ class Main {
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/operator/#5-%EA%B8%B0%EB%B3%B8%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84){: .btn .btn-outline }
 
 <br/><br/><br/>
+
+## #문제_14681
+
+> **점의 좌표를 입력받아 그 점이 어느 사분면에 속하는지 알아내는 프로그램을 작성하시오.**
+
+<br/>
+
+> (−1000 ≤ x ≤ 1000; x ≠ 0) 
+>
+> (−1000 ≤ y ≤ 1000; y ≠ 0)
+
+---
+
+### #입력
+{: .no_toc }
+
+> 12, 5
+
+> 9, -13
+
+### #출력
+{: .no_toc }
+
+> 1
+
+> 4
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 구현, 기하학
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+  public static void main(String[] args) {
+    Short x,y;
+		
+    Scanner i = new Scanner(System.in);
+    x = i.nextShort();
+    y = i.nextShort();
+		
+    if (x>0) {
+      if (y>0) {
+        System.out.println(1);      //x>0, y>0
+      } else System.out.println(4); //x>0, y<0
+    } else {
+      if (y>0) {
+        System.out.println(2);      //x<0, y>0
+      } else System.out.println(3); //x<0, y<0
+    }
+  }
+}
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> 조건문의 중첩될수록 복잡해진다
+
+> 가독성을 위해 주석을 작성하거나 더 간단한 코드를 모색한다
+>
+> 위의 경우 논리연산자 and를 사용하여 4줄의 syso으로 표현해도 정답이 된다
+
+<br/><br/><br/>
