@@ -519,5 +519,78 @@ if (M-45 >= 0) System.out.println( H + " " + (M-45) );
 >
 > 입력값이 들어왔을 때 빠져나갈 구멍이 없도록 만들자
 
+<br/>
+
+{: .highlight }
+> Scanner의 구분자
+
+> Scanner는 입력받은 값이 여러개인 경우, 스페이스바를 기준으로 구분한다
+>
+> 따라서 위의 경우, H와 M을 엔터 기준으로 입력해도 되고 스페이스바를 이용하여 한 번에 입력해도 된다
+
+- 입력 콘솔창
+
+> 23 40
+
+or
+
+> 23
+>
+> 40
+
+
+<br/><br/><br/>
+
+## #문제_10699
+
+> 서울의 오늘 날짜를 출력하는 프로그램을 작성하시오.
+
+---
+
+### #입력
+{: .no_toc }
+
+> 없음
+
+### #출력
+{: .no_toc }
+
+> 2023-04-27
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 구현
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Main {
+  public static void main(String[] args) {
+    Date date = new Date();
+    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+    System.out.println(formatter.format(date));
+  }
+}
+```
+
+---
+
+### #참고
+{: .no_toc }
+
+{: .highlight }
+> 현재시간을 출력
+
+> 아래에 현재시간을 출력할 수 있는 다양한 방법에 대해 소개하고있다 _링크 첨부_
+
+[Link button](https://developer-talk.tistory.com/408){: .btn .btn-outline }
 
 <br/><br/><br/>

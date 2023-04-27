@@ -446,13 +446,13 @@ static class Hello {
 
 > 그 중 API방식은 String 반환과 객체 반환으로 나뉜다
 >
-> 1. String 반환
+> - String 반환
 >
 > @Responsbody를 사용하여 뷰 리졸버 대신 http메시지컨버터가 동작한다
 >
 > 컨버터는 문자값을 리턴받았으므로 String 방식으로 바로 출력한다
 >
-> 2. 객체 반환
+> - 객체 반환
 > 
 > @Responsbody를 사용하여 뷰 리졸버 대신 http메시지컨버터가 동작한다
 >
