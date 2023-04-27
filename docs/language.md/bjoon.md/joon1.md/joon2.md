@@ -386,4 +386,138 @@ public class Main {
 >
 > 위의 경우 논리연산자 and를 사용하여 4줄의 syso으로 표현해도 정답이 된다
 
+```java
+import java.util.Scanner;
+
+public class Main {
+
+  public static void main(String[] args) {
+    Short x,y;
+		
+    Scanner i = new Scanner(System.in);
+    x = i.nextShort();
+    y = i.nextShort();
+		
+    if (x>0 && y>0) System.out.println(1);
+    if (x>0 && y<0) System.out.println(4);
+    if (x<0 && y>0) System.out.println(2);
+    if (x<0 && y<0) System.out.println(3);
+  }
+}
+```
+
+<br/><br/><br/>
+
+## #문제_2884
+
+> **상근이가 설정한 알람 시각이 주어졌을 때, '45분 일찍 맞추기' 방법을 사용한다면, 이를 언제로 고쳐야 하는지 구하는 프로그램을 작성하시오.**
+
+<br/>
+
+>  (0 ≤ H ≤ 23, 0 ≤ M ≤ 59) 
+
+---
+
+### #입력
+{: .no_toc }
+
+> 10 10
+
+> 0 30
+
+> 23 40
+
+### #출력
+{: .no_toc }
+
+> 9 25
+
+> 23 45
+
+> 22 55
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 수학, 사칙연산
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    byte H, M;
+
+    Scanner i = new Scanner(System.in);
+    H = i.nextByte();
+    M = i.nextByte();
+
+    if (M-45 >= 0) System.out.println( H + " " + (M-45) ); 
+    //45분을 빼도 H가 바뀌지 않는 경우
+    if (M-45 < 0) {
+    //45분을 빼면 H가 바뀌는 경우
+      if (H == 0) {
+        System.out.println(23 + " " + (M + 15));
+        //00시일 경우
+      } else System.out.println((H - 1) + " " + (M + 15));
+        //00시가 아닌 경우
+    }
+  }
+}
+```
+
+---
+
+### #오답노트
+
+<br/>
+
+- 나의 제출 답안
+
+```java
+if (M-45 > 0) System.out.println( H + " " + (M-45) ); 
+//이 부분이 다름
+    if (M-45 < 0) {
+      if (H == 0) {
+        System.out.println(23 + " " + (M + 15));
+      } else System.out.println((H - 1) + " " + (M + 15));
+    }
+```
+
+<br/>
+
+- **WHY** : 왜 틀렸는가
+
+> 크다, 작다를 기준으로 생각하다보니 M-45가 0이 되는 경우를 미쳐 생각하지 못했다
+
+<br/>
+
+- **HOW** : 어떻게 풀어야하는가
+
+> 45분을 제할 경우 나올 수 있는 모든 경우를 생각해본다
+>
+> M-45 == 0 인 경우, H에 변화가 없어도 되므로 첫째 조건을 **크거나 같다로 수정**한다
+
+```java
+if (M-45 >= 0) System.out.println( H + " " + (M-45) ); 
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> 조건문에서 모든 경우의 수를 생각해보자
+
+> 좋은 코드는 예외까지 고려할 수 있는 코드이다
+>
+> 입력값이 들어왔을 때 빠져나갈 구멍이 없도록 만들자
+
+
 <br/><br/><br/>
