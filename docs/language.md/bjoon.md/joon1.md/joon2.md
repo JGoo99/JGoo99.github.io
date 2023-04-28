@@ -482,11 +482,12 @@ public class Main {
 ```java
 if (M-45 > 0) System.out.println( H + " " + (M-45) ); 
 //이 부분이 다름
-    if (M-45 < 0) {
-      if (H == 0) {
-        System.out.println(23 + " " + (M + 15));
-      } else System.out.println((H - 1) + " " + (M + 15));
-    }
+  if (M-45 < 0) {
+    if (H == 0) {
+      System.out.println(23 + " " + (M + 15));
+    } else System.out.println((H - 1) + " " + (M + 15));
+  }
+}
 ```
 
 <br/>
@@ -592,5 +593,191 @@ public class Main {
 > 아래에 현재시간을 출력할 수 있는 다양한 방법에 대해 소개하고있다 _링크 첨부_
 
 [Link button](https://developer-talk.tistory.com/408){: .btn .btn-outline }
+
+<br/><br/><br/>
+
+## #문제_2420
+
+> **두 서브도메인의 유명도가 주어졌을 때, 그 차이를 구하는 프로그램을 작성하시오.**
+
+<br/>
+
+>  (-2,000,000,000 ≤ N, M ≤ 2,000,000,000)
+
+---
+
+### #입력
+{: .no_toc }
+
+> -2, 5
+
+### #출력
+{: .no_toc }
+
+> 7
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 수학, 구현, 사칙연산
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    long N, M;
+
+    Scanner i = new Scanner(System.in);
+    N = i.nextLong();
+    M = i.nextLong();
+
+    if (N-M >= 0) {
+      System.out.println(N-M);
+    } else System.out.println(M-N);
+  }
+}
+```
+
+---
+
+### #오답노트
+
+<br/>
+
+- 나의 제출 답안
+
+```java
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    int N, M;
+
+    Scanner i = new Scanner(System.in);
+    N = i.nextInt();
+    M = i.nextInt();
+
+    if (N-M >= 0) {
+      System.out.println(N-M);
+    } else System.out.println(M-N);
+  }
+}
+```
+
+<br/>
+
+- **WHY** : 왜 틀렸는가
+
+> 두 정수의 범위는 int형에 속하므로 데이터 타입과 스캐너입력값의 타입을 int로 선언했다
+
+<br/>
+
+- **HOW** : 어떻게 풀어야하는가
+
+> 두 정수의 덧셈, 뺄셈 과정에서 int형의 데이터 저장 범위를 넘어설 수 있다
+>
+> int형끼리의 연산 시 int형으로 출력되기 때문에 아래와 같이 오류가 발생한다
+
+```java
+-2000000000 2000000000
+
+294967296
+```
+
+> 따라서 ±4,000,000,000를 저장할 수 있는 long타입으로 선언해야 한다
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> 변수의 데이터타입 선언은 계산값도 고려하기
+
+> 해당 변수의 대입값 뿐만 아니라 연산값도 고려하여 선언해야 한다
+
+<br/>
+
+{: .highlight }
+> 절대값 함수 사용하기
+
+> 자바에서는 절대값을 도출하는 함수를 지원하고있다
+>
+> 아래와 같이 절대값 함수를 사용하여 값을 도출하는 방법도 있다
+
+```java
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    int N, M;
+
+    Scanner i = new Scanner(System.in);
+    N = i.nextInt();
+    M = i.nextInt();
+
+    if (N-M >= 0) {
+      System.out.println(N-M);
+    } else System.out.println(M-N);
+  }
+}
+```
+
+<br/><br/><br/>
+
+## #문제_
+
+> 
+
+---
+
+### #입력
+{: .no_toc }
+
+> 
+
+> 
+
+> 
+
+### #출력
+{: .no_toc }
+
+> 
+
+> 
+
+>
+
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> 
+
+> 
 
 <br/><br/><br/>
