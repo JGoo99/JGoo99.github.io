@@ -784,25 +784,14 @@ public class Main {
     B = i.nextShort();
     C = i.nextShort();
 
-    short max = (short) Math.max(A, B);
-
     if (A == B && B == C) {
-    //A=B=C
-      System.out.println(10000 + A * 1000);
-    } else if (A == B) {
-      //셋 중 하나라도 다른 경우
-      System.out.println(1000 + A * 100);
+      System.out.println(10000 + A*1000);
+    } else if (A == B || A == C) {
+      System.out.println(1000 + A*100);
     } else if (B == C) {
-      System.out.println(1000 + B * 100);
-    } else if (C == A) {
-      System.out.println(1000 + C * 100);
-    }
-
-    if (A != B && B != C && A!=C) {
-    //셋 다 다른 경우
-      if (max > C) {
-        System.out.println(max * 100);
-      } else System.out.println(C * 100);
+      System.out.println(1000 + B*100);
+    } else {
+      System.out.println(Math.max(A, Math.max(B, C))*100);
     }
   }
 }
