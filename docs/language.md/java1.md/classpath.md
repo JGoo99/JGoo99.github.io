@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 클래스패스
-parent: Java
+parent: Java 기초
 grand_parent: Language
 nav_order: 20
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 연산자
-parent: Java
+parent: Java 기초
 grand_parent: Language
 nav_order: 5
 ---

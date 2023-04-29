@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 초기화와 생성자
-parent: Java
+parent: Java 기초
 grand_parent: Language
 nav_order: 15
 ---

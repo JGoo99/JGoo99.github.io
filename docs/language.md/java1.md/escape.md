@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 이스케이프 문자
-parent: Java
+parent: Java 기초
 grand_parent: Language
 nav_order: 22
 ---

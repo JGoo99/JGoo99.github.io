@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 입력과 출력
-parent: Java
+parent: Java 기초
 grand_parent: Language
 nav_order: 10
 ---

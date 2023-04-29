@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 유효범위
-parent: Java
+parent: Java 기초
 grand_parent: Language
 nav_order: 14
 ---
