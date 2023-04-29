@@ -731,35 +731,41 @@ public class Main {
 
 <br/><br/><br/>
 
-## #문제_
+## #문제_2480
 
-> 
+> **3개의 주사위를 던져서 다음과 같은 규칙에 따라 상금을 계산하여 출력하시오.**
+>
+> 1. 같은 눈이 3개가 나오면 10,000원+(같은 눈)×1,000원의 상금을 받게 된다. 
+>
+> 2. 같은 눈이 2개만 나오는 경우에는 1,000원+(같은 눈)×100원의 상금을 받게 된다. 
+>
+> 3. 모두 다른 눈이 나오는 경우에는 (그 중 가장 큰 눈)×100원의 상금을 받게 된다.  
 
 ---
 
 ### #입력
 {: .no_toc }
 
-> 
+> 3, 3, 6
 
-> 
+> 2, 2, 2
 
-> 
+> 6, 2, 5
 
 ### #출력
 {: .no_toc }
 
-> 
+> 1300
 
-> 
+> 12000
 
->
+> 600
 
 
 ### #알고리즘 분류
 {: .no_toc }
 
-> 
+> 수학, 구현, 사칙연산, 많은 조건 분기
 
 ---
 
@@ -767,7 +773,39 @@ public class Main {
 {: .no_toc }
 
 ```java
+import java.util.Scanner;
 
+public class Main {
+  public static void main(String[] args) {
+    short A, B, C;
+
+    Scanner i = new Scanner(System.in);
+    A = i.nextShort();
+    B = i.nextShort();
+    C = i.nextShort();
+
+    short max = (short) Math.max(A, B);
+
+    if (A == B && B == C) {
+    //A=B=C
+      System.out.println(10000 + A * 1000);
+    } else if (A == B) {
+      //셋 중 하나라도 다른 경우
+      System.out.println(1000 + A * 100);
+    } else if (B == C) {
+      System.out.println(1000 + B * 100);
+    } else if (C == A) {
+      System.out.println(1000 + C * 100);
+    }
+
+    if (A != B && B != C && A!=C) {
+    //셋 다 다른 경우
+      if (max > C) {
+        System.out.println(max * 100);
+      } else System.out.println(C * 100);
+    }
+  }
+}
 ```
 
 ---
@@ -776,8 +814,10 @@ public class Main {
 {: .no_toc }
 
 {: .highlight }
-> 
+> if 문에서 여러개의 변수 비교하기
 
-> 
+> if(조건) 문에서 '조건'에 **A==B==C** 형식으로 작성할 수 없다
+>
+> 따라서 논리 연사자를 사용하여 여러개의 변수를 비교하자
 
 <br/><br/><br/>
