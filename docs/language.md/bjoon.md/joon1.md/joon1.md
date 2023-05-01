@@ -4,7 +4,6 @@ title: 입출력과 사칙연산
 parent: Algorithm
 grand_parent: Language
 nav_order: 2
-has_children: true
 ---
 
 <details open markdown="block">

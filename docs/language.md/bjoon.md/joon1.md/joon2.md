@@ -4,7 +4,6 @@ title: 조건문
 parent: Algorithm
 grand_parent: Language
 nav_order: 3
-has_children: true
 ---
 
 <details open markdown="block">
