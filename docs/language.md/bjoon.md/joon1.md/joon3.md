@@ -276,3 +276,85 @@ public class Main {
 > sum += i;
 
 <br/><br/><br/>
+
+## #문제_25304
+
+> **구매한 물건의 가격과 개수로 계산한 총 금액이 영수증에 적힌 총 금액과 일치하는지 검사해보자.**
+>
+> 첫째 줄에는 영수증에 적힌 총 금액 X가 주어진다.
+>
+> 둘째 줄에는 영수증에 적힌 구매한 물건의 종류의 수 N이 주어진다.
+>
+> 이후 N개의 줄에는 각 물건의 가격 a와 개수 b가 공백을 사이에 두고 주어진다.
+>
+> 구매한 물건의 가격과 개수로 계산한 총 금액이 영수증에 적힌 총 금액과 일치하면 Yes를 출력한다. 일치하지 않는다면 No를 출력한다.
+
+---
+
+### #입력
+{: .no_toc }
+
+> 260000
+>
+> 4
+>
+> 20000 5
+>
+> 30000 2
+>
+> 10000 6
+>
+> 5000 8
+
+### #출력
+{: .no_toc }
+
+> Yes
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 수학, 구현, 사칙연산
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    int sum = 0;
+
+    Scanner sc = new Scanner(System.in);
+    int X = sc.nextInt();
+    byte N = sc.nextByte();
+
+    for (int i = 0; i < N; i++) {
+      int a = sc.nextInt();
+      int b = sc.nextByte();
+      sum += a * b;
+    }
+
+    if (sum == X) {
+      System.out.println("Yes");
+    } else {
+      System.out.println("No");
+    }
+  }
+}
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> 사칙연산의 정확성
+
+> 물건 값과 개수의 곱을 구해야 하는데 더하기를 하는 등의 실수를 주의하자
+
+<br/><br/><br/>
