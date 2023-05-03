@@ -217,3 +217,62 @@ byte inCase = sc.nextByte();
 > byte A = (byte) (3+inCase);
 
 <br/><br/><br/>
+
+## #문제_8393
+
+> n이 주어졌을 때, 1부터 n까지 합을 구하는 프로그램을 작성하시오.
+
+---
+
+### #입력
+{: .no_toc }
+
+> 3
+
+### #출력
+{: .no_toc }
+
+> 6
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 수학, 구현
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    int sum=0, n;
+    Scanner sc = new Scanner(System.in);
+    n = sc.nextInt();
+
+    for (int i=1; i < (n+1); i++) {
+      sum = (int) (sum + i);
+    }
+    System.out.println(sum);
+  }
+}
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> sum += i;
+
+> sum = (int) (sum+i);
+>
+> 위의 문장은 아래 문장과 정확히 동일하다
+>
+> sum += i;
+
+<br/><br/><br/>
