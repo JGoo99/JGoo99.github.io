@@ -358,3 +358,61 @@ public class Main {
 > 물건 값과 개수의 곱을 구해야 하는데 더하기를 하는 등의 실수를 주의하자
 
 <br/><br/><br/>
+
+## #문제_25314
+
+> **N바이트 정수까지 저장할 수 있다고 생각하는 정수 자료형의 이름을 출력하여라.**
+
+> ( 4 =< N =< 1,000 ) N은 4의 배수
+
+---
+
+### #입력
+{: .no_toc }
+
+> 20
+
+### #출력
+{: .no_toc }
+
+> long long long long long int
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 구현
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    short N = sc.nextShort();
+
+    for (int i = 0; i < (N/4); i++) {
+      System.out.print( "long " );
+    }
+    System.out.print("int");
+  }
+}
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> 띄어쓰기 중요성
+
+> 일일이 출력하여 확인하는 것도 좋지만, 코드가 더 복잡해질 수 있으므로
+>
+> 내가 의도한대로 출력될 수 있도록 계획적으로 여백을 넣자
+
+<br/><br/><br/>
