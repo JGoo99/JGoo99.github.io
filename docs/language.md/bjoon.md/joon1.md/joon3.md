@@ -359,6 +359,84 @@ public class Main {
 
 <br/><br/><br/>
 
+## #문제_11021
+
+> **두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.**
+
+> (0 < A, B < 10)
+
+---
+
+### #입력
+{: .no_toc }
+
+> 5
+>
+> 1 1
+>
+> 2 3
+>
+> 3 4
+>
+> 9 8
+>
+> 5 2
+
+### #출력
+{: .no_toc }
+
+> Case #1: 2
+>
+> Case #2: 5
+>
+> Case #3: 7
+>
+> Case #4: 17
+>
+> Case #5: 7
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 수학, 구현, 사칙연산
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int Case = sc.nextInt();
+
+    for (int i = 0; i < Case; i++) {
+      byte x = (byte) (i+1);
+      int A = sc.nextInt();
+      int B = sc.nextInt();
+      System.out.println("Case #" +x + ": "+(A+B));
+    }
+  }
+}
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> 고정 입력값을 반복문 안에 넣지 않기
+
+> Case 숫자를 입력받는 문장을 반복문 안에 넣게되면
+>
+> 계속해서 Case가 초기화 되면서 로직이 꼬이게 된다
+
+<br/><br/><br/>
+
 ## #문제_25314
 
 > **N바이트 정수까지 저장할 수 있다고 생각하는 정수 자료형의 이름을 출력하여라.**
