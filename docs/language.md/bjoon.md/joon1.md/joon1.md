@@ -68,6 +68,8 @@ public class Main {
 
 <br/><br/><br/>
 
+---
+
 ## #문제_1000
 
 > 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
@@ -121,6 +123,8 @@ public class Main {
 > 이제는 이해를 넘어서서 사용법을 외워보자
 
 <br/><br/><br/>
+
+---
 
 ## #문제_1001
 
@@ -182,6 +186,8 @@ public class Main {
 
 <br/><br/><br/>
 
+---
+
 ## #문제_10998
 
 > 두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오.
@@ -237,6 +243,8 @@ public class Main {
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/operator/){: .btn .btn-purple }
 
 <br/><br/><br/>
+
+---
 
 ## #문제_1008
 
@@ -299,6 +307,8 @@ public class Main {
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/data_type/#ii-%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95){: .btn .btn-purple }
 
 <br/><br/><br/>
+
+---
 
 ## #문제_10869
 
@@ -371,6 +381,8 @@ public class Main {
 > print + line 으로 자동 줄바꿈을 해주는 명령어
 
 <br/><br/><br/>
+
+---
 
 ## #문제_10926
 
@@ -493,6 +505,8 @@ System.out.println(i.next() + "??!");
 
 <br/><br/><br/>
 
+---
+
 ## #문제_18108
 
 > **불기 연도가 주어질 때 이를 서기 연도로 바꿔 주는 프로그램을 작성하시오.**
@@ -558,6 +572,8 @@ public class Main {
 > Scanner에 입력되는 데이터타입에 맞추어 정확히 호출해야한다
 
 <br/><br/><br/>
+
+---
 
 ## #문제_10430
 
@@ -633,6 +649,8 @@ public class Main {
 > **닫는 방법 : i.close();** 
 
 <br/><br/><br/>
+
+---
 
 ## #문제_2588
 
@@ -713,6 +731,8 @@ public class Main {
 > 따라서 입력값이 바뀌었을 때도 사용할 수 있는 코드에 대해 고민을 했다
 
 <br/><br/><br/>
+
+---
 
 ## #문제_11382
 
@@ -833,6 +853,8 @@ long A = sc.nextLong(); //에러 해결
 
 <br/><br/><br/>
 
+---
+
 ## #문제_10171
 
 > 아래와 같이 고양이를 출력하시오.
@@ -888,6 +910,8 @@ class Main {
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/escape/){: .btn .btn-outline }
 
 <br/><br/><br/>
+
+---
 
 ## #문제_10172
 

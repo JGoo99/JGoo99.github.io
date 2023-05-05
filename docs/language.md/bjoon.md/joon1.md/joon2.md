@@ -99,6 +99,8 @@ class Main {
 
 <br/><br/><br/>
 
+---
+
 ## #문제_9498
 
 > 시험 점수를 입력받아 등급을 출력하는 프로그램을 작성하시오.
@@ -219,6 +221,8 @@ else
 
 <br/><br/><br/>
 
+---
+
 ## #문제_2753
 
 > **연도가 주어졌을 때, 윤년이면 1, 아니면 0을 출력하는 프로그램을 작성하시오.**
@@ -311,6 +315,8 @@ class Main {
 [Link button](https://jgoo99.github.io/docs/programing.md/java.md/operator/#5-%EA%B8%B0%EB%B3%B8%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84){: .btn .btn-outline }
 
 <br/><br/><br/>
+
+---
 
 ## #문제_14681
 
@@ -406,6 +412,8 @@ public class Main {
 ```
 
 <br/><br/><br/>
+
+---
 
 ## #문제_2884
 
@@ -541,6 +549,8 @@ or
 
 <br/><br/><br/>
 
+---
+
 ## #문제_10699
 
 > 서울의 오늘 날짜를 출력하는 프로그램을 작성하시오.
@@ -594,6 +604,8 @@ public class Main {
 [Link button](https://developer-talk.tistory.com/408){: .btn .btn-outline }
 
 <br/><br/><br/>
+
+---
 
 ## #문제_2420
 
@@ -729,6 +741,8 @@ public class Main {
 ```
 
 <br/><br/><br/>
+
+---
 
 ## #문제_2480
 
