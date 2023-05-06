@@ -504,3 +504,111 @@ public class Main {
 > 내가 의도한대로 출력될 수 있도록 계획적으로 여백을 넣자
 
 <br/><br/><br/>
+
+## #문제_15552
+
+> **각 테스트케이스마다 A+B를 한 줄에 하나씩 순서대로 출력한다. 단, 제한시간은 1초이다.**
+
+> ( 1 =< A, B =< 1,000 )
+>
+> T < 1,000,000
+
+---
+
+### #입력
+{: .no_toc }
+
+> 5
+>
+> 1 1
+>
+> 12 34
+>
+> 5 500
+>
+> 40 60
+>
+> 1000 1000
+
+### #출력
+{: .no_toc }
+
+> 2
+>
+> 46
+>
+> 505
+>
+> 100
+>
+> 2000
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 수학, 구현, 사칙연산
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.io.*;
+
+class Main {
+  public static void main(String[] args) throws IOException {
+    int T; //케이스 개수
+    short A, B; //입력받는 두 정수
+
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+    T = Integer.parseInt(br.readLine());
+
+    for (int i = 0; i < T; i++) {
+      String[] strs = br.readLine().split(" ");
+      A = Short.parseShort(strs[0]);
+      B = Short.parseShort(strs[1]);
+      bw.write(String.valueOf(A+B));
+      bw.newLine();
+    }
+    bw.flush();
+    bw.close();
+	}
+}
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> BufferedReader
+
+> 키보드로 입력하는 순간 저장하는 방식으로, 입력시간을 최소화 시켜준다
+>
+> 단, 아래 사항을 지켜주어야 한다
+>
+> 1. 예외처리 ( throws IOException / try and catch )
+>
+> 2. 클래스임포트 ( import java.io.*; )
+>
+> 3. 데이터 가공 ( String[] strs = br.readLine().split(" ") )
+
+<br/>
+
+{: .highlight }
+> BufferedWriter
+
+> 버퍼의 출력방식으로 출력시간을 최소화 시켜준다
+>
+> 단, 아래 사항을 지켜주어야 한다
+>
+> 1. 개행처리 ( bw.newLine() )
+>
+> 2. 뒤처리 ( bw.flush(), bw.close() )
+
+
+<br/><br/><br/>
