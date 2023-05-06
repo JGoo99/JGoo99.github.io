@@ -575,7 +575,7 @@ class Main {
     }
     bw.flush();
     bw.close();
-	}
+  }
 }
 ```
 
