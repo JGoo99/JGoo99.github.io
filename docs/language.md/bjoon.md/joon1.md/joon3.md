@@ -505,6 +505,8 @@ public class Main {
 
 <br/><br/><br/>
 
+---
+
 ## #문제_15552
 
 > **각 테스트케이스마다 A+B를 한 줄에 하나씩 순서대로 출력한다. 단, 제한시간은 1초이다.**
@@ -610,5 +612,99 @@ class Main {
 >
 > 2. 뒤처리 ( bw.flush(), bw.close() )
 
+
+<br/><br/><br/>
+
+---
+
+## #문제_11022
+
+> **각 테스트 케이스마다 "Case #x: A + B = C" 형식으로 출력한다. x는 테스트 케이스 번호이고 1부터 시작하며, C는 A+B이다.**
+
+> ( 0 =< A, B =< 10 )
+>
+> T < 1,000,000
+
+---
+
+### #입력
+{: .no_toc }
+
+> 5
+>
+> 1 1
+>
+> 2 3
+>
+> 3 4
+>
+> 9 8
+>
+> 5 2
+
+### #출력
+{: .no_toc }
+
+> Case #1: 1 + 1 = 2
+>
+> Case #2: 2 + 3 = 5
+>
+> Case #3: 3 + 4 = 7
+>
+> Case #4: 9 + 8 = 17
+>
+> Case #5: 5 + 2 = 7
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 수학, 구현, 사칙연산
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.io.*;
+
+class Main {
+  public static void main(String[] args) throws IOException {
+    int T; //케이스 개수
+    byte A, B; //입력받은 두 정수
+
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    T = Integer.parseInt(br.readLine());
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+    for (int i = 0; i < T; i++) {
+      String[] strs = br.readLine().split(" ");
+      A = Byte.parseByte(strs[0]);
+      B = Byte.parseByte(strs[1]);
+			
+      bw.write("Case #" + (i+1) + ": ");
+      bw.write(A + " + " + B + " = ");
+      bw.write(String.valueOf(A+B));
+      bw.newLine();
+    }
+    bw.flush();
+    bw.close();
+  }
+}
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> 연산자의 우선순위
+
+> 연산자끼리도 우선 계산되는 순위가 있으므로 정확한 출력을 위해 알고있어야 한다
+>
+> 아래 정리해놓은 표 링크를 첨부한다
+
+[Link button](https://jgoo99.github.io/docs/language.md/java1.md/operator/#5-%EA%B8%B0%EB%B3%B8%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84){: .btn .btn-outline }
 
 <br/><br/><br/>
