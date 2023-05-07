@@ -235,7 +235,7 @@ System.out.println( "" + 7 + 7 );
 | %o      | 8진 정수   |
 | %x, %X  | 16진 정수  |
 | %f      | 부동 소수점 |
-| %e,ㅍ%E | 지수 표현식 |
+| %e,%E   | 지수 표현식 |
 | %c      | 문자      |
 | %s      | 문자열     |
 
@@ -377,11 +377,104 @@ num= 22
 ### i. 논리형
 {: .no_toc }
 
+> Boolean형 변수 하나 뿐으로 **false**와 **true** 중 하나를 저장할 수 있다
+>
+> 기본값은 false이며, 대문자를 사용하면 에러가 발생한다
+
+```java
+boolean power = true;
+boolean checked = False; //Error
+```
+
+<br/>
+
 ### ii. 문자형
 {: .no_toc }
 
+> char형 변수 하나 뿐으로 단 하나의 문자만 저장할 수 있다
+
+```java
+char ch = 'A';
+```
+
+{: .new-title }
+> 문자와 유니코드
+>
+> 위의 A는 문자로 저장되는 것이 아니라 **유니코드 65**로 저장된다
+>
+> 문자를 숫자로 변환하여 저장하는 것을 **인코딩**
+>
+> 숫자를 다시 문자로 출력하는 것을 **디코딩**이라고 한다
+>
+> 실제로 그러한지 문자와 유니코드를 출력해보자
+
+```java
+char ch = '가';
+System.out.printf("%c = %d(%#X)", ch, (int)ch, (int)ch);
+```
+
+```java
+가 = 44032(0XAC00)
+```
+
+<br/>
+
+- **특수문자 저장하기**
+
+> 특수문자는 백슬레시를 사용하여 저장해야 한다
+>
+> 아래 예시와 표를 참고하자
+
+```java
+char tab = '\t';
+//실제로는 두 개의 문자이지만 하나의 문자로 취급되어 자장된다
+```
+
+| 특수문자 | 문자 리터럴 |
+|:------:|:--------:|
+| tab | \t |
+| backspace | \b |
+| form feed | \f |
+| new line | \n |
+| carriage return | \r |
+| 역슬래쉬 | \\\ |
+| 작은 따옴표 | \' |
+| 큰 따옴표 | \" |
+| 유니코드(16진수 문자) | \u |
+
+```java
+System.out.println("tab :" + '\t' + "."); //tab
+
+System.out.println("backspace :" + "." + '\b' + ".");
+
+System.out.println("form feed :" + '\f' + ".");
+		//다음페이지로 넘어감
+System.out.println("new line :" + '\n' + ".");
+
+System.out.println("carriage return :" + '\r' + ".");
+		//맨 왼 쪽으로 이동
+System.out.println("역슬래쉬 :" + '\\');
+
+System.out.println("따옴표 :" + '\'' + '\"' );
+```
+
+```java
+tab :	.
+backspace :.
+form feed :.
+new line :
+.
+.
+역슬래쉬 :\
+따옴표 :'"
+```
+
+<br/>
+
 ### iii. 정수형
 {: .no_toc }
+
+> byte, short, int, long 총 네가지로 각 자료형의 저장 수용 범위가 다르다
 
 ### vi. 실수형
 {: .no_toc }
