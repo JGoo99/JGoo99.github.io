@@ -731,11 +731,11 @@ class Main {
 >
 > **
 >
-> ***
+> ** *
 >
-> ****
+> ** **
 >
-> *****
+> ** ** *
 
 ### #알고리즘 분류
 {: .no_toc }
@@ -753,21 +753,21 @@ class Main {
 import java.util.Scanner;
 
 class Main {
-	public static void main(String[] args) {
-		byte N; //테스트 개수
+  public static void main(String[] args) {
+    byte N; //테스트 개수
 
-		Scanner sc = new Scanner(System.in);
-		N = sc.nextByte();
+    Scanner sc = new Scanner(System.in);
+    N = sc.nextByte();
 
-		for (int i = 0; i < N ; i++) {
-			for (int j = 0; j < (i+1); j++) {
-				System.out.print("*");
-			}
-			if (i == N-1) {
-				sc.close();
-			} else System.out.print('\n');
-		}
-	}
+    for (int i = 0; i < N ; i++) {
+      for (int j = 0; j < (i+1); j++) {
+        System.out.print("*");
+      }
+      if (i == N-1) {
+        sc.close();
+      } else System.out.print('\n');
+    }
+  }
 }
 ```
 
@@ -800,7 +800,7 @@ class Main {
 }
 ```
 
-> buffer를 사용할 경우 메모리와 시간을 모두 절약할 수 있다
+> buffer를 사용할 경우 메모리와 시간을 모두 절약할 수 있다 (위: buffer, 아래: scanner)
 
 ![joon3_1](https://user-images.githubusercontent.com/126454114/236752307-ab0b23bf-b591-4cd4-81e0-412eff18839f.jpg)
 
@@ -819,9 +819,21 @@ class Main {
 > 아래 예시를 통해 확인하자
 
 ```java
-System.out.println("hello") //출력 후 자동 개행
-System.out.print("hello im Goo") //간단한 출력 (개행x)
-System.out.printf("hello im %s", name) //더 복잡한 출력 (개행x)
+String name = "Goo";
+int age = 24;
+
+System.out.println("hello");
+//출력 후 자동 개행
+System.out.print("hello im Goo");
+//간단한 출력 (개행x)
+System.out.println();
+System.out.printf("hello im %s, and im %d", name, age);
+```
+
+```java
+hello
+hello im Goo
+hello im Goo, and im 24
 ```
 
 <br/><br/><br/>
