@@ -727,15 +727,7 @@ class Main {
 ### #출력
 {: .no_toc }
 
-> *
->
-> **
->
-> ** *
->
-> ** **
->
-> ** ** *
+![joon3_2](https://user-images.githubusercontent.com/126454114/236755012-a499e505-c405-45d3-b453-972af86edfa2.jpg)
 
 ### #알고리즘 분류
 {: .no_toc }
