@@ -708,3 +708,120 @@ class Main {
 [Link button](https://jgoo99.github.io/docs/language.md/java1.md/operator/#5-%EA%B8%B0%EB%B3%B8%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84){: .btn .btn-outline }
 
 <br/><br/><br/>
+
+---
+
+## #문제_2438
+
+> **첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제**
+
+> (1 ≤ N ≤ 100)
+
+---
+
+### #입력
+{: .no_toc }
+
+> 5
+
+### #출력
+{: .no_toc }
+
+> *
+>
+> **
+>
+> ***
+>
+> ****
+>
+> *****
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 구현
+
+---
+
+### #풀이
+{: .no_toc }
+
+- scanner 사용
+
+```java
+import java.util.Scanner;
+
+class Main {
+	public static void main(String[] args) {
+		byte N; //테스트 개수
+
+		Scanner sc = new Scanner(System.in);
+		N = sc.nextByte();
+
+		for (int i = 0; i < N ; i++) {
+			for (int j = 0; j < (i+1); j++) {
+				System.out.print("*");
+			}
+			if (i == N-1) {
+				sc.close();
+			} else System.out.print('\n');
+		}
+	}
+}
+```
+
+<br/>
+
+- buffer 사용
+
+```java
+import java.io.*;
+
+class Main {
+  public static void main(String[] args) throws IOException {
+    byte N; //케이스 개수
+
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    N = Byte.parseByte(br.readLine());
+    br.close();
+
+    for (int i = 0; i < N; i++) {
+      for (int j = 0; j < i+1; j++) {
+        bw.write('*');
+      }
+      if (i == N-1) {
+        bw.flush();
+        bw.close();
+      } else bw.newLine();
+    }
+  }
+}
+```
+
+> buffer를 사용할 경우 메모리와 시간을 모두 절약할 수 있다
+
+![joon3_1](https://user-images.githubusercontent.com/126454114/236752307-ab0b23bf-b591-4cd4-81e0-412eff18839f.jpg)
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> **System.out.print()** vs **System.out.printf()**
+
+> **System.out.print()**는 단순한 콘솔 출력에 사용하고
+>
+> **System.out.printf()**는 %d와 %n등을 활용하여 좀 더 복잡한 출력에 사용된다
+>
+> 아래 예시를 통해 확인하자
+
+```java
+System.out.println("hello") //출력 후 자동 개행
+System.out.print("hello im Goo") //간단한 출력 (개행x)
+System.out.printf("hello im %s", name) //더 복잡한 출력 (개행x)
+```
+
+<br/><br/><br/>
