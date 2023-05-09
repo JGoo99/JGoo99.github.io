@@ -829,3 +829,81 @@ hello im Goo, and im 24
 ```
 
 <br/><br/><br/>
+
+---
+
+## #문제_2438
+
+> **첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제(단, 오른쪽 정렬)
+
+> (1 ≤ N ≤ 100)
+
+---
+
+### #입력
+{: .no_toc }
+
+> 5
+
+### #출력
+{: .no_toc }
+
+![joon3_3](https://github.com/JGoo99/java-project/assets/126454114/4a507c0d-2254-4470-a93e-ae1d95f63c0b)
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 구현
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.io.*;
+
+class Main {
+  public static void main(String[] args) throws IOException {
+    int N; //테스트개수
+
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    N = Integer.parseInt(br.readLine());
+    br.close();
+
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+    for (int i = 0; i < N; i++) {
+      for (int j = 1; j < N-i; j++) {
+        bw.write(" ");
+      }
+      for (int l = 0; l < i+1; l++) {
+        bw.write('*');
+      }
+      bw.flush();
+      if (i == N-1) {
+        bw.flush();
+        bw.close();
+      } else {
+        bw.newLine();
+      }
+    }
+  }
+}
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> 반복문 변수 초기화
+
+> 반복문 조건 괄호 안에 초기화할 때 머리속에서 시물레이션을 돌리면서
+>
+> 몇번의 반복이 필요할지, 어떤 수로 초기화 할지 구상하고 입력하도록 한다
+>
+> 감이 안 잡히면 실제로 돌려보면서 어떤 오류가 발생하는지 확인하면 좋다
+
+<br/><br/><br/>
