@@ -907,3 +907,91 @@ class Main {
 > 감이 안 잡히면 실제로 돌려보면서 어떤 오류가 발생하는지 확인하면 좋다
 
 <br/><br/><br/>
+
+---
+
+## #문제_10952
+
+> **두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.**
+
+> **입력의 마지막에 0 두 개가 들어오면 종료**
+
+---
+
+### #입력
+{: .no_toc }
+
+> 1 1
+>
+> 2 3
+>
+> 3 4
+>
+> 9 8
+>
+> 5 2
+>
+> 0 0
+
+### #출력
+{: .no_toc }
+
+> 2
+>
+> 5
+>
+> 7
+>
+> 17
+>
+> 7
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 수학, 구현, 사칙연산
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.io.*;
+
+class Main {
+  public static void main(String[] args) throws IOException {
+    int A, B; //입력받는 두 정수
+
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+    while (true) {
+      String[] strs = br.readLine().split(" ");
+      A = Integer.parseInt(strs[0]);
+      B = Integer.parseInt(strs[1]);
+
+      if (A + B == 0) {
+        bw.flush();
+        bw.close();
+        break;
+      } else {
+        bw.write(String.valueOf(A+B));
+        bw.newLine();
+      }
+    }
+  }
+}
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> break;
+
+> while (true) {} 반복문을 사용할 때는 꼭 break를 이용하여 종료하도록 한다
+
+<br/><br/><br/>
