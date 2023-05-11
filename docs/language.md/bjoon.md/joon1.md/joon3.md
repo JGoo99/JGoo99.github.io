@@ -995,3 +995,124 @@ class Main {
 > while (true) {} 반복문을 사용할 때는 꼭 break를 이용하여 종료하도록 한다
 
 <br/><br/><br/>
+
+---
+
+## #문제_10951
+
+> **두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.**
+
+---
+
+### #입력
+{: .no_toc }
+
+> 1 1
+>
+> 2 3
+>
+> 3 4
+>
+> 9 8
+>
+> 5 2
+
+### #출력
+{: .no_toc }
+
+> 2
+>
+> 5
+>
+> 7
+>
+> 17
+>
+> 7
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 수학, 구현, 사칙연산
+
+---
+
+### #풀이
+{: .no_toc }
+
+- Scanner 사용
+
+```java
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    int A, B; //입력받는 두 정수
+
+    Scanner sc = new Scanner(System.in);
+
+    while (sc.hasNextInt()) {
+    //입력값이 정수=true
+    //정수가 아닐 경우 false를 반환하며 종료
+      A = sc.nextInt();
+      B = sc.nextInt();
+      System.out.println(A+B);
+    }
+    sc.close();
+  }
+}
+```
+
+- Buffer 사용
+
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+class Main {
+  public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringBuilder sb = new StringBuilder();
+    StringTokenizer st;
+    String str;
+
+    while ( (str = br.readLine()) != null) {
+      st = new StringTokenizer(str, " ");
+      int A = Integer.parseInt(st.nextToken());
+      int B = Integer.parseInt(st.nextToken());
+      sb.append(A+B).append('\n');
+    }
+    System.out.print(sb);
+  }
+}
+```
+
+[Link button](https://st-lab.tistory.com/40){: .btn .btn-outline }
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> EOF (End Of File)
+
+> **입력에서 더이상의 읽을 수 있는 데이터가 존재하지 않을 때 반복문을 종료하라는 것**
+>
+> 맥에서는 cmd+d를 입력하면 null값을 반환한다
+
+<br/>
+
+{: .highlight }
+> StringTokenizer
+
+> .split(" ")과 비슷하지만 성능측면에서 더 좋다
+>
+> str 문자열에서 " "을 기준으로 저장하는 형식이다
+
+```java
+StringTokenizer st = new StringTokenizer(str, " ");
+```
+
+<br/><br/><br/>
