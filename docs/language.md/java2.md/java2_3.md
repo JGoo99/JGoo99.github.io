@@ -349,10 +349,39 @@ class Main {
 _점수를 입력받아 학점을 부여하는 예제_
 
 ```java
+class Main {
+  public static void main(String[] args) {
+    int score; //입력받는 점수
+    char grade; //부여되는 학점
 
+    Scanner sc = new Scanner(System.in);
+    System.out.print("성적 입력 > ");
+    score = sc.nextInt();
+
+    switch (score/10) {
+      case 10: case 9:
+        grade = 'A';
+        break;
+      case 8:
+        grade = 'B';
+        break;
+      case 7:
+        grade = 'C';
+        break;
+      default:
+        grade = 'F';
+    }
+    System.out.println("학점 : " + grade);
+  }
+}
 ```
 
-<br/><br/>
+<br/>
+
+{:style="counter-reset:step-counter 4"}
+5. **switch문의 중첩**
+
+> 중첩은 가능하나, 가독성과 break를 빼먹는 실수 등의 단점으로 사용하지 않는 편이 좋아보인다
 
 ---
 
@@ -361,6 +390,45 @@ _점수를 입력받아 학점을 부여하는 예제_
 ### i. for문
 {: .no_toc }
 
+_for문은 반복 수행 횟수를 알고있을 때 사용하면 좋다_
+
+<br/>
+
+1. for문의 구조와 수행순서
+
+> 초기화, 조건식, 증감식, 블럭으로 이루어져 있으며, 수행순서는 아래와 같다
+>
+> 수행순서: 초기화 - 조건식(참) - 수행될 문장 - 증감식 - 다시 조건식부터 - ... - 조건식(거짓) - 종료
+
+```java
+for (초기화; 조건식; 증감식;) {
+  수행될 문장
+}
+```
+
+<br/>
+
+- **초기화**
+
+> 초기화는 처음에 한 번만 수행되며, 둘 이상의 변수를 사용할 땐 구분자;를 이용하여 선언한다
+
+```java
+for (int i = 0; i < 10; i++) {}
+
+for (int i  = 0, j = 1; i < 10; i++) {}
+```
+
+<br/>
+
+- **조건식**
+
+> 조건식의 값이 참이면 반복수행, 거짓이면 for문을 종료한다
+>
+> 조건식을 잘못 입력하면 블럭 내 문장이 아예 수행되지 않거나 무한반복을 하는 오류가 발생할 수 있다
+
+- **증감식**
+
+> 
 
 <br/><br/>
 
