@@ -28,12 +28,12 @@ nav_order: 4
 
 ## 조건문
 
-### i. if 문
+### i. if문
 {: .no_toc }
 
-- **if 문의 구조**
+- **if문의 구조**
 
-> if 문은 조건식과 괄호로 이루어져있다
+> if문은 조건식과 괄호로 이루어져있다
 >
 > if문의 조건식이 true면 괄호 안의 문장을 수행하라는 의미의 문법이다
 
@@ -89,7 +89,7 @@ if (조건식) {
 
 <br/><br/>
 
-### iii. if-else if 문
+### iii. if-else if문
 {: .no_toc }
 
 > 처리해야 할 경우의 수가 셋 이상일 때 사용하는 문법으로
@@ -110,10 +110,10 @@ if (조건식 1) {
 
 <br/><br/>
 
-### iv. 중첩 if 문
+### iv. 중첩 if문
 {: .no_toc }
 
-> if 문 안에 if 문을 포함시키는 문법으로, 중첩 횟수에는 제한이 거의 없다
+> if문 안에 if문을 포함시키는 문법으로, 중첩 횟수에는 제한이 거의 없다
 
 ```java
 if (조건식 1) {
@@ -126,9 +126,231 @@ if (조건식 1) {
 
 <br/><br/>
 
-### v. switch 문
+### v. switch문
 {: .no_toc }
 
+- **switch문은 언제 사용할까**
+
+> if문은 참, 거짓으로 결과가 두 가지 뿐이라 여러개의 조건식이 있을 경우 복잡해진다
+>
+> 따라서 하나의 조건식으로 **다양한 경우의 수를 처리**할 수 있는 switch문을 사용한다
+
+<br/>
+
+- **switch문의 구조**
+
+<br/>
+
+1. **switch문의 흐름**
+
+> 1. 조건식을 계산한다
+>
+> 2. 조건식의 결과와 일치하는 case문으로 이동한다
+>
+> 3. 이후의 문장들을 수행한다
+>
+> 4. break문이나 switch문의 끝을 만나면 switch문 전체를 빠져나간다
+
+```java
+switch (조건식) {
+  case 값1 :
+    조건식의 결과가 값1과 같을 경우 수행될 문장들
+    break;
+  case 값2 :
+    조건식의 결과가 값2와 같을 경우 수행될 문장들
+    break;
+  default :
+    조건식의 결과와 일치하는 case문이 없을 때 수행될 문장들
+}
+```
+
+> 이떄 **default문**은 if문의 else와 같은 역할을 한다
+>
+> 대부분 마지막에 쓰이기 때문에 break문을 쓰지 않아도 된다
+
+<br/>
+
+{:style="counter-reset:none"}
+2. **break문의 용도**
+
+> switch문의 각 case문 영역을 구분하는 역할을 한다
+>
+> 만약 break문이 없을 경우 다른 case문의 문장들도 실행되므로 빼먹지 않도록 주의한다
+>
+> 그러나 필요에 따라서 의도적으로 break문을 제외하는 경우가 있다 _아래 예시_
+
+_회원제 웹사이트 코드 일부_
+
+```java
+switch (level) {
+  case 3 :
+    grantDelete(); //삭제권한
+  case 2 :
+    grantWrite();  //쓰기권한
+  case 1 :
+    grantRead();   //읽기권한
+}
+```
+
+> level 3일 경우 모든 권한을 갖고, level 1일 경우 읽기권한만 가질 수 있다
+
+<br/>
+
+{:style="counter-reset:none"}
+3. **switch문의 제약조건**
+
+> 1. switch문의 조건식 결과는 정수 또는 문자열이어야 한다
+>
+> 2. case문의 값은 정수 상수만 가능하며, 중복되지 않아야 한다
+>
+> 아래 여러가지 예시를 통해 switch문을 알아보자
+
+<br/>
+
+_switch문과 제약조건_
+
+```java
+int num, result;
+final int ONE = 1;
+
+switch (result) {
+  case '1' :    //OK 문자상수 (숫자 49와 동일)
+  case ONE :    //OK 정수상수
+  case "YES" :  //OK 문자열 상수
+  case num :    //ERROR 변수 불가
+  case 1.0 :    //ERROR 실수 불가
+} 
+```
+
+<br/>
+
+{:style="counter-reset:step-counter 3"}
+4. **switch문의 여러가지 예시**
+
+_몇 월인지 입력받은 후 계절을 출력하는 예제_
+
+```java
+class Main {
+  public static void main(String[] args) throws IOException {
+    int mon; //입력받는 달
+
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+    mon = Integer.parseInt(br.readLine());
+    br.close();
+
+    switch (mon) {
+      case 3 : case 4 : case 5 :
+        bw.write("봄");
+        break;
+      case 6 :
+      case 7 :
+      case 8 :
+        bw.write("여름");
+        break;
+      case 9 : case 10 : case 11 :
+        bw.write("가을");
+        break;
+      default :  
+      case 12 : case 1 : case 2 :
+        bw.write("겨울");
+        break;
+    }
+    bw.flush();
+    bw.close();
+  }
+}
+```
+
+{: .highlight }
+> case문은 한줄에 써도 되고, 붙여서 써도 된다
+
+<br/>
+
+_컴퓨터와 유저 간의 가위바위보 게임 예제_
+
+```java
+class Main {
+  public static void main(String[] args) throws IOException {
+    int user, com;
+
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+    bw.write("가위(1), 바위(2), 보(3) 중에 하나를 입력하시오 > ");
+    bw.flush();
+    bw.newLine();
+
+    user = Integer.parseInt(br.readLine());
+    br.close();
+
+    com = (int) (Math.random() * 3 + 1);
+
+    bw.write("user: " + user + "\ncom: " + com);
+    bw.flush();
+    bw.newLine();
+
+    switch (user - com) {
+      case -2 : case 1 :
+        bw.write("user win");
+        break;
+      case -1 : case 2 :
+        bw.write("user lose");
+        break;
+      case 0 :
+        bw.write("retry");
+    }
+    bw.flush();
+    bw.close();
+  }
+}
+```
+
+<br/>
+
+_주민등록번호를 입력받아 성별을 구별하는 예제_
+
+```java
+class Main {
+  public static void main(String[] args) {
+    String regNo; //입력받는 주민등록번호
+    char gender;  //성별
+
+    Scanner sc = new Scanner(System.in);
+    regNo = sc.nextLine();
+    gender = regNo.charAt(7);
+
+    switch (gender) {
+      case '1': case '3':
+        System.out.println("남성");
+        break;
+      case '2': case '4':
+        System.out.println("여성");
+        break;
+      default:
+        System.out.println("다시 입력하시오");
+    }
+  }
+} 
+```
+
+{: .warning-title }
+> Error
+>
+> 문자형 숫자와 정수형 숫자의 구별을 주의하자
+>
+> **'1'은 문자, 1은 정수형 숫자이다**
+>
+> 만약 case 결과값을 (1,3) (2,4)로 한다면 default값의 문장만 수행될 것이다
+
+<br/>
+
+_점수를 입력받아 학점을 부여하는 예제_
+
+```java
+
+```
 
 <br/><br/>
 
@@ -136,31 +358,31 @@ if (조건식 1) {
 
 ## 반복문
 
-### i. for 문
+### i. for문
 {: .no_toc }
 
 
 <br/><br/>
 
-### ii. while 문
+### ii. while문
 {: .no_toc }
 
 
 <br/><br/>
 
-### iii. do-while 문
+### iii. do-while문
 {: .no_toc }
 
 
 <br/><br/>
 
-### iv. break 문
+### iv. break문
 {: .no_toc }
 
 
 <br/><br/>
 
-### v. continue 문
+### v. continue문
 {: .no_toc }
 
 
