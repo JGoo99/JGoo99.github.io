@@ -394,7 +394,7 @@ _for문은 반복 수행 횟수를 알고있을 때 사용하면 좋다_
 
 <br/>
 
-1. for문의 구조와 수행순서
+1. **for문의 구조와 수행순서**
 
 > 초기화, 조건식, 증감식, 블럭으로 이루어져 있으며, 수행순서는 아래와 같다
 >
@@ -426,21 +426,258 @@ for (int i  = 0, j = 1; i < 10; i++) {}
 >
 > 조건식을 잘못 입력하면 블럭 내 문장이 아예 수행되지 않거나 무한반복을 하는 오류가 발생할 수 있다
 
+<br/>
+
 - **증감식**
 
-> 
+> 반복문을 제어하는 변수의 값을 일정하게 변화시켜, 그 값이 조건식을 벗어나면 for문을 종료하도록 한다
+>
+> i++, i--, i+=2, i*=3 등 복합 대입 연산자를 사용할 수 있으며 생략도 가능하다
+
+```java
+for (int i = 0; i < 10; i*=3) {} //i가 3배씩 증가
+
+for (int i = 0, j = 9; i< 10; i++, j--) {} //i는 0부터 9까지, j는 9부터 0까지 감소
+
+for(;;) {} //무한반복문으로 사용가능하며 if문을 통해 빠져나오도록 설계하면 된다
+
+for(int i = 0; i < 10; i%=3) {} //i = 0, 1, 2, 0, 1, 2 ...로 반복 가능
+
+for(int i = 0; i < 10; i/=3) {} //i = 0, 0, 1, 1, 2, 2 ...로 연속 가능
+```
+
+_복합대입연산자 링크_
+
+[Link button](https://jgoo99.github.io/docs/language.md/java2.md/java2_2/#ii-%EB%8C%80%EC%9E%85-%EC%97%B0%EC%82%B0%EC%9E%90){: .btn .btn-outline }
+
+<br/>
+
+{:style="counter-reset:step-counter 1"}
+2. **향상된 for문**
+
+> 배열이나 컬렉션 내에 저장된 값이 매반복마다 하나씩 순서대로 읽혀서 변수에 저장된다
+>
+> 아래 구조와 예시를 보며 향상된 for문을 이해해보자
+
+_구조_
+
+```java
+for ( 타입 변수명 : 배열 또는 컬랙션) {
+  //반복할 문장
+}
+```
+
+<br/>
+
+_예시_
+
+```java
+int[] arr = {10, 20, 30, 40, 50};
+
+for (int i = 0; i < 5; i++) {
+  System.out.print(arr[i] + " ");
+}
+System.out.println();
+
+for (int tmp : arr) {
+  System.out.print(tmp + " ");
+}  
+```
+
+```java
+10 20 30 40 50
+10 20 30 40 50
+```
 
 <br/><br/>
 
 ### ii. while문
 {: .no_toc }
 
+- **while문의 구조**
+
+> for문보다 간단하며 for문이랑 완벽하게 대체 가능한 문법이지만
+>
+> 초기화 과정이나 증감식이 필요없는 경우 유용하게 사용가능하다
+>
+> (**단, 조건식은 생략 불가능하다**)
+
+```java
+for (조건식) {
+  //반복을 수행할 문장
+}
+```
+
 <br/>
+
+- **while문의 예시**
+
+_증감식 사용 주의 예시_
+
+1. **후위형**
+
+```java
+int i = 5, j = 5;
+
+while (i-- != 0) {
+  System.out.println(i + " hello");
+}
+
+while (i != 0) { //위와 동일함
+  i--;
+  System.out.println(i + " hello);
+}
+```
+
+```java
+4 hello
+3 hello
+2 hello
+1 hello
+0 hello
+```
+
+{: .highlight }
+> i--는 후위형이기 때문에 조건식이 평가된 후 1이 감소하여 4부터 출력되는 것을 알 수 있다
+
+<br/>
+
+{:style="counter-reset:step-counter 1"}
+2. **전위형**
+
+> 전위형 증감식을 조건식 바깥에 쓸 경우 다른 결과값을 갖는다
+
+```java
+int i = 5, j = 5;
+
+while (--i != 0) {
+  System.out.println(i + " hello");
+}
+
+System.out.println();
+
+while (j != 0) { 
+  --j;
+  System.out.println(j + " hi");
+}  
+```
+
+```java
+4 hello
+3 hello
+2 hello
+1 hello
+
+4 hi
+3 hi
+2 hi
+1 hi
+0 hi
+```
+
+<br/>
+
+_각 자리 숫자 더하기 예시_
+
+```java
+class Main {
+  public static void main(String[] args) {
+    int num; //입력받는 다섯자리 수 12345
+    int sum = 0;
+
+    Scanner sc = new Scanner(System.in);
+    num = sc.nextInt();
+
+    while (num != 0) {
+      sum += num%10;
+      System.out.printf("sum = %2d, num = %d%n", sum, num);
+      num /= 10;
+    }
+    System.out.println();
+    System.out.printf("sum = %d", sum) ;
+  }
+}
+```
+
+```java
+sum =  5, num = 12345
+sum =  9, num = 1234
+sum = 12, num = 123
+sum = 14, num = 12
+sum = 15, num = 1
+
+sum = 15
+```
+
+{: .new-title }
+> 🧐
+>
+> printf()에서 **%3d, %2d**등의 표현을 볼 수 있다
+>
+> 위 표현은 3자리 또는 2자리 정수를 표현할 때 위처럼 빈칸을 포함하여 출력한다
+>
+> 또한 **%03d, %02d**등의 표현은 위와 동일하나 빈칸에 0을 채워 표현한다
+>
+> ex) %3d > "  2", "  5" **//** %03d > "002", "005"
 
 
 <br/>
 
+_누적합계가 100이 넘지 않는 제일 큰 수를 구하는 예제_
+
+```java
+int i = 0; 
+int sum = 0;
+
+while ( (sum += ++i) < 100) {
+  System.out.printf("i = %2d, sum = %2d%n", i, sum);
+}
+```
+
+{: .warning-title }
+> ❗️
+>
+> 1. **조건식 내에서 i++로 입력할 경우**
+>
+> 조건식 내에서 i=0 부터 더해지므로 sum=0부터 시작한다
+>
+> {:style="counter-reset:step-counter 1"}
+> 2. **printf()내에서 sum+=i로 입력할 경우**
+>
+> 조건식에서 한 번, printf에서 한 번 총 두 번의 i가 더해진다
+
 <br/>
+
+_더할 숫자를 입력받다가 0을 입력받으면 총 합을 구하는 예제_
+
+```java
+int num; //입력받은 수
+boolean flag = true; //입력받은 숫자가 0이면 false
+int sum = 0;
+
+Scanner sc = new Scanner(System.in);
+
+while (flag != false) {
+  System.out.print(">> ");
+  num = sc.nextInt();
+  if (num != 0) {
+    sum += num;
+  } else {
+    flag = false;
+  }
+}
+System.out.println();
+System.out.printf("sum = %d", sum);
+```
+
+```java
+>> 11
+>> 22
+>> 33
+>> 0
+
+sum = 66
+```
 
 <br/><br/>
 
