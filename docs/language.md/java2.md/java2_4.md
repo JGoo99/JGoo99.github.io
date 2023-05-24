@@ -148,7 +148,7 @@ score[1+k] = 30; //인덱스를 변수가 포함된 수식으로 설정
 tmp = score[1] + score [1+k];
 
 for (int i = 0; i < 3; i++) {
-	System.out.printf("score[%d] = %d%n", i, score[i]);
+  System.out.printf("score[%d] = %d%n", i, score[i]);
 }
 System.out.println(tmp);
 System.out.printf("score[%d] = %d", 4, score[4]);
@@ -181,10 +181,11 @@ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 4 out
 >
 > 아래 여러가지 예시를 통해 알아보자
 
-_ex1) 각 요소에 직접 초기화 하는 경우_
+_**ex1)** 각 요소에 직접 초기화 하는 경우_
 
 ```java
 int[] score = new int[5];
+
 score[0] = 50;
 score[1] = 90;
 score[2] = 60;
@@ -194,7 +195,7 @@ score[4] = 20;
 
 <br/>
 
-_ex2) 저장 값이 일정한 규칙을 가진 경우_
+_**ex2)** 저장 값이 일정한 규칙을 가진 경우_
 
 > 일정한 규칙을 가진 배열은 for문을 이용하여 초기화하면 좋다
 
@@ -208,7 +209,7 @@ for (int i = 0; i < num.length; i++) {
 
 <br/>
 
-_ex3) 각 요소를 한 번에 직접 초기화하는 경우_
+_**ex3)** 각 요소를 한 번에 직접 초기화하는 경우_
 
 > 배열 길이를 선언하지 않아도 괄호 안의 값의 수에 맞추어 자동으로 결정된다
 
@@ -229,7 +230,7 @@ score = new int[] {10, 20, 30};
 
 <br/>
 
-_ex4) 배열이 add 매서드의 매개변수로 쓰이는 경우_
+_**ex4)** 배열이 add 매서드의 매개변수로 쓰이는 경우_
 
 > 이 경우에는 **new 타입[]을 생략할 수 없다**
 
@@ -241,7 +242,7 @@ int result = add(new int[] {10, 20, 30});
 
 <br/>
 
-_ex5) 길이가 0인 배열을 초기화하는 경우_
+_**ex5)** 길이가 0인 배열을 초기화하는 경우_
 
 ```java
 int[] score = new int[0];
@@ -253,7 +254,7 @@ int[] score = {};
 
 - **배열의 출력 방법**
 
-1. for문 사용하기
+1. **for문 사용하기**
 
 > 일정한 규칙을 가진 값을 배열에 저장할 때도 for문을 사용하였는데
 >
@@ -276,7 +277,7 @@ for (int i = 0; i < arr.length; i++) {
 <br/>
 
 {:style="counter-reset:none"}
-2. Arrays.toString(변수이름) 매서드 사용하기
+2. **Arrays.toString(변수이름) 매서드 사용하기**
 
 > for문보다 더 간단한 방법으로 배열을 출력하는 방법이다
 >
@@ -310,7 +311,9 @@ System.out.println(arr);
 > arr는 참조변수이므로 내부주소를 포함한 **타입@주소**형태로 출력한다
 >
 > I는 1차원 배열임을 나타내며, @ 뒤의 주소는 실제주소가 아닌 배열의 내부주소이다
->
+
+<br/>
+
 > _참고로 char 배열은 변수명으로 출력해도 각 요소가 정상출력된다(구분자 없음)_
 
 ```java
@@ -328,12 +331,223 @@ abc
 ### v. 배열의 복사
 {: .no_toc }
 
+> 배열은 한 번 선언할 때 그 길이까지 같이 선언되며, 길이의 변경이 불가능하다
+>
+> 따라서 저장공간이 더 넓은 새로운 배열을 선언하여 기존 배열을 복사하는 과정을 통해 길이 변경이 가능하다
 
+<br/>
+
+1. **for문 이용하기**
+
+```java
+int[] arr1 = new int[] {10, 20, 30};
+System.out.println("arr1 = " + Arrays.toString(arr1));
+
+int[] arr2 = new int[arr1.length * 2]; //기존의 길이*2
+
+for (int i = 0; i < arr1.length; i++) { //arr2에 복사하기
+  arr2[i] = arr1[i];
+}
+
+arr1 = arr2; //다시 arr1에 arr2값을 저장하여 길이 변경하기
+
+System.out.println("arr1 = " + Arrays.toString(arr1));
+```
+
+```java
+arr1 = [10, 20, 30] //기존 arr1은 사용할 수 없는 배열이 된다
+arr1 = [10, 20, 30, 0, 0, 0]
+```
+
+<br/>
+
+{:style="counter-reset:none"}
+2. **System.arraycopy()매서드 이용하기**
+
+> **System.arracopy(기존배열명, 몇 번째 요소부터, 새로운 배열명, 몇 번째 요소로, 값의 개수);**
+>
+> for문은 각 요소 하나하나에 접근하여 복사했다면,
+>
+> 위 메서드는 배열 묶음 통째로 복사하기 때문에 더 효율적이라고 할 수 있다
+
+```java
+int[] arr1 = new int[] {10, 20, 30};
+
+int[] arr2 = new int[arr1.length * 2];
+
+System.out.println("arr1 = " + Arrays.toString(arr1));
+
+System.arraycopy(arr1, 0, arr2, 0, arr1.length);
+arr1 = arr2;
+
+System.out.println("arr1 = " + Arrays.toString(arr1));
+```
+
+<br/>
+
+{: .highlight-title }
+> 새로운 배열의 중간 인덱스의 위치로 복사해보자
+
+```java
+int[] arr1 = new int[] {10, 20, 30};
+
+int[] arr2 = new int[arr1.length * 2];
+
+System.out.println("arr1 = " + Arrays.toString(arr1));
+
+System.arraycopy(arr1, 0, arr2, 2, arr1.length);
+arr1 = arr2;
+
+System.out.println("arr1 = " + Arrays.toString(arr1));
+```
 
 <br/><br/>
 
 ### vi. 배열의 활용
 {: .no_toc }
+
+> 아래의 다양한 예제들을 통해 배열을 어떻게 활용해야할지 배워보자
+
+<br/>
+
+_**ex1)** 배열 요소의 총합과 평균 구하기 예제_
+
+```java
+int sum = 0;
+
+int[] score = {100, 88, 100, 100, 90};
+
+for (int i = 0; i < score.length; i++) {
+  sum += score[i];
+}
+
+System.out.println("sum = " + sum);
+System.out.println("average = " + (float)sum/score.length);
+```
+
+```java
+sum = 478
+average = 95.6
+```
+
+<br/>
+
+_**ex2)** 배열의 요소 중 최대값과 최소값 구하기 예제_
+
+```java
+int[] score = {79, 88, 91, 33, 100, 55, 95};
+int max = score[0];
+int min = score[0];
+
+for (int i = 0; i < score.length; i++) {
+  if (max < score[i]) {
+    max = score[i];
+  } else if (min > score[i]) {
+    min = score[i];
+  }
+}
+
+System.out.println("max = " + max);
+System.out.println("min = " + min);
+```
+
+```java
+max = 100
+min = 33
+```
+
+<br/>
+
+_**ex3)** 배열 요소의 순서 섞기 예제_
+
+```java
+int[] numArr = new int[10];
+int random;
+
+for (int i = 0; i < numArr.length; i++) {
+  numArr[i] = i;
+}
+System.out.println(Arrays.toString(numArr));
+
+for (int j = 0; j < numArr.length; j++) {
+  random = (int) (Math.random()*10);
+  int tmp = numArr[j];
+  numArr[j] = numArr[random];
+  numArr[random] = tmp;
+}
+System.out.println(Arrays.toString(numArr));
+```
+
+```java
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[3, 4, 6, 2, 9, 0, 5, 8, 1, 7]
+```
+
+<br/>
+
+{: .warning-title }
+> ❗️
+>
+> x의 값과 y의 값을 바꿀 때는 아래처럼 해야한다
+
+```java
+tmp = x;
+x = y;
+y = tmp;
+```
+
+<br/>
+
+_**ex4)** 연속 or 불연속적인 값들로 배열 초기화하기 예제_
+
+1. **연속적인 값(로또번호)**
+
+```java
+
+```
+
+```java
+
+```
+
+<br/>
+
+{:style="counter-reset:none"}
+2. **불연속적인 값(임의의 수)**
+
+```java
+
+```
+
+```java
+
+```
+
+<br/>
+
+_**ex5)** 오름차순, 내림차순으로 배열 정렬하기 예제_
+
+```java
+
+```
+
+```java
+
+```
+
+<br/>
+
+_**ex6)** 배열 특정 요소의 빈도수 구하기 예제_
+
+```java
+
+```
+
+```java
+
+```
+
+<br/>
 
 
 
