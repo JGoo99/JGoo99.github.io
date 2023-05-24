@@ -706,6 +706,8 @@ do {
 } while (조건식);
 ```
 
+<br/>
+
 - **do-while문의 예시**
 
 _ex1) Up And Down 게임 만들기 예제_
@@ -735,7 +737,7 @@ System.out.println("정답입니다");
 1-100 사이 양수를 입력하시오 >> 20
 더 큰 수를 입력하시오 >> 40
 더 큰 수를 입력하시오 >> 60
-더 작은 수를 입력하시오 >> 50
+더 작은 수를 입력하시오 >> 52
 정답입니다
 ```
 
@@ -751,15 +753,152 @@ System.out.println("정답입니다");
 ### iv. break문
 {: .no_toc }
 
+> 자신이 포함된 가장 가까운 반복문을 벗어나는 문장이다
+>
+> 주로 if문과 함꼐 사용되어 특정 조건을 만족하면 반복문을 벗어나도록 한다
+>
+> 특히 while문은 if문과 break문이 항상 같이 사용된다
 
+<br/>
+
+_ex) 1씩 증가하여 더하는 누적합계가 100을 넘었을 때의 i와 sum을 출력하는 예제_
+
+```java
+int sum = 0;
+int i = 0;
+
+while (true) {
+  if ( (sum += ++i) > 100 ) {
+    System.out.printf("i = %2d, sum = %2d", i, sum);
+    break;
+  }
+}
+```
 
 <br/><br/>
 
 ### v. continue문
 {: .no_toc }
 
+> 반복이 진행되는 와중에 continue문을 만나면 반복문의 끝으로 이동하여 다음 반복이 실행된다
+>
+> break문과 다르게 반복문을 아예 종료하는 것이 아니다
+>
+> **전체 반복 중에 특정 조건을 제외하고자 할 때 유용하게 사용한다**
+
+<br/>
+
+_ex1) 1-10 숫자를 출력하되 3의 배수는 제외하는 예제_
+
+```java
+for (int i = 0; i < 11; i++) {
+  if (i%3 == 0) {
+    continue;
+  }
+  System.out.print(i + " ");
+
+//3의 배수일 경우 이 곳, 반복문의 끝으로 이동한다
+}
+```
+
+```java
+1 2 4 5 7 8 10
+```
+
+<br/>
+
+_ex2) 메뉴를 보여주고 선택하는 예제: 잘못선택하면 다시 메뉴를 띄우며 종료는 0이다_
+
+```java
+int io; //입력받은 메뉴 번호
+
+Scanner sc = new Scanner(System.in);
+
+while	(true) {
+  System.out.println("(1) 가");
+  System.out.println("(2) 나");
+  System.out.println("(3) 다");
+  System.out.print("위 보기 중 하나를 선택하시오(종료: 0) >> ");
+  io = sc.nextInt();
+
+  if (io == 0) {
+    System.out.println("종료합니다");
+    break;
+  } else if (!( 1 <= io && io <= 3 )) {
+    System.out.println("잘못 입력하셨습니다");
+    continue;
+  }
+  System.out.println("선택하신 메뉴: " + io);
+}
+```
+
+```java
+(1) 가
+(2) 나
+(3) 다
+위 보기 중 하나를 선택하시오(종료: 0) >> 1
+선택하신 메뉴: 1
+(1) 가
+(2) 나
+(3) 다
+위 보기 중 하나를 선택하시오(종료: 0) >> 4
+잘못 입력하셨습니다
+(1) 가
+(2) 나
+(3) 다
+위 보기 중 하나를 선택하시오(종료: 0) >> 0
+종료합니다
+```
 
 <br/><br/>
 
 ### vi. 이름 붙은 반복문
 {: .no_toc }
+
+> 중첩 반복문 앞에 이름을 붙이고 break문과 continue문에 이름을 지정해 줌으로써
+>
+> **하나 이상의 반복문을 벗어나거나 건너뛸 수 있다**
+
+```java
+Loop1 :
+  for (int i = 1; i <= 9; i++) {
+	  for (int j = 1; j <= 9; j++) {
+		  System.out.printf("%d * %d = %d", i, j, i*j);
+		  System.out.println();
+		  if (j == 5) {
+			  continue Loop1;
+			  //break Loop1;
+		  }
+	  }
+  }
+```
+
+_continue Loop1; 결과 (거의 쓰이지 않음)_
+
+```java
+1 * 1 = 1
+1 * 2 = 2
+1 * 3 = 3
+1 * 4 = 4
+1 * 5 = 5
+2 * 1 = 2
+2 * 2 = 4
+.
+. 중략
+.
+9 * 1 = 9
+9 * 2 = 18
+9 * 3 = 27
+9 * 4 = 36
+9 * 5 = 45
+```
+
+_break Loop1; 결과_
+
+```java
+1 * 1 = 1
+1 * 2 = 2
+1 * 3 = 3
+1 * 4 = 4
+1 * 5 = 5
+```
