@@ -386,6 +386,8 @@ System.out.println("arr1 = " + Arrays.toString(arr1));
 <br/>
 
 {: .highlight-title }
+> 🐷
+>
 > 새로운 배열의 중간 인덱스의 위치로 복사해보자
 
 ```java
@@ -503,12 +505,42 @@ _**ex4)** 연속 or 불연속적인 값들로 배열 초기화하기 예제_
 1. **연속적인 값(로또번호)**
 
 ```java
+int[] num = new int[45];
+int[] lotto = new int[6];
 
+Random rd = new Random();
+
+for (int i = 0; i < num.length; i++) { //1-45 배열 생성
+  num[i] = (i+1);
+}
+
+for (int i = 0; i < num.length; i++) { //num[] 배열 섞기
+  int tmp = num[i];
+  num[i] = num[rd.nextInt(45)];
+  num[rd.nextInt(45)] = tmp;
+}
+
+for (int i = 0; i < 6; i++) { //lotto[] 배열 생성하여 복사
+  lotto[i] = num[i];
+}
+
+System.out.println(Arrays.toString(lotto));
 ```
 
 ```java
-
+[33, 7, 43, 20, 45, 23]
 ```
+
+<br/>
+
+{: .important-title } 
+> 🐷
+>
+> **난수를 생성하는 방법**
+>
+> 1. Math.random() * n + 1
+>
+> 2. random.nextInt(n) + 1
 
 <br/>
 
@@ -516,11 +548,17 @@ _**ex4)** 연속 or 불연속적인 값들로 배열 초기화하기 예제_
 2. **불연속적인 값(임의의 수)**
 
 ```java
+int[] num = {-1, 4, 6, -5 ,7};
+int[] arr = new int[10];
 
+for (int i = 0; i < arr.length; i++) {
+  arr[i] = num[(int) (Math.random()*5)];
+}
+System.out.println(Arrays.toString(arr));
 ```
 
 ```java
-
+[-1, 6, -1, 7, -5, 4, -1, 4, 6, 6]
 ```
 
 <br/>
