@@ -566,28 +566,145 @@ System.out.println(Arrays.toString(arr));
 _**ex5)** 오름차순, 내림차순으로 배열 정렬하기 예제_
 
 ```java
+int[] num = new int[10];
 
+for (int i = 0; i < num.length; i++) { //1-10까지 무작위 저장
+	num[i] = (int) (Math.random() * 10 + 1);
+}
+System.out.println("무작위 결과:\n" + Arrays.toString(num));
+System.out.println();
+
+for (int i = 0; i < num.length; i++) { 
+  boolean check = false;
+
+  for (int j = 0; j < num.length-1-i; j++) { 
+    if (num[j] > num[j+1]) {
+      int tmp = num[j];
+      num[j] = num[j+1];
+      num[j+1] = tmp;
+      check = true;
+      continue;
+    }
+  }
+
+  if (!check) { //자리 바꾸지 않았으면 종료
+    System.out.println();
+    break;
+  } else {      //자리 바꿨으면 계속 진행
+    System.out.println(Arrays.toString(num));
+  }
+}
+System.out.println("정렬 결과:\n" + Arrays.toString(num));
 ```
 
 ```java
+무작위 결과:
+[2, 7, 1, 4, 1, 7, 1, 7, 8, 2]
 
+[2, 1, 4, 1, 7, 1, 7, 7, 2, 8]
+[1, 2, 1, 4, 1, 7, 7, 2, 7, 8]
+[1, 1, 2, 1, 4, 7, 2, 7, 7, 8]
+[1, 1, 1, 2, 4, 2, 7, 7, 7, 8]
+[1, 1, 1, 2, 2, 4, 7, 7, 7, 8]
+
+정렬 결과:
+[1, 1, 1, 2, 2, 4, 7, 7, 7, 8]
 ```
+
+<br/>
+
+{: .important-title }
+> ❗️
+>
+> 중요한 것은 **반복 횟수(for문의 조건식)**이다
+>
+> 전체 비교횟수는 **num.length-1**이고, 각 자리를 하나하나 비교하는 횟수는 **num.length-1-i**이다
+>
+> 최대값, 그 다음 최댓값을 하나씩 찾아 뒤로 밀어내는 과정이라고 생각하면 쉽다
+>
+> 큰 값이 자기 자리를 찾아가면 그 자리의 수는 비교하지 않아도 된다 (-i)
 
 <br/>
 
 _**ex6)** 배열 특정 요소의 빈도수 구하기 예제_
 
-```java
+1. 내가 푼 답안
 
+> 책의 답안에 더 효율적인 방법이 있으나, 비교를 통한 학습을 위해 기록한다
+
+```java
+int[] num = new int[10];
+
+for (int i = 0; i < num.length; i++) {
+  num[i] = (int) (Math.random()*10 + 1);
+}
+System.out.println(Arrays.toString(num));
+
+for (int i = 1; i < num.length+1; i++) {
+  int sum = 0;
+  for (int j = 0; j < num.length; j++) {
+    if (num[j] == i) {
+      sum++;
+      continue;
+    }
+  }
+  System.out.printf("%2d의 빈도 = %d%n",i, sum);
+}
 ```
 
 ```java
-
+[10, 7, 4, 7, 7, 3, 2, 4, 4, 6]
+ 1의 빈도 = 0
+ 2의 빈도 = 1
+ 3의 빈도 = 1
+ 4의 빈도 = 3
+ 5의 빈도 = 0
+ 6의 빈도 = 1
+ 7의 빈도 = 3
+ 8의 빈도 = 0
+ 9의 빈도 = 0
+10의 빈도 = 1
 ```
 
 <br/>
 
+{:style="counter-reset:none"}
+2. 책의 답안
 
+> 같은 길이의 새로운 배열을 선언하여 빈도수를 세는 방법이다
+>
+> num[i]의 해당하는 숫자) counter[i-1]에 값을 1씩 증가시키는 과정을 반복하여 저장
+>
+> 예를들어 num[0], num[6] = 3 이라면, counter[2]는 2가 된다
+
+```java
+int[] num = new int[10];
+int[] counter = new int[10];
+
+//중략
+
+for (int i = 0; i < num.length; i++) {
+  counter[num[i]-1]++;
+}
+
+for (int i = 0; i < num.length; i++) {
+  System.out.printf("%2d의 빈도: %d%n", i+1, counter[i]);
+}
+```
+
+```java
+[1, 7, 3, 5, 8, 4, 2, 3, 10, 6]
+ 1의 빈도: 1
+ 2의 빈도: 1
+ 3의 빈도: 2
+ 4의 빈도: 1
+ 5의 빈도: 1
+ 6의 빈도: 1
+ 7의 빈도: 1
+ 8의 빈도: 1
+ 9의 빈도: 0
+10의 빈도: 1
+```
 
 ---
 
