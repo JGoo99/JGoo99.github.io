@@ -569,7 +569,7 @@ _**ex5)** 오름차순, 내림차순으로 배열 정렬하기 예제_
 int[] num = new int[10];
 
 for (int i = 0; i < num.length; i++) { //1-10까지 무작위 저장
-	num[i] = (int) (Math.random() * 10 + 1);
+  num[i] = (int) (Math.random() * 10 + 1);
 }
 System.out.println("무작위 결과:\n" + Arrays.toString(num));
 System.out.println();
@@ -673,9 +673,20 @@ for (int i = 1; i < num.length+1; i++) {
 
 > 같은 길이의 새로운 배열을 선언하여 빈도수를 세는 방법이다
 >
-> num[i]의 해당하는 숫자) counter[i-1]에 값을 1씩 증가시키는 과정을 반복하여 저장
+> num[i]의 해당하는 숫자 -> counter[i-1]에 값을 1씩 증가시키는 과정을 반복하여 저장
 >
-> 예를들어 num[0], num[6] = 3 이라면, counter[2]는 2가 된다
+> 아래 과정을 보고 이해해보자
+
+```java
+counter[1-1= 0]++
+counter[7-1= 6]++
+counter[3-1= 2]++
+counter[5-1= 4]++
+
+//이런식으로 counter배열의 값이 1씩 증가하여 빈도수를 셀 수 있다
+```
+
+<br/>
 
 ```java
 int[] num = new int[10];
@@ -694,13 +705,13 @@ for (int i = 0; i < num.length; i++) {
 
 ```java
 [1, 7, 3, 5, 8, 4, 2, 3, 10, 6]
- 1의 빈도: 1
- 2의 빈도: 1
+ 1의 빈도: 1 
+ 2의 빈도: 1 
  3의 빈도: 2
  4의 빈도: 1
  5의 빈도: 1
  6의 빈도: 1
- 7의 빈도: 1
+ 7의 빈도: 1 
  8의 빈도: 1
  9의 빈도: 0
 10의 빈도: 1
