@@ -99,3 +99,123 @@ class Main {
 <br/><br/><br/>
 
 ---
+
+## #문제_10871
+
+> 정수 N개로 이루어진 수열 A와 정수 X가 주어진다. 이때, A에서 X보다 작은 수를 모두 출력하는 프로그램을 작성하시오.
+
+---
+
+### #입력
+{: .no_toc }
+
+> 10 5
+>
+> 1 10 4 9 2 3 8 5 7 6
+
+### #출력
+{: .no_toc }
+
+> 1 4 2 3
+
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 구현
+
+---
+
+### #풀이
+{: .no_toc }
+
+1. **Scanner 이용**
+
+```java
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int[] A = new int[sc.nextInt()];
+    int X = sc.nextInt();
+
+    for (int i = 0; i < A.length; i++) {
+      A[i] = sc.nextInt();
+    }
+
+    for (int i = 0; i < A.length; i++) {
+      if (A[i] < X) {
+        System.out.print(A[i] + " ");
+      }
+    }
+  }
+}
+```
+
+<br/>
+
+{:style="counter-reset:none"}
+2. **Buffered 이용**
+
+> 메모리와 시간절약 가능
+
+```java
+import java.io.*;
+
+class Main {
+  public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+    String input1 = br.readLine();
+    String[] word = input1.split(" ");
+
+    int N = Integer.parseInt(word[0]);
+    int X = Integer.parseInt(word[1]);
+
+    int[] A = new int[N];
+
+    String input2 = br.readLine();
+    String[] num = input2.split(" ");
+    br.close();
+
+    for (int i = 0; i < N; i++) {
+      A[i] = Integer.parseInt(num[i]);
+      if (A[i] < X) {
+        bw.write(A[i] + " ");
+      }
+    }
+    bw.flush();
+    bw.close();
+  }
+}
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> 반복문의 효율성
+
+> 하나의 반복문에서 여러가지 수행을 할 수 있다면 더욱 효율적일 것이다
+>
+> 따라서 같이 반복할 수 있는 두 가지 문장을 서로다른 반복문에 넣어 효율성을 떨어뜨리는 일은 없도록 하자
+
+<br/>
+
+{: .highlight }
+> buffered와 split
+
+> BufferedReader로 한줄의 여러 정수를 입력받았을 때, 띄어쓰기를 기준으로 배열저장하기
+
+```java
+String input = br.readLine();
+String[] arr = input.split(" ");
+```
+
+<br/><br/><br/>
+
+---
