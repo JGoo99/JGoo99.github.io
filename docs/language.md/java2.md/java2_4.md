@@ -724,21 +724,164 @@ for (int i = 0; i < num.length; i++) {
 ### i. String배열의 선언과 생성
 {: .no_toc }
 
+- **String배열의 선언**
 
+> 생성방법은 int배열과 다르지 않으며, 기본값은 null이다
+>
+> _각 자료형의 기본값을 정리한 링크를 아래에 첨부한다_
+
+```java
+String[] name = new String[3];
+```
+
+> String은 참조형 자료이므로 null값이 기본값이 된다
+
+[Link button](https://jgoo99.github.io/docs/language.md/java2.md/java2_1/#ii-%EB%B3%80%EC%88%98%EC%9D%98-%EC%84%A0%EC%96%B8%EA%B3%BC-%EC%B4%88%EA%B8%B0%ED%99%94){: .btn .btn-outline }
 
 <br/><br/>
 
 ### ii. String배열의 초기화
 {: .no_toc }
 
+- **기본 초기화 방법**
 
+> int형 배열과 초기화 방법이 다르지 않다
+
+```java
+String[] name = new String[3];
+
+name[0] = new String("Hong");
+name[1] = new String("Gil");
+name[2] = new String("Dong");
+```
+
+{: .highlight-title }
+> 🥕
+>
+> String은 클래스이므로 원래는 위 처럼 선언해야하며, 아래처럼 생략하여 표현하는 것도 허용된다
+
+```java
+name[0] = "Hong";
+name[1] = "Gil";
+name[2] = "Dong";
+```
+
+<br/>
+
+- **간단한 초기화 방뻡**
+
+> String배열 역시 new String[]을 생략하여 간단하게 선언할 수 있다
+>
+> 단, 참조형 배열의 경우 참조형 자료이므로 배열에 저장되는 것은 값이 아닌 객체의 주소이다 (객체배열)
+
+```java
+String[] name = new String[] {"Hong", "Gil", "Dong"};
+
+String[] name = {"Hong", "Gil", "Dong"};
+```
 
 <br/><br/>
 
 ### iii. char배열과 String클래스
 {: .no_toc }
 
+- **정의**
 
+> String클래스는 char배열에 매서드 기능을 추가한 것이다
+>
+> 둘의 **중요한 차이점은 String객체(문자열)는 읽을 수만 있을 뿐 내용을 변경할 수 없다**
+>
+> (+객체지향개념이 나온 후 자바에서는 데이터와 그에 관련된 기능(매서드)들을 하나의 클래스로 묶어 사용한다)
+
+```java
+String str = "java";
+str = str + "11";
+System.out.println(str);
+```
+
+```java
+java11
+```
+
+> 문자열을 변경한 것 같지만 **새로운 문자열을 생성**하여 저장한 것이다
+
+<br/>
+
+- **String클래스의 주요 매서드**
+
+```java
+String str = "ABCDE";
+char ch = str.charAt(3);
+System.out.println(ch);
+```
+
+```java
+D
+```
+
+> 문자열에서 해당 위치(index)에 있는 문자를 반환한다
+
+<br/>
+
+```java
+String str = "ABCDE";
+int i = str.length();
+System.out.println(i);
+```
+
+```java
+5
+```
+
+> 문자열의 길이를 반환한다
+
+<br/>
+
+```java
+String str = "ABCDE";
+String str2 = str.substring(2,4);
+System.out.println(str2);
+```
+
+```java
+CD
+```
+
+> 문자열에서 해당 범위(from-to)에 있는 문자열을 반환한다 (**to는 미포함**)
+
+<br/>
+
+```java
+String str1 = "ABCDE";
+String str2 = "ABCDE";
+
+if (str1.equals(str2)) System.out.println(str2);
+```
+
+```java
+ABCDE
+```
+
+> 문자열의 내용이 같은지 확인한다 (같으면 true, 다르면 false)
+
+<br/>
+
+```java
+String str = "ABCDE";
+char[] ch = str.toCharArray();
+System.out.println(Arrays.toString(ch));
+```
+
+```java
+[A, B, C, D, E]
+```
+
+> 문자열을 문자배열(char[])로 변환해서 반환한다
+
+
+<br/>
+
+- **char배열과 String클래스의 변환**
 
 <br/><br/>
 
