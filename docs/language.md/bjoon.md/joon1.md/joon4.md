@@ -192,6 +192,8 @@ class Main {
 }
 ```
 
+![joon4_1](https://github.com/JGoo99/JGoo99.github.io/assets/126454114/79b47eed-09e9-4407-ac95-1d3285169e9c)
+
 ---
 
 ### #유의할 점
