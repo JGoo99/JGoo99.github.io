@@ -194,6 +194,8 @@ class Main {
 
 ![joon4_1](https://github.com/JGoo99/JGoo99.github.io/assets/126454114/79b47eed-09e9-4407-ac95-1d3285169e9c)
 
+_buffered를 사용할 때 더 효율적인 성능을 가진다_
+
 ---
 
 ### #유의할 점
@@ -217,6 +219,95 @@ class Main {
 String input = br.readLine();
 String[] arr = input.split(" ");
 ```
+
+<br/><br/><br/>
+
+---
+
+## #문제_10818
+
+> N개의 정수가 주어진다. 이때, 최솟값과 최댓값을 구하는 프로그램을 작성하시오.
+
+> 첫째 줄에 정수의 개수 N (1 ≤ N ≤ 1,000,000)이 주어진다.
+>
+> 둘째 줄에는 N개의 정수를 공백으로 구분해서 주어진다.
+>
+> 모든 정수는 -1,000,000보다 크거나 같고, 1,000,000보다 작거나 같은 정수이다.
+
+---
+
+### #입력
+{: .no_toc }
+
+> 5
+>
+> 20 10 35 30 7
+
+### #출력
+{: .no_toc }
+
+> 7 35
+
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 수학, 구현
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.io.*;
+
+class Main {
+  public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+    int N = Integer.parseInt(br.readLine());
+    String input = br.readLine();
+    String[] word = input.split(" ");
+    br.close();
+
+    int[] num = new int[N];
+
+    for (int i = 0; i < N; i++) {
+      num[i] = Integer.parseInt(word[i]);
+    }
+
+    int MAX = num[0];
+    int MIN = num[0];
+
+    for (int i = 0; i < N; i++) {
+      if (MAX < num[i]) {
+        MAX = num[i];
+      }
+      if (MIN > num[i]) {
+        MIN = num[i];
+      }
+    }
+
+    bw.write(MIN + " " + MAX);
+    bw.flush();
+    bw.close();
+  }
+}
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> 대입연산자의 변수, 대입값의 위치
+
+> 넣고자하는 값은 오른쪽, 저장장소로 이용할 변수는 왼쪽에 배치한다
+>
+> 위에서 만약 num[i] = MAX;로 한다면 num배열의 모든 요소는 MAX값으로 통일되는 오류가 발생한다
 
 <br/><br/><br/>
 
