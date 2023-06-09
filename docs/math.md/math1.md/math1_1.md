@@ -31,7 +31,7 @@ nav_order: 2
 
 1. 수열의 수렴
 
-> 수열 $a_n$이 일정한 극한(또는 극한값) $\alpha$에 한없이 가까워지는 것
+수열 $a_n$이 일정한 극한(또는 극한값) $\alpha$에 한없이 가까워지는 것
 
 > $\displaystyle \lim_{ n\to \infty}a_n = \alpha$
 
