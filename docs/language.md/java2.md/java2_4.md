@@ -877,11 +877,74 @@ System.out.println(Arrays.toString(ch));
 ```
 
 > 문자열을 문자배열(char[])로 변환해서 반환한다
+>
+> 이 부분은 아래에서 더 자세히 다룬다
 
 
 <br/>
 
 - **char배열과 String클래스의 변환**
+
+1. **단순 변환 방법**
+
+_char배열 - String클래스_
+
+```java
+String str = new String(chArr);
+```
+
+_String클래스 - char배열_
+
+```java
+char[] chArr = str.toCharArray();
+```
+
+<br/>
+
+{:style="counter-reset:none"}
+2. **String-char 예제**
+
+_**ex1)** 문자열을 char배열로 변환하여 하나씩 출력하기 예제_
+
+```java
+String src = "ABCD";
+
+for (int i = 0; i < src.length(); i++) {
+  char ch = src.charAt(i);
+  System.out.printf("src.charAt(%d) :%c%n", i, ch);
+}
+
+char[] chArr = src.toCharArray();
+System.out.println(chArr);
+```
+
+```java
+src.charAt(0) :A
+src.charAt(1) :B
+src.charAt(2) :C
+src.charAt(3) :D
+ABCD
+```
+
+> **length(), charAt(int idx), toCharArray()**가 쓰인 것을 알 수 있다
+>
+> 또한, char배열은 바로 출력해도된다 **System.out.print(chArr)**
+
+<br/>
+
+_**ex2)** 문자열을 모르스 부호로 변환하는 예제_
+
+> 
+
+```java
+
+```
+
+```java
+
+```
+
+
 
 <br/><br/>
 
