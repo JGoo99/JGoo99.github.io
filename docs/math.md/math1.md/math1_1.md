@@ -120,7 +120,7 @@ _ex) 수열 발산의 예시_
 
 #### #기본문제 2)
 
-![image](https://github.com/JGoo99/java-project/assets/126454114/b23ae088-a92f-4d3f-b601-823405bbf63f)
+![image](https://github.com/JGoo99/java-project/assets/126454114/b23ae088-a92f-4d3f-b601-823405bbf63f){: width="60%"",height="40%""}
 
 <br/>
 
