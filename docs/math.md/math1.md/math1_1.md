@@ -120,34 +120,34 @@ _ex) 수열 발산의 예시_
 
 #### #기본문제 2)
 
-![image](https://github.com/JGoo99/java-project/assets/126454114/b23ae088-a92f-4d3f-b601-823405bbf63f){: width="60%"",height="40%""}
+![image](https://github.com/JGoo99/java-project/assets/126454114/b23ae088-a92f-4d3f-b601-823405bbf63f){: width="50%""}
 
 <br/>
 
-![image](https://github.com/JGoo99/java-project/assets/126454114/20348985-bcf8-48b3-ba1e-ae7516cb6878)
+![image](https://github.com/JGoo99/java-project/assets/126454114/20348985-bcf8-48b3-ba1e-ae7516cb6878){: width="50%""}
 
-![image](https://github.com/JGoo99/java-project/assets/126454114/6e9ef8e5-f61a-4da3-a675-99cc27ffe17e)
+![image](https://github.com/JGoo99/java-project/assets/126454114/6e9ef8e5-f61a-4da3-a675-99cc27ffe17e){: width="50%""}
 
 <br/>
 
 #### #기본문제 3)
 
-![image](https://github.com/JGoo99/java-project/assets/126454114/233fd094-3dfa-4a89-94a4-82fe8f7f17d0)
+![image](https://github.com/JGoo99/java-project/assets/126454114/233fd094-3dfa-4a89-94a4-82fe8f7f17d0){: width="50%""}
 
 <br/>
 
-![image](https://github.com/JGoo99/java-project/assets/126454114/bce805e3-48fc-42d3-baf0-8871fa126971)
+![image](https://github.com/JGoo99/java-project/assets/126454114/bce805e3-48fc-42d3-baf0-8871fa126971){: width="50%""}
 
 
 <br/>
 
 #### #기본문제 4)
 
-![image](https://github.com/JGoo99/java-project/assets/126454114/f316eaa3-79a2-467f-9ff5-4824b85d0c95)
+![image](https://github.com/JGoo99/java-project/assets/126454114/f316eaa3-79a2-467f-9ff5-4824b85d0c95){: width="50%""}
 
 <br/>
 
-![image](https://github.com/JGoo99/java-project/assets/126454114/a2c588e5-9b5b-4b33-8cd2-86a3def8bade)
+![image](https://github.com/JGoo99/java-project/assets/126454114/a2c588e5-9b5b-4b33-8cd2-86a3def8bade){: width="50%""}
 
 ---
 
