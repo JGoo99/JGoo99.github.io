@@ -30,7 +30,7 @@ use_math: true
 ### i. 수열의 수렴과 발산
 {: .no_toc }
 
-1. 수열의 수렴
+1. **수열의 수렴**
 
 수열 $a_n$이 일정한 극한(또는 극한값) $\alpha$에 한없이 가까워지는 것
 
@@ -46,9 +46,9 @@ _ex) 수열 수렴의 예시_
 <br/><br/>
 
 {:style="counter-reset:none"}
-2. 수열의 발산
+2. **수열의 발산**
 
-> > 수열 $a_n$이 음이나 양의 무한대로 발산하거나 진동하는 것
+수열 $a_n$이 음이나 양의 무한대로 발산하거나 진동하는 것
 
 > $\displaystyle \lim_{ n\to \infty}a_n = \infty$
 >
@@ -74,7 +74,7 @@ _ex) 수열 발산의 예시_
 ### ii. 수열의 극한에 관한 기본 성질
 {: .no_toc }
 
-> **수렴하는 수열**의 극한에 관하여 다음 성질이 성립한다
+**수렴하는 수열**의 극한에 관하여 다음 성질이 성립한다
 
 > 수렴하는 수열 {$a_n$}, {$b_n$}에 관하여 $\displaystyle \lim_{ n\to \infty}a_n= \alpha$, $\displaystyle \lim_{ n\to \infty}b_n= \beta$이면
 >
@@ -102,7 +102,52 @@ _ex) 수열 발산의 예시_
 
 ### #연습문제
 
+#### #기본문제 1)
 
+![image](https://github.com/JGoo99/java-project/assets/126454114/540629fd-10ab-4473-bf6a-b64850eefa9e)
+
+<br/>
+
+![image](https://github.com/JGoo99/java-project/assets/126454114/da079a43-21fd-4087-81b1-f018ee83f207)
+
+{: .note }
+> $\frac{\infty}{\infty}$ 꼴의 유리식 극한은 분모의 최고차항으로 분모, 분자를 나누어라
+
+{: .note }
+> 분모, 분자의 차수가 같을 때에는 최고차항의 계수만 생각하면 된다
+
+<br/>
+
+#### #기본문제 2)
+
+![image](https://github.com/JGoo99/java-project/assets/126454114/b23ae088-a92f-4d3f-b601-823405bbf63f)
+
+<br/>
+
+![image](https://github.com/JGoo99/java-project/assets/126454114/20348985-bcf8-48b3-ba1e-ae7516cb6878)
+
+![image](https://github.com/JGoo99/java-project/assets/126454114/6e9ef8e5-f61a-4da3-a675-99cc27ffe17e)
+
+<br/>
+
+#### #기본문제 3)
+
+![image](https://github.com/JGoo99/java-project/assets/126454114/233fd094-3dfa-4a89-94a4-82fe8f7f17d0)
+
+<br/>
+
+![image](https://github.com/JGoo99/java-project/assets/126454114/bce805e3-48fc-42d3-baf0-8871fa126971)
+
+
+<br/>
+
+#### #기본문제 4)
+
+![image](https://github.com/JGoo99/java-project/assets/126454114/f316eaa3-79a2-467f-9ff5-4824b85d0c95)
+
+<br/>
+
+![image](https://github.com/JGoo99/java-project/assets/126454114/a2c588e5-9b5b-4b33-8cd2-86a3def8bade)
 
 ---
 
@@ -110,13 +155,13 @@ _ex) 수열 발산의 예시_
 
 ---
 
-### i. 등비수열의 수렴과 발산
+### 등비수열의 수렴과 발산
 {: .no_toc }
 
 
 
 <br/>
 
----
+### #연습문제
 
-## 연습문제
+---
