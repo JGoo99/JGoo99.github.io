@@ -4,6 +4,7 @@ title: 수열의 극한
 parent: 미적분
 grand_parent: Math
 nav_order: 2
+use_math: true
 ---
 
 <details open markdown="block">
