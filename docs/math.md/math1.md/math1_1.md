@@ -203,5 +203,3 @@ _유제 4)_
 
 ![math6](https://github.com/JGoo99/java-project/assets/126454114/311f8147-a4f1-4f8f-95ff-e81e7c5f7437)
 
-
----

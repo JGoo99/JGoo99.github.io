@@ -930,28 +930,90 @@ ABCD
 >
 > 또한, char배열은 바로 출력해도된다 **System.out.print(chArr)**
 
-<br/>
-
-_**ex2)** 문자열을 모르스 부호로 변환하는 예제_
-
-> 
-
-```java
-
-```
-
-```java
-
-```
-
-
-
 <br/><br/>
 
 ### iv. 커맨드 라인을 통해 입력받기
 {: .no_toc }
 
+> 터미널에서 커맨드라인을 이용하여 배열의 요소를 전달할 수 있다.
 
+```java
+class Main {
+  public static void main(String[] args) {
+    System.out.printf("매개변수의 개수: %d%n", args.length);
+    for (int i = 0; i < args.length; i++) {
+      System.out.printf("args[%d] = %s%n", i, args[i]);
+    }
+  }
+}
+```
+
+_~/algorithm/javatutorial/src_
+```
+> java Main abc 123 "Hello World"
+매개변수의 개수: 3
+args[0] = abc
+args[1] = 123
+args[2] = Hello World
+
+> java Main
+매개변수의 개수: 0
+```
+
+<br/>
+
+_ex) 커맨드라인을 통해 계산해보기_
+
+```java
+class Main {
+  public static void main(String[] args) {
+    if (args.length != 3) {
+      System.out.println("usage: java Main NUM1 OP NUM2");
+      System.exit(0);
+    }
+
+    int NUM1 = Integer.parseInt(args[0]);
+    char OP = args[1].charAt(0);
+    int NUM2 = Integer.parseInt(args[2]);
+    int result = 0;
+
+    switch (OP) {
+      case '+':
+        result = NUM1 + NUM2;
+        break;
+      case '-':
+        result = NUM1 - NUM2;
+        break;
+      case '/':
+        result = NUM1 / NUM2;
+        break;
+      case 'x':
+        result = NUM1 * NUM2;
+        break;
+      default:
+        System.out.println("지원하지 않는 연산입니다.");
+    }
+    System.out.printf("%d %c %d = %d", NUM1, OP, NUM2, result);
+  }
+}
+```
+
+```sh
+> java Main
+usage: java Main NUM1 OP NUM2
+
+>java Main 1 + 2
+1 + 2 = 3%
+
+> java Main 1 - 3
+1 - 3 = -2%
+
+> java Main 4 / 2
+4 / 2 = 2%
+
+> java Main 4 x 6
+4 x 6 = 24%
+```
 
 ---
 
@@ -960,14 +1022,154 @@ _**ex2)** 문자열을 모르스 부호로 변환하는 예제_
 ### i. 2차원 배열의 선언과 인덱스
 {: .no_toc }
 
+> **타입[][] 변수이름 = new 타입[n][m];** 으로 n행 m열의 배열을 생성할 수 있다.
 
+```java
+int[][] score = new int[1][2];
+```
+
+| | 1열 | 2열 | 3열 |
+|:---:|:---:|:---:|:---:|
+| 1행 | score[0][0] | score[0][1] | score[0][2] |
+| 2행 | score[1][0] | score[1][1] | score[1][2] |
+
+_아직 초기화하지 않았기 때문에 배열의 각 요소의 값은 0이다._
 
 <br/><br/>
 
 ### ii. 2차원 배열의 초기화
 {: .no_toc }
 
+> 2차원 배열은 **배열의 배열**로 구성되어 있다.
 
+```java
+int[][] score = {
+  {1,2,3},
+  {4,5,6}
+};
+
+System.out.println(score[1][2]);
+```
+
+```java
+6
+```
+
+<br/>
+
+_**ex 1)** 배열을 모두 출력하고, 그 합을 구해라._ 
+
+```java
+class Main {
+  public static void main(String[] args) {
+    int[][] score = {
+            {100, 100, 100},
+            {20, 20, 20},
+            {30, 30, 30},
+            {40, 40, 40}
+    };
+
+    int sum = 0;
+
+    for (int i = 0; i < score.length; i++) { //score.length = 4
+      for (int j = 0; j < score[i].length; j++) {
+        System.out.printf("score[%d][%d]= %3d%n", i, j, score[i][j]);
+        sum += score[i][j];
+      }
+    }
+    System.out.printf("sum = %d", sum);
+  }
+}
+```
+
+```java
+score[0][0]= 100
+score[0][1]= 100
+score[0][2]= 100
+score[1][0]=  20
+score[1][1]=  20
+score[1][2]=  20
+score[2][0]=  30
+score[2][1]=  30
+score[2][2]=  30
+score[3][0]=  40
+score[3][1]=  40
+score[3][2]=  40
+sum = 570
+```
+
+<br/>
+
+{: .note }
+> 배열+반복문의 문법 for each 문
+
+```java
+for (int[] tmp : score) {  //tmp에 score의 각 요소(1차원 배열의 주소)를 저장
+  for (int i : tmp) {      //tmp는 1차원 배열을 가리키는 참조변수 
+    sum += i;
+  }
+}
+```
+
+> 먼저 tmp에 {100, 100, 100}, {20, 20, 20} ... 이 각각 담긴다
+>
+> 각각의 tmp의 각 요소를 다시 차례로 i에 담는다
+
+<br/>
+
+_**ex 2)** 5명의 세 과목 점수를 더해서 각 학생의 총점, 평균과 과목별 총점을 계산해라._ 
+
+```java
+class Main {
+  public static void main(String[] args) {
+    int[][] score = {
+            {100, 100, 100},
+            {20, 20, 20},
+            {30, 30, 30},
+            {40, 40, 40},
+            {50, 50, 50}
+    };
+
+    System.out.println("번호		국어		수학		영어		총점		평균");
+    System.out.println("============================================");
+
+    int kor = 0;
+    int math = 0;
+    int eng = 0;
+
+    for (int i = 0; i < score.length; i++) {
+      System.out.print(i+1);
+      int sum = 0;
+      float avg = 0.0f;
+
+      kor += score[i][0];
+      math += score[i][1];
+      eng += score[i][2];
+
+      for (int j = 0; j < score[i].length; j++) {
+        sum += score[i][j];
+        System.out.printf("	  %5d", score[i][j]);
+      }
+      avg = sum/3;
+      System.out.printf("	 %5d	  %5.1f%n", sum, avg);
+    }
+    System.out.println("============================================");
+    System.out.println("총점:	" + kor + "		" + math + "		" + eng);
+  }
+}
+```
+
+```java
+번호		국어		수학		영어		총점		평균
+============================================
+1	    100	    100	    100	   300	  100.0
+2	     20	     20	     20	    60	   20.0
+3	     30	     30	     30	    90	   30.0
+4	     40	     40	     40	   120	   40.0
+5	     50	     50	     50	   150	   50.0
+============================================
+총점:	240		240		240
+```
 
 <br/><br/>
 

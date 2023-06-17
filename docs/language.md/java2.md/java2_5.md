@@ -75,6 +75,7 @@ nav_order: 6
 
 <br/>
 
+{:style="counter-reset:none"}
 2. **객체**
 
 > 정의: 실제로 존재하는 것. 사물 또는 개념.
@@ -209,17 +210,102 @@ Tv Channel: 6
 {:style="counter-reset:none"}
 3. **인스턴스간의 관계**
 
-1. 
+- **참조변수 별로 멤버변수 초기화**
+
+> 별개의 참조변수를 생성하여 같은 매서드를 사용할 수 있다.
+
+```java
+class TvTest {
+  public static void main(String[] args) {
+    Tv t1 = new Tv();
+    Tv t2 = new Tv();
+    t1.channel = 7;
+    t2.channel = 5;
+
+    t1.channelDown();
+    t2.channelUp();
+
+    System.out.printf("t1 channel: %d%n", t1.channel);
+    System.out.printf("t2 channel: %d", t2.channel);
+  }
+}
+```
+
+```java
+t1 channel: 6 //7-1
+t2 channel: 6 //5+1
+```
+
+<br/>
+
+- **별개의 참조변수에 같은 인스턴스 주소를 저장**
+
+> 참조변수 t2에 참조변수 t1의 주소를 저장하면 같은 인스턴스를 공유한다.
+
+```java
+class TvTest {
+  public static void main(String[] args) {
+    Tv t1 = new Tv();
+    Tv t2 = new Tv();
+    System.out.printf("t1 channel: %d%n", t1.channel);
+    System.out.printf("t2 channel: %d%n", t2.channel);
+
+    t2 = t1;
+    t1.channel = 7;
+
+    System.out.printf("t1 channel: %d%n", t1.channel);
+    System.out.printf("t2 channel: %d%n", t2.channel);
+  }
+}
+```
+
+```java
+t1 channel: 0
+t2 channel: 0
+t1 channel: 7
+t2 channel: 7 //t2의 멤버변수를 따로 초기화하지 않아도 7로 할당되어있음.
+```
+
+<br>
+
+{: .important-title }
+> 🐷
+>
+> 단, 하나의 참조변수로 여러개의 인스턴스를 참조하는 것은 불가능하다.
 
 <br/><br/>
 
 ### v. 객체 배열
 {: .no_toc }
 
+> 여러개의 객체를 다루고 싶을 때 사용하며, 객체의 주소를 저장하는 것으로 참조변수의 배열이라고 볼 수 있다.
+
+```java
+class TvTest {
+  public static void main(String[] args) {
+    Tv[] tvArr = new Tv[3]; //아직 참조변수의 값은 null(참조변수만 생성한 것)
+
+    for (int i = 0; i < tvArr.length; i++) {
+      tvArr[i] = new Tv();        //객체 배열 생성
+      tvArr[i].channel = 10+i;    //각 인스턴스의 멤버변수 초기화
+      System.out.printf("tvArr[%d].channel: %d%n", i, tvArr[i].channel);
+    }
+  }
+}
+```
+
+```java
+tvArr[0].channel: 10
+tvArr[1].channel: 11
+tvArr[2].channel: 12
+```
+
 <br/><br/>
 
 ### vi. 클래스의 또 다른 정의
 {: .no_toc }
+
+
 
 <br/><br/>
 
