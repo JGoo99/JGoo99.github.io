@@ -312,3 +312,100 @@ class Main {
 <br/><br/><br/>
 
 ---
+
+## #문제_2562
+
+> 9개의 서로 다른 자연수가 주어질 때,
+>
+> 이들 중 최댓값을 찾고 그 최댓값이 몇 번째 수인지를 구하는 프로그램을 작성하시오.
+
+> 예를 들어, 서로 다른 9개의 자연수
+>
+> 3, 29, 38, 12, 57, 74, 40, 85, 61
+> 
+> 이 주어지면, 이들 중 최댓값은 85이고, 이 값은 8번째 수이다.
+
+---
+
+### #입력
+{: .no_toc }
+
+> 3
+>
+> 29
+>
+> 38
+>
+> 12
+>
+> 57
+>
+> 74
+>
+> 40
+>
+> 85
+>
+> 61
+
+### #출력
+{: .no_toc }
+
+> 85
+>
+> 8
+
+
+### #알고리즘 분류
+{: .no_toc }
+
+> 구현
+
+---
+
+### #풀이
+{: .no_toc }
+
+```java
+import java.io.*;
+
+class Main {
+  public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+    int[] NUM = new int[9];
+    int MAX = 0;
+    int MaxNum = 0;
+
+    for (int i = 0; i < NUM.length; i++) {
+      NUM[i] = Integer.parseInt(br.readLine());
+      if (MAX < NUM[i]) {
+        MAX = NUM[i];
+        MaxNum = i;
+      }
+    }
+    bw.write(MAX+"\n");
+    bw.write(String.valueOf(MaxNum+1));
+    bw.flush();
+    bw.close();
+    br.close();
+  }
+}
+```
+
+---
+
+### #유의할 점
+{: .no_toc }
+
+{: .highlight }
+> buffered 정수 출력 오류
+
+> bw.write(MAX), bw.write(MaxNum) 사용 시 출력이 안 되거나 아스키코드가 출력되는 현상이 있다.
+>
+> 개행문자("n")과 String.valueOf를 사용하여 해결했다.
+
+<br/><br/><br/>
+
+---
